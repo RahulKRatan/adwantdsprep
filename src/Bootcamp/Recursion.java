@@ -71,6 +71,10 @@ public class Recursion {
         return false;
     }
 
+    public static void Permutations(){
+
+    }
+
     public static void main(String[] args) {
         int result = factorial(5);
         int fiboResult = fibonacci(5);
