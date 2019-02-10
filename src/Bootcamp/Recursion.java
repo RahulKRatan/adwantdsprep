@@ -2,8 +2,8 @@ package Bootcamp;
 
 
 /**
- * Binary search
- * Palindrome
+ * Binary search - DONE
+ * Palindrome - DONE
  * Permutations
  * Subsets -- similar to permutations
  * Tower of hanoi
@@ -15,7 +15,8 @@ package Bootcamp;
  * Looking for patterns ( Knapsack, travelling salesman, finding hidden words )
  */
 
-public class RecusrsionTest {
+public class Recursion {
+
 
     public static int factorial(int n) {
 
@@ -37,10 +38,36 @@ public class RecusrsionTest {
         }
     }
 
-    public static boolean binarySearch(int[] input, int value){
+    public static boolean binarySearch(int[] input, int start, int end, int value) {
 
+        int mid = (start + end) / 2;
 
+        if (end < start) {
+            return false;
+        }
+        if (input[mid] == value) {
+            return true;
+        }
+        if (input[mid] > value) {
+            return binarySearch(input, start, mid - 1, value);
+        }
+        if (input[mid] < value) {
+            return binarySearch(input, mid + 1, end, value);
+        }
+        return false;
+    }
 
+    public static boolean palindrome(String str, int start, int end) {
+        if (start == end) {
+            return true;
+        }
+        if (str.charAt(start) != str.charAt(end)) {
+            return false;
+        }
+
+        if (start < end + 1) {
+            return palindrome(str, start + 1, end - 1);
+        }
         return false;
     }
 
@@ -48,10 +75,12 @@ public class RecusrsionTest {
         int result = factorial(5);
         int fiboResult = fibonacci(5);
         int[] inputBinary = new int[]{2,3,6,7,9,13,18,25};
+        String str = "adwda";
 
         System.out.println(result);
         System.out.println(fiboResult);
-        System.out.println(binarySearch(inputBinary,3));
+        System.out.println(binarySearch(inputBinary, 0, inputBinary.length - 1, 23));
+        System.out.println(palindrome(str, 0, str.length() - 1));
 
     }
 
