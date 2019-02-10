@@ -4,7 +4,7 @@ package Bootcamp;
 /**
  * Binary search - DONE
  * Palindrome - DONE
- * Permutations
+ * Permutations - DONE
  * Subsets -- similar to permutations
  * Tower of hanoi
  * Anagram finder = backtracking
@@ -71,8 +71,15 @@ public class Recursion {
         return false;
     }
 
-    public static void Permutations(){
-
+    public static void permutations(String prefix, String value) {
+        int n = value.length();
+        if (n == 0) {
+            System.out.println(prefix);
+        } else {
+            for (int i = 0; i < n; i++) {
+                permutations(prefix + value.charAt(i), value.substring(0, i) + value.substring(i + 1, n));
+            }
+        }
     }
 
     public static void main(String[] args) {
@@ -85,6 +92,7 @@ public class Recursion {
         System.out.println(fiboResult);
         System.out.println(binarySearch(inputBinary, 0, inputBinary.length - 1, 23));
         System.out.println(palindrome(str, 0, str.length() - 1));
+        permutations("", "abc");
 
     }
 
