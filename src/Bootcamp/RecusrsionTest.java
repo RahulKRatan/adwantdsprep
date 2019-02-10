@@ -37,15 +37,21 @@ public class RecusrsionTest {
         }
     }
 
-    public static void binarySearch(int[] input, int value){
+    public static boolean binarySearch(int[] input, int value){
 
+
+
+        return false;
     }
 
     public static void main(String[] args) {
         int result = factorial(5);
         int fiboResult = fibonacci(5);
+        int[] inputBinary = new int[]{2,3,6,7,9,13,18,25};
+
         System.out.println(result);
         System.out.println(fiboResult);
+        System.out.println(binarySearch(inputBinary,3));
 
     }
 
