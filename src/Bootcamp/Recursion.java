@@ -82,6 +82,21 @@ public class Recursion {
         }
     }
 
+    public static void permutationsKelemts(){
+
+    }
+
+    public static void subsets(String prefix, String value) {
+        System.out.println(prefix);
+        for (int i = 0; i < value.length(); i++) {
+            subsets(prefix + value.charAt(i), value.substring(i + 1));
+        }
+    }
+
+    public static void subsetKelements(String prefix, String value,int range){
+
+    }
+
     public static void main(String[] args) {
         int result = factorial(5);
         int fiboResult = fibonacci(5);
@@ -93,6 +108,8 @@ public class Recursion {
         System.out.println(binarySearch(inputBinary, 0, inputBinary.length - 1, 23));
         System.out.println(palindrome(str, 0, str.length() - 1));
         permutations("", "abc");
+        subsets("", "abc");
+        subsetKelements("", "abc",2);
 
     }
 
