@@ -73,7 +73,7 @@ public class Recursion {
 
     public static void permutations(String prefix, String value) {
         int n = value.length();
-        if (n == 0) {
+        if (n == 0 ) {
             System.out.println(prefix);
         } else {
             for (int i = 0; i < n; i++) {
@@ -82,8 +82,15 @@ public class Recursion {
         }
     }
 
-    public static void permutationsKelemts(){
-
+    public static void permutationsKelemts(String prefix, String value, int range){
+        int n = value.length();
+        if (n == range-1 && prefix.length() == range) {
+            System.out.println(prefix);
+        } else {
+            for (int i = 0; i < n; i++) {
+                permutationsKelemts(prefix + value.charAt(i), value.substring(0, i) + value.substring(i + 1, n),range);
+            }
+        }
     }
 
     public static void subsets(String prefix, String value) {
@@ -117,6 +124,7 @@ public class Recursion {
         System.out.println(binarySearch(inputBinary, 0, inputBinary.length - 1, 23));
         System.out.println(palindrome(str, 0, str.length() - 1));
         permutations("", "abc");
+        permutationsKelemts("", "abcde",3);
         subsets("", "abc");
         subsetKelements("", "abcde", 3);
 
