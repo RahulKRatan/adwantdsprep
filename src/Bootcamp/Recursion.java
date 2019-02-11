@@ -1,11 +1,14 @@
 package Bootcamp;
 
 
+import com.sun.istack.internal.NotNull;
+
 /**
  * Binary search - DONE
  * Palindrome - DONE
  * Permutations - DONE
  * Subsets -- similar to permutations( combinations ) - DONE
+ * Anagram - DONE
  * Tower of hanoi
  * Anagram finder = backtracking
  * N-QUEENS problem
@@ -71,7 +74,7 @@ public class Recursion {
         return false;
     }
 
-    public static void permutations(String prefix, String value) {
+    public static void permutations(String prefix, @NotNull String value) {
         int n = value.length();
         if (n == 0 ) {
             System.out.println(prefix);
@@ -82,7 +85,7 @@ public class Recursion {
         }
     }
 
-    public static void permutationsKelemts(String prefix, String value, int range){
+    public static void permutationsKelemts(String prefix, @NotNull String value, int range){
         int n = value.length();
         if (n == range-1 && prefix.length() == range) {
             System.out.println(prefix);
@@ -93,7 +96,7 @@ public class Recursion {
         }
     }
 
-    public static void subsets(String prefix, String value) {
+    public static void subsets(String prefix,@NotNull String value) {
         System.out.println(prefix);
         for (int i = 0; i < value.length(); i++) {
             subsets(prefix + value.charAt(i), value.substring(i + 1));
@@ -109,7 +112,7 @@ public class Recursion {
         }
     }
 
-    public static void anagram(String prefix, String input, String compare) {
+    public static void anagram(String prefix, @NotNull String input, @NotNull String compare) {
         int n = input.length();
         if (n == 0 && prefix.equals(compare)) {
             System.out.println(prefix);
@@ -118,6 +121,10 @@ public class Recursion {
                 anagram(prefix + input.charAt(i), input.substring(0, i) + input.substring(i + 1, n), compare);
             }
         }
+    }
+
+    public static void towerOfHanoi(){
+        //TODO
     }
 
     public static void main(String[] args) {
