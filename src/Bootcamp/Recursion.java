@@ -5,7 +5,7 @@ package Bootcamp;
  * Binary search - DONE
  * Palindrome - DONE
  * Permutations - DONE
- * Subsets -- similar to permutations
+ * Subsets -- similar to permutations( combinations ) - DONE
  * Tower of hanoi
  * Anagram finder = backtracking
  * N-QUEENS problem
@@ -109,8 +109,15 @@ public class Recursion {
         }
     }
 
-    public static void anagram() {
-
+    public static void anagram(String prefix, String input, String compare) {
+        int n = input.length();
+        if (n == 0 && prefix.equals(compare)) {
+            System.out.println(prefix);
+        } else {
+            for (int i = 0; i < n; i++) {
+                anagram(prefix + input.charAt(i), input.substring(0, i) + input.substring(i + 1, n), compare);
+            }
+        }
     }
 
     public static void main(String[] args) {
@@ -127,7 +134,7 @@ public class Recursion {
         permutationsKelemts("", "abcde",3);
         subsets("", "abc");
         subsetKelements("", "abcde", 3);
-
+        anagram("", "dbca", "abcd");
     }
 
 
