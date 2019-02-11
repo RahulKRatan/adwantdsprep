@@ -94,6 +94,15 @@ public class Recursion {
     }
 
     public static void subsetKelements(String prefix, String value,int range){
+        if (range == 0) { // important - for every 3rd iteration range will be 0 and reset to 3
+            System.out.println(prefix);
+        }
+        for (int i = 0; i < value.length(); i++) {
+            subsetKelements(prefix + value.charAt(i), value.substring(i + 1), range - 1);
+        }
+    }
+
+    public static void anagram() {
 
     }
 
@@ -109,7 +118,7 @@ public class Recursion {
         System.out.println(palindrome(str, 0, str.length() - 1));
         permutations("", "abc");
         subsets("", "abc");
-        subsetKelements("", "abc",2);
+        subsetKelements("", "abcde", 3);
 
     }
 
