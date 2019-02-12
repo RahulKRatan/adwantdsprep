@@ -15,6 +15,7 @@ import com.sun.istack.internal.NotNull;
  * https://www.hackerearth.com/practice/basic-programming/recursion/recursion-and-backtracking/tutorial/
  * Sudoku - using backtracking
  * Cryptarithmetic
+ * Knapsack - DONE
  * Looking for patterns ( Knapsack, travelling salesman, finding hidden words )
  */
 
