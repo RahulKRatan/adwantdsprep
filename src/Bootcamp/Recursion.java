@@ -9,7 +9,7 @@ import com.sun.istack.internal.NotNull;
  * Permutations - DONE
  * Subsets -- similar to permutations( combinations ) - DONE
  * Anagram - DONE
- * Tower of hanoi
+ * Tower of hanoi - DONE
  * Anagram finder = backtracking
  * N-QUEENS problem
  * https://www.hackerearth.com/practice/basic-programming/recursion/recursion-and-backtracking/tutorial/
@@ -123,8 +123,21 @@ public class Recursion {
         }
     }
 
-    public static void towerOfHanoi(){
-        //TODO
+    public static void towerOfHanoi(int n, String start, String intermediate, String end) {
+        /*Base Case - When n = 1
+        Move the disc from start pole to end pole
+        Recursive Case - When n > 1
+        Step 1: Move (n-1) discs from start pole to auxiliary pole.
+        Step 2: Move the last disc from start pole to end pole.
+        Step 3: Move the (n-1) discs from auxiliary pole to end pole.
+        Steps 1 and 3 are recursive invocations of the same procedure.
+        */
+        if (n == 0) {
+            return;
+        }
+        towerOfHanoi(n - 1, start, end, intermediate);
+        System.out.println("Move \"" + n + "\" from " + start + " --> " + end);
+        towerOfHanoi(n - 1, intermediate, start, end);
     }
 
     public static void main(String[] args) {
@@ -142,6 +155,8 @@ public class Recursion {
         subsets("", "abc");
         subsetKelements("", "abcde", 3);
         anagram("", "dbca", "abcd");
+        towerOfHanoi(3, "Pole1", "Pole2", "Pole3");
+
     }
 
 
