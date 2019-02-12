@@ -1,4 +1,4 @@
-package Bootcamp;
+package Bootcamp.Recursion;
 
 public class Knapsack {
 
