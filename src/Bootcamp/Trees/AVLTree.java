@@ -1,154 +1,157 @@
 package Bootcamp.Trees;
 
 
-/**
- * Date 07/04/2014
- * @author tusroy
- *
- * Video link - https://youtu.be/rbg7Qf8GkQ4
- *
- * Write a program to insert into an AVL tree.
- *
- * AVL tree is self balancing binary tree. Difference of height of left or right subtree
- * cannot be greater than one.
- *
- * There are four different use cases to insert into AVL tree
- * left left - needs ones right rotation
- * left right - needs one left and one right rotation
- * right left - needs one right and one left rotation
- * right right - needs one left rotation
- *
- * Follow rotation rules to keep tree balanced.
- *
- * At every node we will also keep height of the tree so that we don't
- * have to recalculate values again.
- *
- * Runtime complexity to insert into AVL tree is O(logn).
- *
- * References
- * http://en.wikipedia.org/wiki/AVL_tree
- * http://www.geeksforgeeks.org/avl-tree-set-1-insertion/
- *
- */
-public class AVLTree {
+// Java program for insertion in AVL Tree
+class Node {
+    int key, height;
+    Node left, right;
 
-    class Node{
-        Node left;
-        Node right;
-        int data;
-        int lis;
-        int height;
-        int size;
-
-        public  Node newNode(int data){
-            Node n = new Node();
-            n.left = null;
-            n.right = null;
-            n.data = data;
-            n.lis = -1;
-            n.height = 1;
-            n.size = 1;
-            return n;
-        }
-    }
-
-
-    private Node leftRotate(Node root){
-        Node newRoot = root.right;
-        root.right = root.right.left;
-        newRoot.left = root;
-        root.height = setHeight(root);
-        root.size = setSize(root);
-        newRoot.height = setHeight(newRoot);
-        newRoot.size = setSize(newRoot);
-        return newRoot;
-    }
-
-    private Node rightRotate(Node root){
-        Node newRoot = root.left;
-        root.left = root.left.right;
-        newRoot.right = root;
-        root.height = setHeight(root);
-        root.size = setSize(root);
-        newRoot.height = setHeight(newRoot);
-        newRoot.size = setSize(newRoot);
-        return newRoot;
-    }
-
-    private int setHeight(Node root){
-        if(root == null){
-            return 0;
-        }
-        return 1 + Math.max((root.left != null ? root.left.height : 0), (root.right != null ? root.right.height : 0));
-    }
-
-    private int height(Node root){
-        if(root == null){
-            return 0;
-        }else {
-            return root.height;
-        }
-    }
-
-    private int setSize(Node root){
-        if(root == null){
-            return 0;
-        }
-        return 1 + Math.max((root.left != null ? root.left.size : 0), (root.right != null ? root.right.size : 0));
-    }
-
-    public Node insert(Node root, int data){
-        if(root == null){
-            return Node.newNode(data);
-        }
-        if(root.data <= data){
-            root.right = insert(root.right,data);
-        }
-        else{
-            root.left = insert(root.left,data);
-        }
-        int balance = balance(root.left, root.right);
-        if(balance > 1){
-            if(height(root.left.left) >= height(root.left.right)){
-                root = rightRotate(root);
-            }else{
-                root.left = leftRotate(root.left);
-                root = rightRotate(root);
-            }
-        }else if(balance < -1){
-            if(height(root.right.right) >= height(root.right.left)){
-                root = leftRotate(root);
-            }else{
-                root.right = rightRotate(root.right);
-                root = leftRotate(root);
-            }
-        }
-        else{
-            root.height = setHeight(root);
-            root.size = setSize(root);
-        }
-        return root;
-    }
-
-    private int balance(Node rootLeft, Node rootRight){
-        return height(rootLeft) - height(rootRight);
-    }
-
-    public static void main(String args[]){
-        AVLTree avlTree = new AVLTree();
-        Node root = null;
-        root = avlTree.insert(root, -10);
-        root = avlTree.insert(root, 2);
-        root = avlTree.insert(root, 13);
-        root = avlTree.insert(root, -13);
-        root = avlTree.insert(root, -15);
-        root = avlTree.insert(root, 15);
-        root = avlTree.insert(root, 17);
-        root = avlTree.insert(root, 20);
-
-        TreeTraversals tt = new TreeTraversals();
-        tt.inOrder(root);
-        System.out.println();
-        tt.preOrder(root);
+    Node(int d) {
+        key = d;
+        height = 1;
     }
 }
+
+class AVLTree {
+
+    Node root;
+
+    // A utility function to get the height of the tree
+    int height(Node N) {
+        if (N == null)
+            return 0;
+
+        return N.height;
+    }
+
+    // A utility function to get maximum of two integers
+    int max(int a, int b) {
+        return (a > b) ? a : b;
+    }
+
+    // A utility function to right rotate subtree rooted with y
+    // See the diagram given above.
+    Node rightRotate(Node y) {
+        Node x = y.left;
+        Node T2 = x.right;
+
+        // Perform rotation
+        x.right = y;
+        y.left = T2;
+
+        // Update heights
+        y.height = max(height(y.left), height(y.right)) + 1;
+        x.height = max(height(x.left), height(x.right)) + 1;
+
+        // Return new root
+        return x;
+    }
+
+    // A utility function to left rotate subtree rooted with x
+    // See the diagram given above.
+    Node leftRotate(Node x) {
+        Node y = x.right;
+        Node T2 = y.left;
+
+        // Perform rotation
+        y.left = x;
+        x.right = T2;
+
+        // Update heights
+        x.height = max(height(x.left), height(x.right)) + 1;
+        y.height = max(height(y.left), height(y.right)) + 1;
+
+        // Return new root
+        return y;
+    }
+
+    // Get Balance factor of node N
+    int getBalance(Node N) {
+        if (N == null)
+            return 0;
+
+        return height(N.left) - height(N.right);
+    }
+
+    Node insert(Node node, int key) {
+
+        /* 1. Perform the normal BST insertion */
+        if (node == null)
+            return (new Node(key));
+
+        if (key < node.key)
+            node.left = insert(node.left, key);
+        else if (key > node.key)
+            node.right = insert(node.right, key);
+        else // Duplicate keys not allowed
+            return node;
+
+        /* 2. Update height of this ancestor node */
+        node.height = 1 + max(height(node.left),
+                height(node.right));
+
+		/* 3. Get the balance factor of this ancestor
+			node to check whether this node became
+			unbalanced */
+        int balance = getBalance(node);
+
+        // If this node becomes unbalanced, then there
+        // are 4 cases Left Left Case
+        if (balance > 1 && key < node.left.key)
+            return rightRotate(node);
+
+        // Right Right Case
+        if (balance < -1 && key > node.right.key)
+            return leftRotate(node);
+
+        // Left Right Case
+        if (balance > 1 && key > node.left.key) {
+            node.left = leftRotate(node.left);
+            return rightRotate(node);
+        }
+
+        // Right Left Case
+        if (balance < -1 && key < node.right.key) {
+            node.right = rightRotate(node.right);
+            return leftRotate(node);
+        }
+
+        /* return the (unchanged) node pointer */
+        return node;
+    }
+
+    // A utility function to print preorder traversal
+    // of the tree.
+    // The function also prints height of every node
+    void preOrder(Node node) {
+        if (node != null) {
+            System.out.print(node.key + " ");
+            preOrder(node.left);
+            preOrder(node.right);
+        }
+    }
+
+    public static void main(String[] args) {
+        AVLTree tree = new AVLTree();
+
+        /* Constructing tree given in the above figure */
+        tree.root = tree.insert(tree.root, 10);
+        tree.root = tree.insert(tree.root, 20);
+        tree.root = tree.insert(tree.root, 30);
+        tree.root = tree.insert(tree.root, 40);
+        tree.root = tree.insert(tree.root, 50);
+        tree.root = tree.insert(tree.root, 25);
+
+		/* The constructed AVL Tree would be
+			30
+			/ \
+		20 40
+		/ \	 \
+		10 25 50
+		*/
+        System.out.println("Preorder traversal" +
+                " of constructed tree is : ");
+        tree.preOrder(tree.root);
+    }
+}
+
