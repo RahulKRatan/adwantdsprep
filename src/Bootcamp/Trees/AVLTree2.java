@@ -13,7 +13,6 @@ class Node2
         height = 1;
     }
 }
-
 class AVLTree2
 {
     Node root;
