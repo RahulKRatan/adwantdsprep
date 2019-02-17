@@ -50,7 +50,7 @@ class AVLTree2
         // Return new root
         return x;
     }
-    
+
     // A utility function to left rotate subtree rooted with x
     // See the diagram given above.
     Node leftRotate(Node x)
@@ -293,5 +293,4 @@ class AVLTree2
     }
 }
 
-// This code has been contributed by Mayank Jaiswal
 
