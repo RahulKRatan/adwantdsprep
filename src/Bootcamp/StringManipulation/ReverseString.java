@@ -11,7 +11,7 @@ public class ReverseString {
                 i++;
             }
             for(int j=0;j<s.length;j++){
-                System.out.println(s[j]);
+                System.out.print(s[j]);
             }
     }
 
