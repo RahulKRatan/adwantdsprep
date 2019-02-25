@@ -15,7 +15,6 @@ public class AddBinary {
         if (carry != 0) sb.append(carry);
         return sb.reverse().toString();
     }
-
     public static void main(String[] args) {
         String a = "1010";
         String b = "1011";
