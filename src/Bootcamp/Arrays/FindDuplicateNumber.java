@@ -1,5 +1,6 @@
 package Bootcamp.Arrays;
 
+//https://leetcode.com/problems/find-the-duplicate-number/discuss/72846/My-easy-understood-solution-with-O(n)-time-and-O(1)-space-without-modifying-the-array.-With-clear-explanation.
 public class FindDuplicateNumber {
 
     public static int findDuplicate(int[] nums){
