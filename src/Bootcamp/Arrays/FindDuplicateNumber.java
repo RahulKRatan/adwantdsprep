@@ -3,7 +3,10 @@ package Bootcamp.Arrays;
 public class FindDuplicateNumber {
 
     public static int findDuplicate(int[] nums){
-
+        boolean[] flag = new boolean[nums.length];
+        for(int i=0;i<nums.length;i++){
+            
+        }
 
         return 0;
     }
