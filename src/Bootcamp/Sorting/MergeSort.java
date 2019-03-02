@@ -5,7 +5,7 @@ public class MergeSort {
     public static void mergeSort(int[] arr,int start, int end){
         if(start >= end)
             return;
-        int mid = start + (end-start)/2;
+        int mid = start + (end-start)/2; // ** this is to avoid overflow problem.. if start and end are two large integers.
         mergeSort(arr,start,mid);
         mergeSort(arr,mid+1,end);
         merge(arr,start,mid,end);
