@@ -12,7 +12,6 @@ public class MergeSort {
     }
 
     public static void merge(int[] arr, int start, int mid, int end){
-
     }
 
     public static void main(String[] args) {
