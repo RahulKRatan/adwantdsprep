@@ -19,10 +19,11 @@ public class ThreeSum {
             if (arr[i] + arr[l]+arr[r] == 0) {
                 System.out.print(arr[i]+","+arr[l]+","+arr[r]);
                 l++;r--;
-                while (l<r && arr[l] == arr[l-1])
+                while (l<r && arr[l] == arr[l-1]) {
                     l++;
-                while (l<r && arr[r] == arr[r+1])
-                    r--;
+                }
+                while (l<r && arr[r] == arr[r+1]){
+                    r--;}
             }
             if(arr[i] + arr[l]+arr[r] < 0){
                 l++;
