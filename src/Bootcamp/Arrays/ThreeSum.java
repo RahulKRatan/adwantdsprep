@@ -1,29 +1,23 @@
 package Bootcamp.Arrays;
 
 import java.util.Arrays;
+import java.util.TreeSet;
 
 public class ThreeSum {
 
 
-    static void threeSum(int[] arr){
-        String[] strings = new String[3];
-
-        if(arr == null || arr.length == 0){
-            return;
-        }
+    static String[] threeSum(int[] arr){
+        TreeSet<String> set = new TreeSet<>();
         Arrays.sort(arr);
         int size = arr.length;
         for(int i=0;i<size-2;i++){
             int l = i+1,r =size-1;
         while(l<r){
             if (arr[i] + arr[l]+arr[r] == 0) {
-                System.out.print(arr[i]+","+arr[l]+","+arr[r]);
-                l++;r--;
-                while (l<r && arr[l] == arr[l-1]) {
-                    l++;
+                if(!set.contains(arr[i]+","+arr[l]+","+arr[r])){
+                    set.add(arr[i]+","+arr[l]+","+arr[r]);
                 }
-                while (l<r && arr[r] == arr[r+1]){
-                    r--;}
+                l++;
             }
             if(arr[i] + arr[l]+arr[r] < 0){
                 l++;
@@ -33,10 +27,14 @@ public class ThreeSum {
             }
         }
         }
+        return set.toArray(new String[set.size()]);
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{-2,2,0,-2,2};
-        threeSum(arr);
+        int[] arr = new int[]{10, 3, -4, 1, -6, 9};
+        String[] result = threeSum(arr);
+        for(int i=0;i<result.length;i++){
+            System.out.println(result[i]);
+        }
     }
 }
