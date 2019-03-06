@@ -1,6 +1,6 @@
 package Bootcamp.Arrays;
 
-import java.util.Arrays;
+
 
 public class GroupTheNumbers {
 
