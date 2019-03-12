@@ -147,16 +147,16 @@ public class Recursion {
         int[] inputBinary = new int[]{2,3,6,7,9,13,18,25};
         String str = "adwda";
 
-//        System.out.println(result);
-//        System.out.println(fiboResult);
-//        System.out.println(binarySearch(inputBinary, 0, inputBinary.length - 1, 23));
-//        System.out.println(palindrome(str, 0, str.length() - 1));
-//        permutations("", "abc");
-//        permutationsKelemts("", "abcde",3);
+       System.out.println(result);
+       System.out.println(fiboResult);
+       System.out.println(binarySearch(inputBinary, 0, inputBinary.length - 1, 23));
+       System.out.println(palindrome(str, 0, str.length() - 1));
+       permutations("", "abc");
+        permutationsKelemts("", "abcde",3);
         subsets("", "abc");
-//        subsetKelements("", "abcde", 3);
-//        anagram("", "dbca", "abcd");
-//        towerOfHanoi(3, "Pole1", "Pole2", "Pole3");
+        subsetKelements("", "abcde", 3);
+        anagram("", "dbca", "abcd");
+        towerOfHanoi(3, "Pole1", "Pole2", "Pole3");
 
     }
 
