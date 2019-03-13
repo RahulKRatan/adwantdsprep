@@ -6,7 +6,7 @@ public class test {
         char s = 'a';
         char b = 'b';
         if(s>b){
-            
+
         }
     }
 }
