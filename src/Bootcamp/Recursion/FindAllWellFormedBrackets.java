@@ -8,8 +8,7 @@ public class FindAllWellFormedBrackets {
         for (int i = 1; i <= n; i++) {
             Brackets("", 0, 0, i,arrayList,n);
         }
-        String[] array = arrayList.toArray(new String[0]);
-        return array;
+        return arrayList.toArray(new String[0]);
     }
 
     private static void Brackets(String output, int open, int close, int pairs,ArrayList<String> arrayList, int n) {
