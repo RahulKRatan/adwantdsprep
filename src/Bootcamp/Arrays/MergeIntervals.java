@@ -13,7 +13,7 @@ public class MergeIntervals {
             return result;
         }
 
-        Comparator<Interval> comp = Comparator.comparing((Interval i)->i.start);
+        Comparator<Interval> comp = Comparator.comparing((Interval i)->i.start); // sorts intervals by start
         Collections.sort(intervals, comp);
 
         Interval temp = intervals.get(0);
