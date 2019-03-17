@@ -1,57 +1,32 @@
 package Bootcamp.Arrays;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 
 public class FindFirstLastPositionofElementSortedArray {
 
     public static int[] searchRange(int[] nums, int target) {
-        List<Integer> count = new ArrayList<>();
-        int start = 0;
-        int end = nums.length-1;
-        while (start<end){
-            int mid = (start+end)/2;
-            if(target == nums[mid]){
-                count.add(mid);
-                if(mid < nums.length-1 && nums[mid+1] == target){
-                    for(int i=mid+1;i<nums.length;i++){
-                        if(nums[i] == target){
-                            count.add(i);
-                        }
-                    }
-                }
-                if(mid > 0 && nums[mid-1] == target){
-                    for(int i=mid-1;i>=0;i--){
-                        if(nums[i] == target){
-                            count.add(i);
-                        }
-                    }
-                }
+        int start = findPosition(nums, target, false);
+        int end = findPosition(nums, target, true);// to check if this is the last index we are looking for
+        return new int[]{start, end};
+    }
+    private static int findPosition(int[] A, int target, boolean isLast) {
+        int start = 0, end = A.length-1, index = -1;
+        while (start <= end) {
+            int mid = (start + end)/2;
+            if(isLast){
+                if (A[mid] <= target) start = mid + 1; // = is important as it goes till last element
+                else end = mid-1;
+            } else{
+                if (A[mid] < target) start = mid + 1;
+                else end = mid-1;
             }
-
-            if( target < nums[mid]){
-                end = mid -1;
-            }
-            else {
-                start = mid + 1;
-            }
+            if(A[mid] == target) index = mid; /** update index */
         }
-        if(count.isEmpty()){
-            count.add(-1);
-            count.add(-1);
-        }
-        int[] ret = new int[count.size()];
-        Iterator<Integer> iter = count.iterator();
-        for (int i=0; iter.hasNext(); i++) {
-            ret[i] = iter.next();
-        }
-        return ret;
+        return index;
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{5,7,7,8,8,10};
-        int[] result = searchRange(nums,8);
+        int[] nums = new int[]{1,1,1,1,1};
+        int[] result = searchRange(nums,1);
         for (int res: result) {
             System.out.println(res);
         }
