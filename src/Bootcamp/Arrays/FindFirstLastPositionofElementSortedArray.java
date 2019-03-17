@@ -37,7 +37,10 @@ public class FindFirstLastPositionofElementSortedArray {
                 start = mid + 1;
             }
         }
-
+        if(count.isEmpty()){
+            count.add(-1);
+            count.add(-1);
+        }
         int[] ret = new int[count.size()];
         Iterator<Integer> iter = count.iterator();
         for (int i=0; iter.hasNext(); i++) {
