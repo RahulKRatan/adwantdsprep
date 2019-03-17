@@ -7,7 +7,7 @@ import java.util.List;
 
 public class MergeIntervals {
 
-    public List<Interval> merge(List<Interval> intervals) {
+    public static List<Interval> merge(List<Interval> intervals) {
         List<Interval> result = new ArrayList<>();
         if(intervals==null || intervals.size()==0){
             return result;
@@ -32,11 +32,23 @@ public class MergeIntervals {
         return result;
     }
 
+    public static void main(String[] args) {
+        Interval interval1 = new Interval(1,3);
+        Interval interval2 = new Interval(2,6);
+        Interval interval3 = new Interval(8,10);
+        Interval interval4 = new Interval(15,18);
+        List<Interval> intervals = new ArrayList<>();
+        intervals.add(interval2);
+        intervals.add(interval1);
+        intervals.add(interval3);
+        intervals.add(interval4);
+        List<Interval> result = merge(intervals);
+    }
+
 }
 
 class Interval {
      int start;
      int end;
-     Interval() { start = 0; end = 0; }
      Interval(int s, int e) { start = s; end = e; }
   }
