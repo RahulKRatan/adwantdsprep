@@ -34,6 +34,7 @@ public class EditDistance {
         // operations on last character of first string, recursively
         // compute minimum cost for all three operations and take
         // minimum of three values.
+        // i,j-i = addition ; i-1,j = deletion ; i-1,j-1 replacement ( cost = 2 if x!=y , cost = 0 if x = y )
         return 1 + min(editDistance(s1,s2,i-1,j),editDistance(s1,s2,i,j-1),editDistance(s1,s2,i-1,j-1));
     }
 
