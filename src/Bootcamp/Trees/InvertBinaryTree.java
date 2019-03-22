@@ -5,6 +5,7 @@ import java.util.Queue;
 
 public class InvertBinaryTree {
         TreeNode node;
+        // BFS solution
     public static TreeNode invertTree(TreeNode root) {
         if (root == null) {
             return null;
@@ -41,3 +42,16 @@ public class InvertBinaryTree {
         System.out.println(result.left.val);
     }
 }
+
+/* Other solution
+public TreeNode invertTree(TreeNode root) {
+        if (root == null)
+            return root;
+
+        TreeNode tmp = root.left;
+        root.left = invertTree(root.right);
+        root.right = invertTree(tmp);
+
+        return root;
+    }
+*/
