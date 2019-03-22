@@ -1,7 +1,13 @@
 package Bootcamp.Trees;
 
 public class BalancedBSTFromSortedArray {
+    static TreeNode1 build_balanced_bst(int[] a)
+    {
 
+
+        return null;
+
+    }
 
     public static void main(String[] args) {
        int[] a = new int[]{8,10 ,12, 15, 16, 20, 25};
