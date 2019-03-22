@@ -4,7 +4,7 @@ public class BalancedBSTFromSortedArray {
 
 
     public static void main(String[] args) {
-       int[] a = new int[]{};
+       int[] a = new int[]{8,10 ,12, 15, 16, 20, 25};
 
     }
 }
