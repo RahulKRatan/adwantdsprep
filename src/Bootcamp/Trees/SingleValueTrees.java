@@ -1,9 +1,9 @@
 package Bootcamp.Trees;
 
 public class SingleValueTrees {
-    Node5 root;
-    Count ct = new Count();
-    boolean  countSingleRec(Node5 node, Count c)
+    TreeNode root;
+    int count = 0;
+    boolean  countSingleRec(TreeNode node, int c)
     {
         // Return false to indicate NULL
         if (node == null)
@@ -18,19 +18,19 @@ public class SingleValueTrees {
         if (left == false || right == false)
             return false;
 
-        // If left subtree is singly and non-empty, but data
+        // If left subtree is singly and non-empty, but val
         // doesn't match
-        if (node.left != null && node.data != node.left.data)
+        if (node.left != null && node.val != node.left.val)
             return false;
 
         // Same for right subtree
-        if (node.right != null && node.data != node.right.data)
+        if (node.right != null && node.val != node.right.val)
             return false;
 
         // If none of the above conditions is true, then
         // tree rooted under root is single valued, increment
         // count and return true.
-        c.count++;
+        count++;
         return true;
     }
 
@@ -41,39 +41,22 @@ public class SingleValueTrees {
         return countSingle(root);
     }
 
-    int countSingle(Node5 node)
+    int countSingle(TreeNode node)
     {
         // Recursive function to count
-        countSingleRec(node, ct);
-        return ct.count;
+        countSingleRec(node, count);
+        return count;
     }
-
-
 
     public static void main(String[] args) {
         SingleValueTrees tree = new SingleValueTrees();
-        tree.root = new Node5(2);
-        tree.root.left = new Node5(1);
-        tree.root.right = new Node5(3);
+        tree.root = new TreeNode(2);
+        tree.root.left = new TreeNode(1);
+        tree.root.right = new TreeNode(3);
         System.out.println("The count of single valued sub trees is : "
                 + tree.countSingle());
     }
 }
 
-class Count
-{
-    int count = 0;
-}
-
-class Node5{
-    int data;
-    Node5 left;
-    Node5 right;
-    public Node5(int item)
-    {
-        data = item;
-        left = right = null;
-    }
-}
 
 
