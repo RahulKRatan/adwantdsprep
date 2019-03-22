@@ -3,9 +3,13 @@ package Bootcamp.Trees;
 public class KSmallestElement {
     TreeNode root;
     static int kth_smallest_element(TreeNode root, int k) {
-        int count = countNodes(root);
-        System.out.println(count);
-        return 0;
+        int count = countNodes(root.left_ptr);
+        if(k <= count){
+            return kth_smallest_element(root.left_ptr, k);
+        }else if (k > count + 1) {
+            return kth_smallest_element(root.right_ptr, k-1-count);
+        }
+        return root.val;
     }
 
     static int countNodes(TreeNode n) {
