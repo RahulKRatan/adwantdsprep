@@ -4,8 +4,8 @@ public class BalancedBSTFromSortedArray {
 
 
     public static void main(String[] args) {
-        BalancedBSTFromSortedArray tree = new BalancedBSTFromSortedArray();
-        
+       int[] a = new int[]{};
+
     }
 }
 
