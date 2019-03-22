@@ -2,10 +2,17 @@ package Bootcamp.Trees;
 
 public class MaxDepthBinaryTree {
     TreeNode node;
+    static int count = 0;
     public static int maxDepth(TreeNode root) {
-        
-
-        return 0;
+        if(root == null)
+            return count;
+        count = count + 1;
+        int left_depth = maxDepth(root.left);
+        int right_depth = maxDepth(root.right);
+        if(left_depth > right_depth){
+            return left_depth;
+        }else
+            return right_depth;
     }
 
     public static void main(String[] args) {
