@@ -70,5 +70,6 @@ public class GraphTraversal {
 
         GraphTraversal g = new GraphTraversal();
         g.BFS(graph);
+        g.DFS(graph);
     }
 }
