@@ -57,7 +57,7 @@ public class GraphTraversal {
 
     public static void main(String args[]){
 
-        Graph<Integer> graph = new Graph<Integer>(true);
+        Graph<Integer> graph = new Graph<>(true);
         graph.addEdge(1, 2);
         graph.addEdge(1, 3);
         graph.addEdge(2, 4);
