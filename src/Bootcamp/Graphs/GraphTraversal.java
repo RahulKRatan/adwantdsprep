@@ -13,7 +13,7 @@ import java.util.Set;
 public class GraphTraversal {
 
     public void DFS(Graph<Integer> graph){
-        Set<Long> visited = new HashSet<Long>();
+        Set<Long> visited = new HashSet<>();
         for(Vertex<Integer> vertex : graph.getAllVertex()){
             if(!visited.contains(vertex.getId())){
                 DFSUtil(vertex,visited);
@@ -32,14 +32,14 @@ public class GraphTraversal {
     }
 
     public void BFS(Graph<Integer> graph){
-        Set<Long> visited = new HashSet<Long>();
-        Queue<Vertex<Integer>> q = new LinkedList<Vertex<Integer>>();
+        Set<Long> visited = new HashSet<>();
+        Queue<Vertex<Integer>> q = new LinkedList<>();
 
         for(Vertex<Integer> vertex: graph.getAllVertex()){
             if(!visited.contains(vertex.getId())){
                 q.add(vertex);
                 visited.add(vertex.getId());
-                while(q.size() != 0){
+                while(q.isEmpty()){
                     Vertex<Integer> vq = q.poll();
                     System.out.print(vq.getId()+ " ");
                     for(Vertex<Integer> v : vq.getAdjacentVertexes()){
