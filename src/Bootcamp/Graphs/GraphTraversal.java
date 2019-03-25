@@ -12,6 +12,7 @@ import java.util.Set;
  */
 public class GraphTraversal {
 
+    // time complexity is V + E
     public void DFS(Graph<Integer> graph){
         Set<Long> visited = new HashSet<>();
         for(Vertex<Integer> vertex : graph.getAllVertex()){
