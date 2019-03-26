@@ -1,15 +1,18 @@
 package Bootcamp.Graphs;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
 
+import java.util.LinkedList;
+import java.util.Queue;
+/*
+Time Complexity:
+If we use adjacency matrix : O(V2)
+If we use adjacency list: O(E+V)
+ */
 public class CourseSchedule {
 
     public static boolean canFinish(int numCourses, int[][] prerequisites) {
 
-       
+
         if (numCourses == 0 || prerequisites.length == 0) return true;
 
         // Convert graph presentation from edges to indegree of adjacent list.
