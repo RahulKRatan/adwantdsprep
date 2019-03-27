@@ -10,11 +10,6 @@ public class InOrderTraversal {
     inOrderTraversalRecursive(node.right);
     }
 
-    public static void inOrderTraversalIterative(TreeNode node){
-
-
-    }
-
     public static void main(String[] args) {
         InOrderTraversal tree = new InOrderTraversal();
         tree.node = new TreeNode(1);
