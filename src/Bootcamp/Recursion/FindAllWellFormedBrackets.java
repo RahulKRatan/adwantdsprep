@@ -1,6 +1,7 @@
 package Bootcamp.Recursion;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class FindAllWellFormedBrackets {
     static String[] find_all_well_formed_brackets(int n) {
@@ -24,6 +25,6 @@ public class FindAllWellFormedBrackets {
 
     public static void main(String[] args) {
         int n = 3;
-        System.out.println(find_all_well_formed_brackets(n));
+        System.out.println(Arrays.toString(find_all_well_formed_brackets(n)));
     }
 }
