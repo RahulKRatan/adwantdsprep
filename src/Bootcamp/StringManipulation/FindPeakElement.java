@@ -27,6 +27,14 @@ public class FindPeakElement {
     }
 }
 
+/*
+Can we find a peak element in worst time complexity better than O(n)?
+We can use Divide and Conquer to find a peak in O(Logn) time. The idea is Binary Search based, we compare middle element with its neighbors.
+If middle element is not smaller than any of its neighbors, then we return it. If the middle element is smaller than the its left neighbor, then there is always a peak in left half (Why? take few examples).
+If the middle element is smaller than the its right neighbor, then there is always a peak in right half (due to same reason as left half). Following are C and Java implementations of this approach.
+ */
+
+
 //
 //// A Java program to find a peak element element using divide and conquer
 //import java.util.*;
