@@ -3,6 +3,8 @@ package Bootcamp.StringManipulation;
 import java.util.ArrayList;
 import java.util.List;
 
+// time and space complexity - O(numrows square)
+
 public class PascalTriangle {
     public static List<List<Integer>> generate(int numRows) {
         List<List<Integer>> triangle = new ArrayList<List<Integer>>();
