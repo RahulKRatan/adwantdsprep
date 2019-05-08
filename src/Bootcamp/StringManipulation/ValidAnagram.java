@@ -16,7 +16,8 @@ public class ValidAnagram {
         }
         return false;
     }
-
+//we could increment the counter for each letter in ss and decrement the counter for
+// each letter in tt, then check if the counter reaches back to zero.
     // efficient way using counter;
 //    public boolean isAnagram(String s, String t) {
 //        if (s.length() != t.length()) {
