@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class ValidAnagram {
 
-    public boolean isAnagram(String s, String t) {
+    public static boolean isAnagram(String s, String t) {
         char temp1[] = s.toCharArray();
         char temp2[] = t.toCharArray();
         Arrays.sort(temp1);
@@ -18,7 +18,7 @@ public class ValidAnagram {
     }
 
     public static void main(String[] args) {
-
+        System.out.println(isAnagram("cat","tac"));
     }
 
 
