@@ -6,6 +6,14 @@ import java.util.HashMap;
 Thank you! You gave me the missing piece of the puzzle - I couldn't figure out how to remove an element from the array
 without shifting the elements and updating their indexes in the map, causing the removal to cost O(N).
 The idea of swapping the item to be deleted with the last item is simply brilliant !
+Why can't we simply use a hashmap for remove(), insert() and getRandom()?
+Why a arrayList is needed? It seems like the hashmap alone can fulfill all operations?
+The question requires getRandom() in O(1) time and each element needs to be returned with the same probability.
+You can't do that with just hashmap itself.
+ does it make any difference if we change ArrayList to a LinkedList?
+  It does. For a linked list get(index) is a linear time (O(n)) operation since it requires that you search through the whole list in the worst case.
+  Where as an arraylist is O(1) lookup since it uses an array as it's internal data structure.
+  https://leetcode.com/problems/insert-delete-getrandom-o1/discuss/85401/Java-solution-using-a-HashMap-and-an-ArrayList-along-with-a-follow-up.-(131-ms)
  */
 public class InsertDeleteGetRandomO1 {
 
