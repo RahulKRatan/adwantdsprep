@@ -1,5 +1,7 @@
 package Bootcamp.LinkedList;
 
+// get to the middle of the list using fast and slow pointer and then reverse second half of the list and compare it with first half
+// for palindrome match
 public class PalindromeLinkedList {
     public static boolean isPalindrome(ListNode head) {
         ListNode fast = head, slow = head;
