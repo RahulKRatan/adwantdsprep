@@ -1,29 +1,34 @@
 package Bootcamp.LinkedList;
 
 public class ReverseLinkedList {
-    public ListNode reverseList(ListNode head) {
-        if(head==null||head.next==null)
-            return head;
-
-        ListNode p1 = head;
-        ListNode p2 = p1.next;
-
-        head.next = null;
-        while(p1!=null&& p2!=null){
-            ListNode t = p2.next;
-            p2.next = p1;
-            p1 = p2;
-            p2 = t;
+    public static ListNode reverseList(ListNode head) {
+        ListNode prev = null;
+        ListNode curr = head;
+        while (curr != null) {
+            ListNode nextTemp = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = nextTemp;
         }
-
-        return p1;
+        return prev;
     }
+/*
+Recursive
+public ListNode reverseList(ListNode head) {
+    if (head == null || head.next == null) return head;
+    ListNode p = reverseList(head.next);
+    head.next.next = head;
+    head.next = null;
+    return p;
+}
+ */
+
 
     public static void main(String[] args) {
-
+        ListNode head = new ListNode(10);
+        head.next = new ListNode(20);
+        head.next.next = new ListNode(30);
+        ListNode res = reverseList(head);
     }
 }
 
-class ListNode{
-    ListNode next;
-}
