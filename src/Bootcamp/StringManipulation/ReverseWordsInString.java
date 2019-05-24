@@ -3,8 +3,13 @@ package Bootcamp.StringManipulation;
 public class ReverseWordsInString {
 
     public static String reverseWords(String s) {
-        System.out.println(reverse(s));
-        return "";
+       String temp = reverse(s);
+        String t[] = temp.split(" ");
+        StringBuilder stringBuilder = new StringBuilder();
+        for(int i=0;i< t.length;i++){
+            stringBuilder.append(reverse(t[i]) + " ");
+        }
+        return stringBuilder.toString();
     }
 
     public static String reverse(String string){
@@ -17,7 +22,7 @@ public class ReverseWordsInString {
             str[j] = temp;
             i++;j--;
         }
-        return str.toString();
+        return new String(str);
     }
 
     public static void main(String[] args) {
