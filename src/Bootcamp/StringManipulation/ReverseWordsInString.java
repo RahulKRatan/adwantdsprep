@@ -9,7 +9,7 @@ public class ReverseWordsInString {
         for(int i=0;i< t.length;i++){
             stringBuilder.append(reverse(t[i]) + " ");
         }
-        return stringBuilder.toString();
+        return stringBuilder.toString().trim();
     }
 
     public static String reverse(String string){
@@ -26,7 +26,7 @@ public class ReverseWordsInString {
     }
 
     public static void main(String[] args) {
-        System.out.println(reverseWords("  hello world!  "));
+        System.out.println(reverseWords("a good   example"));
     }
 
 }
