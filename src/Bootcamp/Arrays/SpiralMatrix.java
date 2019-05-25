@@ -2,7 +2,13 @@ package Bootcamp.Arrays;
 
 import java.util.ArrayList;
 import java.util.List;
+/*
+This is a very simple and easy to understand solution. I traverse right and increment rowBegin,
+then traverse down and decrement colEnd, then I traverse left and decrement rowEnd, and finally I traverse up and increment colBegin.
 
+The only tricky part is that when I traverse left or up I have to check whether the row or col still exists to prevent duplicates.
+If anyone can do the same thing without that check, please let me know!
+ */
 public class SpiralMatrix {
 
     public List<Integer> spiralOrder(int[][] matrix) {
@@ -49,5 +55,5 @@ public class SpiralMatrix {
 
         return res;
     }
-    
+
 }
