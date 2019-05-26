@@ -17,13 +17,13 @@ package Bootcamp.Arrays;
  */
 public class MedianTwoSortedArrays {
 
-    public double findMedianSortedArrays(int input1[], int input2[]) {
-        //if input1 length is greater than switch them so that input1 is smaller than input2.
-        if (input1.length > input2.length) {
-            return findMedianSortedArrays(input2, input1);
+    public double findMedianSortedArrays(int nums1[], int nums2[]) {
+        //if nums1 length is greater than switch them so that nums1 is smaller than nums2.
+        if (nums1.length > nums2.length) {
+            return findMedianSortedArrays(nums2, nums1);
         }
-        int x = input1.length;
-        int y = input2.length;
+        int x = nums1.length;
+        int y = nums2.length;
 
         int low = 0;
         int high = x;
@@ -33,11 +33,11 @@ public class MedianTwoSortedArrays {
 
             //if partitionX is 0 it means nothing is there on left side. Use -INF for maxLeftX
             //if partitionX is length of input then there is nothing on right side. Use +INF for minRightX
-            int maxLeftX = (partitionX == 0) ? Integer.MIN_VALUE : input1[partitionX - 1];
-            int minRightX = (partitionX == x) ? Integer.MAX_VALUE : input1[partitionX];
+            int maxLeftX = (partitionX == 0) ? Integer.MIN_VALUE : nums1[partitionX - 1];
+            int minRightX = (partitionX == x) ? Integer.MAX_VALUE : nums1[partitionX];
 
-            int maxLeftY = (partitionY == 0) ? Integer.MIN_VALUE : input2[partitionY - 1];
-            int minRightY = (partitionY == y) ? Integer.MAX_VALUE : input2[partitionY];
+            int maxLeftY = (partitionY == 0) ? Integer.MIN_VALUE : nums2[partitionY - 1];
+            int minRightY = (partitionY == y) ? Integer.MAX_VALUE : nums2[partitionY];
 
             if (maxLeftX <= minRightY && maxLeftY <= minRightX) {
                 //We have partitioned array at correct place
@@ -60,10 +60,10 @@ public class MedianTwoSortedArrays {
     }
 
     public static void main(String[] args) {
-        int[] x = {1, 3, 8, 9, 15};
-        int[] y = {7, 11, 19, 21, 18, 25};
+        int[] x = {1,3, 8, 9, 15};
+        int[] y = {7, 11, 18,19, 21, 25};
 
         MedianTwoSortedArrays mm = new MedianTwoSortedArrays();
-        mm.findMedianSortedArrays(x, y);
+        System.out.println(mm.findMedianSortedArrays(x, y));
     }
 }
