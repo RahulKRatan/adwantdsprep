@@ -7,6 +7,7 @@ import java.util.*;
 *Time complexity : O(Nlog(k)). The complexity of Counter method is \mathcal{O}(N)O(N). To build a heap and output list takes \mathcal{O}(N \log(k))O(Nlog(k)). Hence the overall complexity of the algorithm is \mathcal{O}(N + N \log(k)) = \mathcal{O}(N \log(k))O(N+Nlog(k))=O(Nlog(k)).
 *
  *Space complexity : O(N) to store the hash map.
+ * https://leetcode.com/problems/top-k-frequent-elements/discuss/81635/3-Java-Solution-using-Array-MaxHeap-TreeMap
 */
 public class TopK {
 
@@ -16,6 +17,7 @@ public class TopK {
             map.put(n, map.getOrDefault(n,0)+1);
         }
 
+        // decreasing comparator
         PriorityQueue<Map.Entry<Integer, Integer>> maxHeap =
                 new PriorityQueue<>((a,b)->(b.getValue()-a.getValue()));
         for(Map.Entry<Integer,Integer> entry: map.entrySet()){
