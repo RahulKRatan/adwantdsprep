@@ -1,30 +1,38 @@
 package Bootcamp.Arrays;
 
-import java.util.Arrays;
-import java.util.TreeSet;
-
+import java.util.*;
+/*
+*Complexity Analysis
+*
+*Time complexity : O(Nlog(k)). The complexity of Counter method is \mathcal{O}(N)O(N). To build a heap and output list takes \mathcal{O}(N \log(k))O(Nlog(k)). Hence the overall complexity of the algorithm is \mathcal{O}(N + N \log(k)) = \mathcal{O}(N \log(k))O(N+Nlog(k))=O(Nlog(k)).
+*
+ *Space complexity : O(N) to store the hash map.
+*/
 public class TopK {
 
-    static int[] topK(int[] arr, int k) {
-        TreeSet<Integer> treeSet = new TreeSet<>();
-        for(int i=0;i<arr.length;i++){
-            treeSet.add(arr[i]);
-            if(treeSet.size() > k){
-                treeSet.pollFirst();
-            }
+    static List<Integer> topK(int[] nums, int k) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for(int n: nums){
+            map.put(n, map.getOrDefault(n,0)+1);
         }
-        int ans[] = new int[treeSet.size()];
-        int pointer = 0;
-        while(treeSet.iterator().hasNext()){
-            ans[pointer++] = treeSet.pollFirst();
+
+        PriorityQueue<Map.Entry<Integer, Integer>> maxHeap =
+                new PriorityQueue<>((a,b)->(b.getValue()-a.getValue()));
+        for(Map.Entry<Integer,Integer> entry: map.entrySet()){
+            maxHeap.add(entry);
         }
-        return ans;
+
+        List<Integer> res = new ArrayList<>();
+        while(res.size()<k){
+            Map.Entry<Integer, Integer> entry = maxHeap.poll();
+            res.add(entry.getKey());
+        }
+        return res;
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[]{1, 5, 1, 5, 1};
-        int k = 3;
-        int[] result = topK(arr,k);
-        Arrays.stream(result).forEach(s-> System.out.println(s));
+        int[] arr = new int[]{1,1,1,2,2,3};
+        int k = 2;
+        topK(arr,k);
     }
 }
