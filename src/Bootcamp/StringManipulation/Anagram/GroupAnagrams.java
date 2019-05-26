@@ -1,4 +1,4 @@
-package Bootcamp.StringManipulation;
+package Bootcamp.StringManipulation.Anagram;
 
 import java.util.ArrayList;
 import java.util.Arrays;
