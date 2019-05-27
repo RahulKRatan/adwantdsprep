@@ -1,45 +1,44 @@
 package Bootcamp.StringManipulation.Anagram;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class FindAllAnagramsString {
 
     public static List<Integer> findAnagrams(String s, String p) {
-        List<Integer> result = new ArrayList<>();
-        int i=0,j=p.length()-1;
-        int size = s.length()-1;
-        if(p.length() > size){
-            return result;
+        List<Integer> result = new LinkedList<>();
+        if(p.length()> s.length()) return result;
+        Map<Character, Integer> map = new HashMap<>();
+        for(char c : p.toCharArray()){
+            map.put(c, map.getOrDefault(c, 0) + 1);
         }
-        while (j <=size ){
-            if(containsAllChars(s.substring(i,j+1),p)){
-                result.add(i);
-                i = i+1;
-                j = j+1;
+        int counter = map.size();
+
+        int begin = 0, end = 0;
+
+        while(end < s.length()){
+            char c = s.charAt(end);
+            if( map.containsKey(c) ){
+                map.put(c, map.get(c)-1);
+                if(map.get(c) == 0) counter--;
             }
-            else {
-                i = i+1;
-                j = j+1;
+            end++;
+
+            while(counter == 0){
+                char tempc = s.charAt(begin);
+                if(map.containsKey(tempc)){
+                    map.put(tempc, map.get(tempc) + 1);
+                    if(map.get(tempc) > 0){
+                        counter++;
+                    }
+                }
+                if(end-begin == p.length()){
+                    result.add(begin);
+                }
+                begin++;
             }
+
         }
         return result;
-    }
-
-    public static boolean containsAllChars
-            (String container, String containee) {
-        return stringToCharacterSet(container).containsAll
-                (stringToCharacterSet(containee));
-    }
-
-    public static Set<Character> stringToCharacterSet(String s) {
-        Set<Character> set = new HashSet<>();
-        for (char c : s.toCharArray()) {
-            set.add(c);
-        }
-        return set;
     }
 
     public static void main(String[] args) {
