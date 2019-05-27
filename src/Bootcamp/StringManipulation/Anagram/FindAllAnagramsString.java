@@ -1,7 +1,9 @@
 package Bootcamp.StringManipulation.Anagram;
 
 import java.util.*;
-
+/*
+https://leetcode.com/problems/find-all-anagrams-in-a-string/discuss/92007/Sliding-Window-algorithm-template-to-solve-all-the-Leetcode-substring-search-problem.
+ */
 public class FindAllAnagramsString {
 
     public static List<Integer> findAnagrams(String s, String p) {
@@ -23,6 +25,7 @@ public class FindAllAnagramsString {
             }
             end++;
 
+            // counter = 0 means we found the match
             while(counter == 0){
                 char tempc = s.charAt(begin);
                 if(map.containsKey(tempc)){
