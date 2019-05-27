@@ -1,4 +1,4 @@
-package Bootcamp.StringManipulation;
+package Bootcamp.StringManipulation.Templates;
 
 
 public class BacktrackingTemplate {

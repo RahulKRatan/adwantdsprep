@@ -1,4 +1,4 @@
-package Bootcamp.StringManipulation;
+package Bootcamp.StringManipulation.Templates;
 
 import java.util.HashMap;
 import java.util.LinkedList;
