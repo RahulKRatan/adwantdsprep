@@ -5,6 +5,41 @@ public class BacktrackingTemplate {
 /**
     This structure might apply to many other backtracking questions,
     but here I am just going to demonstrate Subsets, Permutations, and Combination Sum.
+    https://leetcode.com/problems/subsets/
+    https://leetcode.com/problems/subsets-ii/
+    https://leetcode.com/problems/permutations/
+    https://leetcode.com/problems/permutations-ii/
+    https://leetcode.com/problems/combination-sum/
+    https://leetcode.com/problems/combination-sum-ii/
+    https://leetcode.com/problems/palindrome-partitioning/
+
+ (1) Why use sort() & (2) Why pass start arugument & (3) what is tempList.remove(tempList.size() - 1) used for?
+ (1)sort() method is to check duplicates for convinence.
+ Like [2,2,3], target 5. Step by step like below:
+ 2,2,2 -1 return -> 2,2,2 -1 return -> 2,2,3...
+ Clearly, it calls 2,2,2 twice.
+ In this case (without duplicates), not using it is better.
+
+ (2)passing argument 'start' will make sure each combination of num run once.
+ I think combined with sort() method to explain it will be easy to understand.
+ e.g. Like [3,2,4], after sorted, turn to [2,3,4]. (ignore target, just look for what's going on)
+ First reached list will be 2,2,2 return --> 2,2,3 return--> 2,2,4 return--> 2,3,3 ...
+ After 2,2,4 return, it should go to 2,3,3 (due to arg start) instead of 2,3,2. Because 2,2,3 we already reached.
+
+ (3)tempList.remove(tempList.size() - 1) do like a pop()
+ Imagine a recursion tree.
+ Node1 adds num1 to tempList, and calls backtrack() to go into its child Node2. Once this child return to its parent Node1, tempList.remove() will pop out the num1 it added before, and adds num2 to tempList and call backtrack() again.
+
+ Algo :
+
+ Pick a starting point.
+ while(Problem is not solved)
+ For each path from the starting point.
+ check if selected path is safe, if yes select it
+ and make recursive call to rest of the problem
+ before which undo the current move.
+ End For
+ If none of the move works out, return false, NO SOLUTON.
 **/
 /*
 Subsets : https://leetcode.com/problems/subsets/
