@@ -2,14 +2,13 @@ package Bootcamp.StringManipulation.Backtracking;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class CombinationSum {
 
     public static List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> list = new ArrayList<>();
-        Arrays.sort(candidates);
+        //Arrays.sort(candidates);
         backtrack(list, new ArrayList<>(), candidates, target, 0);
         return list;
     }
@@ -29,6 +28,7 @@ public class CombinationSum {
     public static void main(String[] args) {
         int[] nums = new int[]{2,3,6,7};
         List<List<Integer>> res = combinationSum(nums,7);
+        System.out.println(res);
 
     }
 
