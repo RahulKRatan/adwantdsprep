@@ -4,17 +4,17 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-/*
+/**
 https://leetcode.com/problems/find-all-anagrams-in-a-string/discuss/92007/Sliding-Window-algorithm-template-to-solve-all-the-Leetcode-substring-search-problem./171085
 Questions that can be solved using this :
-https://leetcode.com/problems/minimum-window-substring/
-https://leetcode.com/problems/longest-substring-without-repeating-characters/
-https://leetcode.com/problems/substring-with-concatenation-of-all-words/
-https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/
-https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters
-https://leetcode.com/problems/find-all-anagrams-in-a-string/
-https://leetcode.com/problems/permutation-in-string/
-https://leetcode.com/problems/longest-repeating-character-replacement
+    https://leetcode.com/problems/minimum-window-substring/
+    https://leetcode.com/problems/longest-substring-without-repeating-characters/
+    https://leetcode.com/problems/substring-with-concatenation-of-all-words/
+    https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/
+    https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters
+    https://leetcode.com/problems/find-all-anagrams-in-a-string/
+    https://leetcode.com/problems/permutation-in-string/
+    https://leetcode.com/problems/longest-repeating-character-replacement
  */
 public class SlidingWindowTemplate {
     public List<Integer> slidingWindowTemplateByHarryChaoyangHe(String s, String t) {
