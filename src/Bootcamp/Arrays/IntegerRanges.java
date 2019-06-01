@@ -17,7 +17,6 @@ public class IntegerRanges {
             }
             i = j+1;
         }
-
         return result;
     }
 
