@@ -2,18 +2,25 @@ package Bootcamp.LinkedList;
 
 public class AddTwoNumbers {
 
-    
+    public static Node addTwoNumbers(Node l1, Node l2) {
+        
+
+
+        return null;
+    }
 
 
 
     public static void main(String[] args) {
-        ListNode first = new ListNode(2);
-        first.next = new ListNode(4);
-        first.next.next = new ListNode(3);
+        Node first = new Node(2);
+        first.next = new Node(4);
+        first.next.next = new Node(3);
 
-        ListNode second = new ListNode(5);
-        second.next = new ListNode(6);
-        second.next.next = new ListNode(4);
+        Node second = new Node(5);
+        second.next = new Node(6);
+        second.next.next = new Node(4);
+
+        Node result = addTwoNumbers(first,second);
     }
 
 
