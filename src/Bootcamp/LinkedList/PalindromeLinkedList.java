@@ -3,8 +3,8 @@ package Bootcamp.LinkedList;
 // get to the middle of the list using fast and slow pointer and then reverse second half of the list and compare it with first half
 // for palindrome match
 public class PalindromeLinkedList {
-    public static boolean isPalindrome(ListNode head) {
-        ListNode fast = head, slow = head;
+    public static boolean isPalindrome(Node head) {
+        Node fast = head, slow = head;
         while (fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
@@ -25,10 +25,10 @@ public class PalindromeLinkedList {
         return true;
     }
 
-    public static ListNode reverse(ListNode head) {
-        ListNode prev = null;
+    public static Node reverse(Node head) {
+        Node prev = null;
         while (head != null) {
-            ListNode next = head.next;
+            Node next = head.next;
             head.next = prev;
             prev = head;
             head = next;
@@ -37,10 +37,10 @@ public class PalindromeLinkedList {
     }
 
     public static void main(String[] args) {
-        ListNode first = new ListNode(1);
-        first.next = new ListNode(2);
-        first.next.next = new ListNode(2);
-        first.next.next.next = new ListNode(1);
+        Node first = new Node(1);
+        first.next = new Node(2);
+        first.next.next = new Node(2);
+        first.next.next.next = new Node(1);
         System.out.println(isPalindrome(first));
     }
 }
