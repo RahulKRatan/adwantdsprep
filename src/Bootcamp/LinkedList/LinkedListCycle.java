@@ -2,12 +2,12 @@ package Bootcamp.LinkedList;
 
 public class LinkedListCycle {
 // T - O(N) ; S - O(1)
-    public boolean hasCycle(ListNode head) {
+    public boolean hasCycle(Node head) {
         if (head == null || head.next == null) {
             return false;
         }
-        ListNode slow = head;
-        ListNode fast = head.next;
+        Node slow = head;
+        Node fast = head.next;
         while (slow != fast) {
             if (fast == null || fast.next == null) {
                 return false;
@@ -19,8 +19,8 @@ public class LinkedListCycle {
     }
 
     /* T - O(N) ; S - O(N)
-    public boolean hasCycle(ListNode head) {
-    Set<ListNode> nodesSeen = new HashSet<>();
+    public boolean hasCycle(Node head) {
+    Set<Node> nodesSeen = new HashSet<>();
     while (head != null) {
         if (nodesSeen.contains(head)) {
             return true;
