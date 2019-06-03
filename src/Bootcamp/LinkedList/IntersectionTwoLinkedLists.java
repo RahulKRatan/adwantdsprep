@@ -3,12 +3,12 @@ package Bootcamp.LinkedList;
 public class IntersectionTwoLinkedLists {
 
 
-    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+    public Node getIntersectionNode(Node headA, Node headB) {
         //boundary check
         if(headA == null || headB == null) return null;
 
-        ListNode a = headA;
-        ListNode b = headB;
+        Node a = headA;
+        Node b = headB;
 
         //if a & b have different len, then we will stop the loop after second iteration
         while( a != b){
