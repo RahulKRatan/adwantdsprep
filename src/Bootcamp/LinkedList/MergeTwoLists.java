@@ -2,9 +2,9 @@ package Bootcamp.LinkedList;
 
 public class MergeTwoLists {
 
-    public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode result = new ListNode(-1);
-        ListNode prev = result;
+    public static Node mergeTwoLists(Node l1, Node l2) {
+        Node result = new Node(-1);
+        Node prev = result;
         while (l1 !=null && l2 != null){
             if(l1.val <= l2.val){
                 prev.next = l1;
@@ -31,7 +31,7 @@ public class MergeTwoLists {
 
     /*
     Recurrsion
-       public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+       public Node mergeTwoLists(Node l1, Node l2) {
         if (l1 == null) {
             return l2;
         }
@@ -51,11 +51,11 @@ public class MergeTwoLists {
      */
 
     public static void main(String[] args) {
-        ListNode first = new ListNode(-9);
-        first.next = new ListNode(3);
+        Node first = new Node(-9);
+        first.next = new Node(3);
 
-        ListNode second = new ListNode(5);
-        second.next = new ListNode(7);
+        Node second = new Node(5);
+        second.next = new Node(7);
         mergeTwoLists(first,second);
     }
 }
