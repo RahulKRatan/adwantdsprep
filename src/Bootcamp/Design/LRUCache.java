@@ -10,7 +10,7 @@ package Bootcamp.Design;
  */
 
 /**
- *  Solution : 
+ *  Solution :
  *  Hashmap + DoubleLinkedList
  */
 public class LRUCache {
