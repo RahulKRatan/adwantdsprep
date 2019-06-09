@@ -27,4 +27,8 @@ public class MaxStack {
 
     }
 
+    public static void main(String[] args) {
+        
+    }
+
 }
