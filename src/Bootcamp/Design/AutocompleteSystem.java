@@ -17,6 +17,15 @@ public class AutocompleteSystem {
         }
     }
 
+    class Pair {
+        String s;
+        int c;
+        public Pair(String s, int c) {
+            this.s = s; this.c = c;
+        }
+    }
+    TrieNode root;
+    String prefix;
     public AutocompleteSystem(String[] sentences, int[] times) {
 
     }
