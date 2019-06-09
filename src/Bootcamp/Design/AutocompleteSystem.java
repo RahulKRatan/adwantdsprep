@@ -8,7 +8,7 @@ public class AutocompleteSystem {
 
     }
 
-    public static List<String> input(char c) {
+    public List<String> input(char c) {
 
     }
 
