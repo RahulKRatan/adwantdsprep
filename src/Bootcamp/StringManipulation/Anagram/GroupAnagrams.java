@@ -17,7 +17,7 @@ import java.util.List;
  */
 
 public class GroupAnagrams {
-    
+
     public static List<List<String>> groupAnagrams(String[] strs) {
         HashMap<String,List<String>> temp = new HashMap<>();
         List<List<String>> result = new ArrayList<>();
