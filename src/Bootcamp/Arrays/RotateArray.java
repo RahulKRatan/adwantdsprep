@@ -1,5 +1,10 @@
 package Bootcamp.Arrays;
 
+/*
+Time complexity : O(n) nn elements are reversed a total of three times.
+Space complexity : O(1). No extra space is used.
+ */
+
 public class RotateArray {
     public static void rotate(int[] nums, int k) {
         k %= nums.length;
