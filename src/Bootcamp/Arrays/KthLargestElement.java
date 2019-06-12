@@ -7,6 +7,8 @@ import java.util.PriorityQueue;
 Time complexity : O(Nlogk).
 Space complexity : O(k) to store the heap elements.
 
+Store elements in map heap and then poll upto k-1. return heap.poll()
+
 Hoare's selection algorithm - try this out
 */
 
@@ -14,14 +16,14 @@ public class KthLargestElement {
 
     public static int findKthLargest(int[] nums, int k) {
         //decreasing order
-        PriorityQueue<Integer> heap = new PriorityQueue<>(Comparator.reverseOrder());
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());
         for(int num: nums){
-            heap.add(num);
+            maxHeap.add(num);
         }
         for(int i=0;i<k-1;i++){
-            heap.poll();
+            maxHeap.poll();
         }
-        return heap.poll();
+        return maxHeap.poll();
     }
 
     public static void main(String[] args) {
