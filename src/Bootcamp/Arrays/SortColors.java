@@ -1,5 +1,17 @@
 package Bootcamp.Arrays;
 
+
+/**
+ * Time complexity : {O}(N) since it's one pass along the array of length NN.
+ *
+ * Space complexity : O}(1) since it's a constant space solution.
+ *
+ * Algorithm :
+ * if arr[i] is red - swap arr[i] with arr[red] and increment red & i
+ * if arr[i] is blue - swap arr[i] with arr[blue] and decrement blue and i
+ * else just increment i ( in case the element is green )
+ *
+ */
 public class SortColors {
 
     public static int[] sortColors(int[] nums) {
