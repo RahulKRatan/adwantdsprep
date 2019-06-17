@@ -26,6 +26,6 @@ public class LengthOfLongestSubstringKDistinct {
         return len;
     }
     public static void main(String[] args) {
-        System.out.println(lengthOfLongestSubstringKDistinct("aa",1));
+        System.out.println(lengthOfLongestSubstringKDistinct("abcba",2));
     }
 }
