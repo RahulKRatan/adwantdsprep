@@ -15,8 +15,7 @@ public class SerializeDeserializeBinaryTree {
     public static String serializeTree(TreeNode root, String s){
         if(root == null){
             s = s + "null,";
-        }
-        else {
+        } else {
             s = s+String.valueOf(root.val) + ",";
             s = serializeTree(root.left,s);
             s = serializeTree(root.right,s);
@@ -54,6 +53,5 @@ public class SerializeDeserializeBinaryTree {
         TreeNode result = deserialize(serialize(tree.node));
         System.out.println(result);
     }
-
 
 }
