@@ -45,7 +45,7 @@ public class FindAllAnagramsString {
     }
 
     public static void main(String[] args) {
-        List<Integer> res = findAnagrams("baa","aa");
+        List<Integer> res = findAnagrams("cbaebabacd","abc");
         System.out.println(res);
     }
 }
