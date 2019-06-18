@@ -1,4 +1,4 @@
-package Bootcamp.Arrays;
+package Bootcamp.StringManipulation.TwoSumVariations;
 
 import java.util.Arrays;
 import java.util.TreeSet;
