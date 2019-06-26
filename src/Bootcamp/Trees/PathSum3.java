@@ -11,7 +11,6 @@ Since we aren't required to keep any information on the path itself, we simply r
 From a high level, pathSum() recursively visits each Node and pathSumFrom() recursively visits each child Node and
 totals their values and checks that against the sum. Every node will be checked including all possible paths downward. */
 
-
 public class PathSum3 {
     TreeNode node;
     public static int pathSum(TreeNode root, int sum) {
