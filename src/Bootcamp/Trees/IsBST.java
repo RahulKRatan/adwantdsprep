@@ -2,7 +2,6 @@ package Bootcamp.Trees;
 
 public class IsBST {
     TreeNode root;
-
     boolean isBST(TreeNode root){
         return isBST(root,Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY);
     }
