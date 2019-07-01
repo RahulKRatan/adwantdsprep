@@ -6,7 +6,7 @@ import Bootcamp.Trees.TreeNode;
  * Morris inorder/preorder traversals
  *
  * Time complexity O(n)
- * Space complexity O(1)
+ * Space complexity O(1) [ normal would be O(N) ]
  */
 public class MorrisTraversal {
 
