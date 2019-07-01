@@ -5,6 +5,7 @@ import java.util.HashMap;
 /**
  * Java program to print Postorder traversal from
  * given Inorder and Preorder traversals.
+ * Time complexity: O(n)
  */
 
 public class PostorderGivenInorderPreorder {
@@ -33,7 +34,7 @@ public class PostorderGivenInorderPreorder {
         void printPostMain(int[] in, int[] pre)
         {
             int n = pre.length;
-            HashMap<Integer, Integer> hm = new HashMap<Integer, Integer>();
+            HashMap<Integer, Integer> hm = new HashMap<>();
             for (int i=0; i<n; i++)
                 hm.put(in[i], i);
 
