@@ -3,9 +3,6 @@ package Bootcamp.Trees.Traversals;
 import Bootcamp.Trees.TreeNode;
 
 /**
- * Date 03/08/2016
- * @author Tushar Roy
- *
  * Morris inorder/preorder traversals
  *
  * Time complexity O(n)
@@ -18,7 +15,7 @@ public class MorrisTraversal {
         while(current != null) {
             //left is null then print the node and go to right
             if (current.left == null) {
-                System.out.print(current.data + " ");
+                System.out.print(current.val + " ");
                 current = current.right;
             }
             else {
@@ -34,7 +31,7 @@ public class MorrisTraversal {
                     current = current.left;
                 }else{ //left is already visit. Go rigth after visiting current.
                     predecessor.right = null;
-                    System.out.print(current.data + " ");
+                    System.out.print(current.val + " ");
                     current = current.right;
                 }
             }
@@ -45,7 +42,7 @@ public class MorrisTraversal {
         TreeNode current = root;
         while (current != null) {
             if(current.left == null) {
-                System.out.print(current.data + " ");
+                System.out.print(current.val + " ");
                 current = current.right;
             }
             else {
@@ -55,7 +52,7 @@ public class MorrisTraversal {
                 }
                 if(predecessor.right == null){
                     predecessor.right = current;
-                    System.out.print(current.data + " ");
+                    System.out.print(current.val + " ");
                     current = current.left;
                 }else{
                     predecessor.right = null;
@@ -65,19 +62,4 @@ public class MorrisTraversal {
         }
     }
 
-    public static void main(String args[]) {
-        BinaryTree bt = new BinaryTree();
-        Node root = null;
-        root = bt.addNode(10, root);
-        root = bt.addNode(50, root);
-        root = bt.addNode(-10, root);
-        root = bt.addNode(7, root);
-        root = bt.addNode(9, root);
-        root = bt.addNode(-20, root);
-        root = bt.addNode(30, root);
-        MorrisTraversal mt = new MorrisTraversal();
-        mt.inorder(root);
-        System.out.println();
-        mt.preorder(root);
-    }
 }
