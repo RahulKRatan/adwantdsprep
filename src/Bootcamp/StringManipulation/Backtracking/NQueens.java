@@ -12,6 +12,7 @@ import java.util.List;
  *
  * Time complexity O(n*n)
  * Space complexity O(n*n)
+ * Also https://algorithms.tutorialhorizon.com/backtracking-n-queens-problem/
  */
 public class NQueens {
 
