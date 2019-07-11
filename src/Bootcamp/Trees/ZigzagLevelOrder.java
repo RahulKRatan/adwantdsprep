@@ -14,7 +14,7 @@ public class ZigzagLevelOrder {
 
         Queue<TreeNode> q = new LinkedList<>();
         q.add(root);
-        boolean order = true; // this is 
+        boolean order = true; // this is insert elements alternatively
         int size = 1;
 
         while(!q.isEmpty()) {
@@ -24,7 +24,7 @@ public class ZigzagLevelOrder {
                 if(order) {
                     tmp.add(n.val);
                 } else {
-                    tmp.add(0, n.val);
+                    tmp.add(0, n.val); // 
                 }
                 if(n.left != null) q.add(n.left);
                 if(n.right != null) q.add(n.right);
