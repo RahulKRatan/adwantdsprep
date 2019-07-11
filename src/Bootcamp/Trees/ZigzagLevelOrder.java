@@ -24,7 +24,7 @@ public class ZigzagLevelOrder {
                 if(order) {
                     tmp.add(n.val);
                 } else {
-                    tmp.add(0, n.val); // 
+                    tmp.add(0, n.val); // interesting way to insert - inserts elements at the first position and pushing rest to right
                 }
                 if(n.left != null) q.add(n.left);
                 if(n.right != null) q.add(n.right);
