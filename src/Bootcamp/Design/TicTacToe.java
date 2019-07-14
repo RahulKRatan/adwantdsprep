@@ -47,6 +47,7 @@ public class TicTacToe {
     }
 
     public static void main(String[] args) {
-
+        TicTacToe ticTacToe = new TicTacToe(3);
+        System.out.println(ticTacToe.move(0,0,1));
     }
 }
