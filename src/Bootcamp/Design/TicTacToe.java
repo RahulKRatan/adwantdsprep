@@ -29,7 +29,7 @@ public class TicTacToe {
             diagonal += toAdd;
         }
 
-        if(col == (cols.length - row -1)){
+        if(row+col == rows.length-1){
             antiDiagonal += toAdd;
         }
 
@@ -47,7 +47,9 @@ public class TicTacToe {
     }
 
     public static void main(String[] args) {
-        TicTacToe ticTacToe = new TicTacToe(3);
-        System.out.println(ticTacToe.move(0,0,1));
+        TicTacToe ticTacToe = new TicTacToe(2);
+        System.out.println(ticTacToe.move(0,0,2));
+        System.out.println(ticTacToe.move(0,1,1));
+        System.out.println(ticTacToe.move(1,1,2));
     }
 }
