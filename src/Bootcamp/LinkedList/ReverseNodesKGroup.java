@@ -1,5 +1,21 @@
 package Bootcamp.LinkedList;
 
+
+/**
+ * Reverse a link list between begin and end exclusively
+ * an example:
+ * a linked list:
+ * 0->1->2->3->4->5->6
+ * |           |
+ * begin       end
+ * after call begin = reverse(begin, end)
+ *
+ * 0->3->2->1->4->5->6
+ *          |  |
+ *      begin end
+ * @return the reversed list's 'begin' node, which is the precedence of node end
+ */
+
 public class ReverseNodesKGroup {
 
     public static Node reverseKGroup(Node head, int k) {
