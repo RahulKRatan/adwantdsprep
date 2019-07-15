@@ -5,13 +5,7 @@ import java.util.*;
 public class MergeKLists {
 
     public static Node mergeKLists(List<Node> lists) {
-        Comparator<Node> comparator = new Comparator<Node>() {
-            @Override
-            public int compare(Node o1, Node o2) {
-                return o1.val - o2.val;
-            }
-        };
-
+        Comparator<Node> comparator = Comparator.comparingInt(o -> o.val);
         Queue<Node> queue = new PriorityQueue<>(comparator);
 
         for(Node node: lists){
@@ -36,7 +30,7 @@ public class MergeKLists {
     }
 
     public static void main(String[] args) {
-        Node first = new Node(1);
+        Node first = new Node(2);
         first.next = new Node(3);
 
         Node second = new Node(1);
