@@ -2,6 +2,9 @@ package Bootcamp.LinkedList;
 
 public class RemoveNthFromEnd {
 
+    public Node removeNthFromEnd(Node head, int n) {
+
+    }
 
     public static void main(String[] args) {
         Node first = new Node(1);
