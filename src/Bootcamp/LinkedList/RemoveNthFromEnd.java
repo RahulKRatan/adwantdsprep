@@ -2,7 +2,7 @@ package Bootcamp.LinkedList;
 
 public class RemoveNthFromEnd {
 
-    public Node removeNthFromEnd(Node head, int n) {
+    public static Node removeNthFromEnd(Node head, int n) {
         
     }
 
@@ -12,5 +12,6 @@ public class RemoveNthFromEnd {
         first.next.next = new Node(3);
         first.next.next.next = new Node(4);
         first.next.next.next.next = new Node(5);
+        System.out.println(removeNthFromEnd(first,2));
     }
 }
