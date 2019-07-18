@@ -2,7 +2,7 @@ package Bootcamp.LinkedList;
 
 
 /**
- * Fast and slow pointers
+ * Fast and slow pointers - forward fast pointer till 'n'
  */
 public class RemoveNthFromEnd {
 
