@@ -1,5 +1,13 @@
 package Bootcamp.LinkedList;
 
+/**
+ * Break list in the middle to two lists (use fast & slow pointers)
+ * Reverse the order of the second list
+ * Merge two list back together
+ *
+ * 
+ */
+
 public class ReorderList {
 
     public static void reorderList(Node head) {
