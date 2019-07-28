@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Time Complexity of this method is same as time complexity of DFS traversal which is O(V+E).
+ * https://www.geeksforgeeks.org/detect-cycle-in-a-graph/
+ */
 class CycleDirectedGraph {
 
     private final int V;
