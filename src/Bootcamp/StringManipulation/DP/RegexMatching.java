@@ -40,7 +40,7 @@ public class RegexMatching {
     /**
      * Dynamic programming technique for regex matching.
      */
-    public boolean matchRegex(char[] text, char[] pattern) {
+    public boolean matchRegexDynamic(char[] text, char[] pattern) {
         boolean T[][] = new boolean[text.length + 1][pattern.length + 1];
 
         T[0][0] = true;
