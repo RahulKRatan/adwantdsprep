@@ -2,6 +2,11 @@ package Bootcamp.Arrays;
 
 import java.util.HashMap;
 
+/**
+ * Time complexity : O(n). The entire numsnums array is traversed only once.
+ *
+ * Space complexity : O(n). Hashmap mapmap can contain upto nn distinct entries in the worst case.
+ */
 public class SubarraySumEqualsK {
 
     public static int subarraySum(int[] nums, int k) {
