@@ -5,10 +5,9 @@ import java.util.Stack;
 public class DecodeString {
 
     public static String decodeString(String s) {
-        String res = "";
-        Stack<Integer> countStack = new Stack<>();
-        // resStack will always have recent calculated result
-        Stack<String> resStack = new Stack<>();
+        String res = ""; // final result
+        Stack<Integer> countStack = new Stack<>(); // num of times to iterate
+        Stack<String> resStack = new Stack<>(); // resStack will always have recent calculated result
         int idx = 0;
         while (idx < s.length()) {
             if (Character.isDigit(s.charAt(idx))) {
@@ -20,8 +19,7 @@ public class DecodeString {
                 countStack.push(count);
             }
             else if (s.charAt(idx) == '[') {
-                // pushing previous calculated result
-                resStack.push(res);
+                resStack.push(res); // pushing previous calculated result
                 res = "";
                 idx++;
             }
