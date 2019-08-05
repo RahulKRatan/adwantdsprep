@@ -20,6 +20,7 @@ public class TopK {
         // decreasing comparator
         PriorityQueue<Map.Entry<Integer, Integer>> maxHeap =
                 new PriorityQueue<>((a,b)->(b.getValue()-a.getValue()));
+
         for(Map.Entry<Integer,Integer> entry: map.entrySet()){
             maxHeap.add(entry);
         }
