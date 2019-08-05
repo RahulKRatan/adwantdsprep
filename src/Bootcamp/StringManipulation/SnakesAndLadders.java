@@ -21,7 +21,7 @@ import java.util.Queue;
  * also the column is only based on rem = (s2-1) % N and what row we are on (forwards or backwards.)
  *
  * From there, we perform a breadth first search, where the nodes are the square numbers s.
- * 
+ *
  * Time Complexity: O(N^2) where N is the length of the board.
  * Space Complexity: O(N^2)
  *
