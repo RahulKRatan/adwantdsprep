@@ -3,7 +3,7 @@ package Bootcamp.Arrays;
 public class SingleNonDuplicateElementSortedArray {
 
     public static int singleNonDuplicate(int[] nums) {
-        
+        int start = 0, end = nums.length - 1;
 
         return 0;
     }
