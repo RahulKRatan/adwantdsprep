@@ -1,5 +1,6 @@
 package Bootcamp.StringManipulation;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -19,7 +20,7 @@ import java.util.Set;
 
 public class WordLadder {
 
-    public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+    public static int ladderLength(String beginWord, String endWord, List<String> wordList) {
         Set<String> dict = new HashSet<>(wordList);
         Set<String> reached = new HashSet<>();
         // HERE
@@ -50,7 +51,11 @@ public class WordLadder {
     }
 
     public static void main(String[] args) {
-        
+        String beginWord = "hit";
+        String endWord = "cog";
+        List<String> wordList = new ArrayList<>();
+        wordList.add("hot");wordList.add("dot");wordList.add("dog");wordList.add("lot");wordList.add("log");wordList.add("cog");
+        System.out.println(ladderLength(beginWord,endWord,wordList));
     }
 
 }
