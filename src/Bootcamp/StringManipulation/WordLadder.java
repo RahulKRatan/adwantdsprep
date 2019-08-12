@@ -49,4 +49,8 @@ public class WordLadder {
         return ladder;
     }
 
+    public static void main(String[] args) {
+        
+    }
+
 }
