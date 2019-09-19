@@ -3,10 +3,13 @@ package Bootcamp.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ *  Time complexity :  O(n)
+ */
 public class HappyNumber {
 
     public static boolean isHappy(int n) {
-        Set<Integer> inLoop = new HashSet<Integer>();
+        Set<Integer> inLoop = new HashSet<>();
         while (inLoop.add(n)){
             int temp = 0;
             while(n!=0){
