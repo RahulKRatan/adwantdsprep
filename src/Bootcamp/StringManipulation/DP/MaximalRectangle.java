@@ -1,9 +1,13 @@
 package Bootcamp.StringManipulation.DP;
 
+import Bootcamp.StackQueues.LargestAreaInHistogram;
+
 public class MaximalRectangle {
 
     public static int maximalRectangle(char[][] matrix) {
+        
 
+        LargestAreaInHistogram largestAreaInHistogram = new LargestAreaInHistogram();
 
         return 0;
     }
