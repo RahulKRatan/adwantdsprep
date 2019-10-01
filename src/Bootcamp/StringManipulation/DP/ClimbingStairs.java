@@ -1,4 +1,4 @@
-package Bootcamp.Arrays;
+package Bootcamp.StringManipulation.DP;
 
 public class ClimbingStairs {
 
