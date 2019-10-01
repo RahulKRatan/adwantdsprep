@@ -1,5 +1,9 @@
 package Bootcamp.StringManipulation.DP;
 
+/**
+ * Time Complexity: O(m*n) where m is number of rows and n is number of columns in the given matrix.
+ * Auxiliary Space: O(m*n) where m is number of rows and n is number of columns in the given matrix.
+ */
 public class MaximalSquare {
 
     private static int min(int a,int b, int c){
