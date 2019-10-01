@@ -29,7 +29,7 @@ public class MaximalRectangle {
         }
         int temp[] = new int[matrix[0].length];
         int maxArea = 0;
-        int area = 0;
+        int area;
         LargestAreaInHistogram largestAreaInHistogram = new LargestAreaInHistogram();
         for(int i=0; i < matrix.length; i++){
             for(int j=0; j < temp.length; j++){
