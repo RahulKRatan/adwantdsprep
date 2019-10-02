@@ -69,3 +69,31 @@ public class LongestIncreasingSubsequence {
         System.out.println(lengthOfLIS(ints));
     }
 }
+/*
+
+RECURSIVE WAY OF DOING IT
+
+    public int longestSubsequenceRecursive(int arr[]){
+        int maxLen = 0;
+        for(int i=0; i < arr.length-1; i++){
+            int len = longestSubsequenceRecursive(arr,i+1,arr[i]);
+            if(len > maxLen){
+                maxLen = len;
+            }
+        }
+        return maxLen + 1;
+    }
+
+    private int longestSubsequenceRecursive(int arr[], int pos, int lastNum){
+        if(pos == arr.length){
+            return 0;
+        }
+        int t1 = 0;
+        if(arr[pos] > lastNum){
+            t1 = 1 + longestSubsequenceRecursive(arr, pos+1, arr[pos]);
+        }
+        int t2 = longestSubsequenceRecursive(arr, pos+1, lastNum);
+        return Math.max(t1, t2);
+    }
+
+*/
