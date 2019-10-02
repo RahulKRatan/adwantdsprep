@@ -2,7 +2,10 @@ package Bootcamp.Arrays;
 
 import java.util.ArrayList;
 import java.util.List;
-
+/*
+        Time : O(N)
+        space : O(1)
+ */
 public class FizzBuzz {
 
     public static List<String> fizzBuzz(int n) {
