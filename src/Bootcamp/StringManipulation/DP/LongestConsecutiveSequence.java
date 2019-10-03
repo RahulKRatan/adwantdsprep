@@ -1,29 +1,47 @@
 package Bootcamp.StringManipulation.DP;
 
 import java.util.HashMap;
-import java.util.Map;
 
+/**
+ * We will use HashMap. The key thing is to keep track of the sequence length and store that in the boundary points of the sequence.
+ *  For example, as a result, for sequence {1, 2, 3, 4, 5}, map.get(1) and map.get(5) should both return 5.
+ *
+ * Whenever a new element n is inserted into the map, do two things:
+ *
+ * See if n - 1 and n + 1 exist in the map, and if so, it means there is an existing sequence next to n.
+ * Variables left and right will be the length of those two sequences, while 0 means there is no sequence and n will be the boundary point later.
+ * Store (left + right + 1) as the associated value to key n into the map.
+ * Use left and right to locate the other end of the sequences to the left and right of n respectively, and replace the value with the new length.
+ * Everything inside the for loop is O(1) so the total time is O(n).
+ */
 public class LongestConsecutiveSequence {
 
     public static int longestConsecutive(int[] nums) {
-        int longest = 0;
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-        for(int i = 0;i < nums.length;i++){
-            // if there is no duplicates, these two lines can be commented
-            if(map.containsKey(nums[i])) continue;
-            map.put(nums[i],1);
+        int res = 0;
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for (int n : nums) {
+            if (!map.containsKey(n)) {
+                int left = (map.containsKey(n - 1)) ? map.get(n - 1) : 0;
+                int right = (map.containsKey(n + 1)) ? map.get(n + 1) : 0;
+                // sum: length of the sequence n is in
+                int sum = left + right + 1;
+                map.put(n, sum);
 
-            int end = nums[i];
-            int begin = nums[i];
-            if(map.containsKey(nums[i]+1))
-                end = nums[i] + map.get(nums[i]+1);
-            if(map.containsKey(nums[i]-1))
-                begin = nums[i] - map.get(nums[i]-1);
-            longest = Math.max(longest, end-begin+1);
-            map.put(end, end-begin+1);
-            map.put(begin, end-begin+1);
+                // keep track of the max length
+                res = Math.max(res, sum);
+
+                // extend the length to the boundary(s)
+                // of the sequence
+                // will do nothing if n has no neighbors
+                map.put(n - left, sum);
+                map.put(n + right, sum);
+            }
+            else {
+                // duplicates
+                continue;
+            }
         }
-        return longest;
+        return res;
     }
 
     public static void main(String[] args) {
