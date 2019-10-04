@@ -21,8 +21,8 @@ public class LongestConsecutiveSequence {
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int n : nums) {
             if (!map.containsKey(n)) {
-                int left = (map.containsKey(n - 1)) ? map.get(n - 1) : 0;
-                int right = (map.containsKey(n + 1)) ? map.get(n + 1) : 0;
+                int left = (map.getOrDefault(n - 1,0));
+                int right = (map.getOrDefault(n + 1,0));
                 // sum: length of the sequence n is in
                 int sum = left + right + 1;
                 map.put(n, sum);
@@ -35,10 +35,6 @@ public class LongestConsecutiveSequence {
                 // will do nothing if n has no neighbors
                 map.put(n - left, sum);
                 map.put(n + right, sum);
-            }
-            else {
-                // duplicates
-                continue;
             }
         }
         return res;
