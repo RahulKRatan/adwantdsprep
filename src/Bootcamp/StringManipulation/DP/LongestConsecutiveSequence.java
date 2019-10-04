@@ -13,6 +13,12 @@ import java.util.HashMap;
  * Store (left + right + 1) as the associated value to key n into the map.
  * Use left and right to locate the other end of the sequences to the left and right of n respectively, and replace the value with the new length.
  * Everything inside the for loop is O(1) so the total time is O(n).
+ *  "1" -> "4"
+ *  "2" -> "4"
+ *  "3" -> "2"
+ *  "100" -> "1"
+ *  "4" -> "4"
+ *  "200" -> "1"
  */
 public class LongestConsecutiveSequence {
 
