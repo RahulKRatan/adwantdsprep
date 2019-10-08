@@ -23,15 +23,17 @@ public class FractionToRecurringDecimal {
             return fraction.toString();
         }
         fraction.append(".");
+
+        // straight forward till here. Next is to add decimal portion ( recurring and non-recurring )
         Map<Long, Integer> map = new HashMap<>();
         while (remainder != 0) {
-            if (map.containsKey(remainder)) {
+            if (map.containsKey(remainder)) {   // for recurring values like 1/3
                 fraction.insert(map.get(remainder), "(");
                 fraction.append(")");
                 break;
             }
             map.put(remainder, fraction.length());
-            remainder *= 10;
+            remainder *= 10;  // this is how decimal is calculated
             fraction.append(String.valueOf(remainder / divisor));
             remainder %= divisor;
         }
@@ -39,6 +41,6 @@ public class FractionToRecurringDecimal {
     }
 
     public static void main(String[] args) {
-        System.out.println(fractionToDecimal(1,2));
+        System.out.println(fractionToDecimal(1,3));
     }
 }
