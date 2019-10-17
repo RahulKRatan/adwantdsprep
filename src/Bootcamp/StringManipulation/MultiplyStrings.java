@@ -7,7 +7,7 @@ package Bootcamp.StringManipulation;
  *
  * Start from right to left, perform multiplication on every pair of digits, and add them together. Let's draw the process! From the following draft, we can immediately conclude:
  *
- *  `num1[i] * num2[j]` will be placed at indices `[i + j`, `i + j + 1]` 
+ *  `num1[i] * num2[j]` will be placed at indices `[i + j`, `i + j + 1]`
  *
  * Time Complexity: O(m*n), where m and n are length of two number that need to be multiplied.
  */
