@@ -18,6 +18,9 @@ package Bootcamp.StringManipulation.DP;
 public class BurstBalloons {
 
     public static int maxCoins(int[] nums) {
+        if(nums.length == 0){
+            return 0;
+        }
         int T[][] = new int[nums.length][nums.length];
 
         for (int len = 1; len <= nums.length; len++) {
