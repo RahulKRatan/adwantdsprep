@@ -15,11 +15,18 @@ public class ReverseLinkedList {
 /*
 Recursive
 public Node reverseList(Node head) {
-    if (head == null || head.next == null) return head;
-    Node p = reverseList(head.next);
-    head.next.next = head;
+    if(head==null || head.next == null)
+        return head;
+
+    //get second node
+    ListNode second = head.next;
+    //set first's next to be null
     head.next = null;
-    return p;
+
+    ListNode rest = reverseList(second);
+    second.next = head;
+
+    return rest;
 }
  */
 
