@@ -30,12 +30,12 @@ class Node {
 
 class LRUCacheTest {
     private HashMap<Integer, Node> map;
-    private int capicity, count;
+    private int capacity, count;
     private Node head, tail;
 
     public LRUCacheTest(int capacity)
     {
-        this.capicity = capacity;
+        this.capacity = capacity;
         map = new HashMap<>();
         head = new Node(0, 0);
         tail = new Node(0, 0);
@@ -91,7 +91,7 @@ class LRUCacheTest {
         else {
             Node node = new Node(key, value);
             map.put(key, node);
-            if (count < capicity) {
+            if (count < capacity) {
                 count++;
                 addToHead(node);
             }
