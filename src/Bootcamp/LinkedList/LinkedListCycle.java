@@ -3,19 +3,18 @@ package Bootcamp.LinkedList;
 public class LinkedListCycle {
 // T - O(N) ; S - O(1)
     public boolean hasCycle(Node head) {
-        if (head == null || head.next == null) {
-            return false;
-        }
+        Node fast = head;
         Node slow = head;
-        Node fast = head.next;
-        while (slow != fast) {
-            if (fast == null || fast.next == null) {
-                return false;
-            }
+
+        while(fast != null && fast.next != null){
             slow = slow.next;
             fast = fast.next.next;
+
+            if(slow == fast)
+                return true;
         }
-        return true;
+
+        return false;
     }
 
     /* T - O(N) ; S - O(N)
