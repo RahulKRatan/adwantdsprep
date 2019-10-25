@@ -15,127 +15,107 @@ package Bootcamp.Design;
  */
 import java.util.HashMap;
 
-class Node {
+
+class Node{
     int key;
     int value;
-    Node pre;
+    Node prev;
     Node next;
 
-    public Node(int key, int value)
-    {
+    public Node(int key, int value){
         this.key = key;
         this.value = value;
     }
 }
+public class LRUCache {
+    int capacity;
+    HashMap<Integer, Node> map = new HashMap<>();
+    Node head = null;
+    Node end = null;
 
-class LRUCacheTest {
-    private HashMap<Integer, Node> map;
-    private int capacity, count;
-    private Node head, tail;
-
-    public LRUCacheTest(int capacity)
-    {
+    public LRUCache(int capacity) {
         this.capacity = capacity;
-        map = new HashMap<>();
-        head = new Node(0, 0);
-        tail = new Node(0, 0);
-        head.next = tail;
-        tail.pre = head;
-        head.pre = null;
-        tail.next = null;
-        count = 0;
     }
 
-    public void deleteNode(Node node)
-    {
-        node.pre.next = node.next;
-        node.next.pre = node.pre;
-    }
-
-    public void addToHead(Node node)
-    {
-        node.next = head.next;
-        node.next.pre = node;
-        node.pre = head;
-        head.next = node;
-    }
-
-    // This method works in O(1)
-    public int get(int key)
-    {
-        if (map.get(key) != null) {
-            Node node = map.get(key);
-            int result = node.value;
-            deleteNode(node);
-            addToHead(node);
-            System.out.println("Got the value : " +
-                    result + " for the key: " + key);
-            return result;
+    public int get(int key) {
+        if (map.containsKey(key)) {
+            Node n = map.get(key);
+            delete(n);
+            setHead(n);
+            return n.value;
         }
-        System.out.println("Did not get any value" +
-                " for the key: " + key);
+
         return -1;
     }
 
-    // This method works in O(1)
-    public void set(int key, int value)
-    {
-        System.out.println("Going to set the (key, "+
-                "value) : (" + key + ", " + value + ")");
-        if (map.get(key) != null) {
-            Node node = map.get(key);
-            node.value = value;
-            deleteNode(node);
-            addToHead(node);
+    /*This method will delete node*/
+    public void delete(Node node) {
+        if (node.prev != null) {
+            node.prev.next = node.next;
+        } else {
+            head = node.next;
         }
-        else {
-            Node node = new Node(key, value);
-            map.put(key, node);
-            if (count < capacity) {
-                count++;
-                addToHead(node);
+
+        if (node.next != null) {
+            node.next.prev = node.prev;
+        } else {
+            end = node.prev;
+        }
+
+    }
+
+    /*This method will make passed node as head*/
+    public void setHead(Node node) {
+        node.next = head;
+        node.prev = null;
+
+        if (head != null)
+            head.prev = node;
+
+        head = node;
+
+        if (end == null)
+            end = head;
+    }
+
+    public void set(int key, int value) {
+        if (map.containsKey(key)) {
+            // update the old value
+            Node old = map.get(key);
+            old.value = value;
+            delete(old);
+            setHead(old);
+        } else {
+            Node newNode = new Node(key, value);
+            if (map.size() >= capacity) {
+
+                map.remove(end.key);
+                // remove last node
+                delete(end);
+                setHead(newNode);
+
+            } else {
+                setHead(newNode);
             }
-            else {
-                map.remove(tail.pre.key);
-                deleteNode(tail.pre);
-                addToHead(node);
-            }
+
+            map.put(key, newNode);
         }
     }
-}
 
-public class LRUCache {
-    public static void main(String[] args)
-    {
-        System.out.println("Going to test the LRU "+
-                " Cache Implementation");
-        LRUCacheTest cache = new LRUCacheTest(2);
+    public static void main(String[] args){
+        LRUCache lrucache = new LRUCache(4);
+        lrucache.set(1, 100);
+        lrucache.set(10, 99);
+        lrucache.set(15, 98);
+        lrucache.set(10, 97);
+        lrucache.set(12, 96);
+        lrucache.set(18, 95);
+        lrucache.set(1, 94);
 
-        // it will store a key (1) with value
-        // 10 in the cache.
-        cache.set(1, 10);
+        System.out.println(lrucache.get(1));
+        System.out.println(lrucache.get(10));
+        System.out.println(lrucache.get(15));
 
-        // it will store a key (1) with value 10 in the cache.
-        cache.set(2, 20);
-        System.out.println("Value for the key: 1 is " +
-                cache.get(1)); // returns 10
-
-        // evicts key 2 and store a key (3) with
-        // value 30 in the cache.
-        cache.set(3, 30);
-
-        System.out.println("Value for the key: 2 is " +
-                cache.get(2)); // returns -1 (not found)
-
-        // evicts key 1 and store a key (4) with
-        // value 40 in the cache.
-        cache.set(4, 40);
-        System.out.println("Value for the key: 1 is " +
-                cache.get(1)); // returns -1 (not found)
-        System.out.println("Value for the key: 3 is " +
-                cache.get(3)); // returns 30
-        System.out.println("Value for the key: 4 is " +
-                cache.get(4)); // return 40
     }
 }
 
