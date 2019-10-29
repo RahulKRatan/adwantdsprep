@@ -8,7 +8,6 @@ public class SwapkthNodesGivenLinkedList {
         
 
         return null;
-
     }
 
     public static void main(String[] args) {
