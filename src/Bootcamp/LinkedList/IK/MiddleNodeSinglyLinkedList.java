@@ -40,7 +40,7 @@ public class MiddleNodeSinglyLinkedList {
      *     return slow;
      *
      *     }
-     * 
+     *
      */
 
 
