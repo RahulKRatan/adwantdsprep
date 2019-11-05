@@ -18,6 +18,12 @@ import java.util.LinkedList;
  */
 public class DFSTreeTraversals {
     TreeNode TreeNode;
+
+    /**
+     * In case of binary search trees (BST), Inorder traversal gives nodes in non-decreasing order.
+     * To get nodes of BST in non-increasing order, a variation of Inorder traversal where Inorder traversal s reversed can be used.
+     * @param root
+     */
     public void inOrder(TreeNode root){
         if(root == null){
             return;
@@ -76,6 +82,13 @@ public class DFSTreeTraversals {
             }
         }
     }
+
+    /**
+     * Postorder traversal is used to delete the tree. Please see the question for deletion of tree for details.
+     * Postorder traversal is also useful to get the postfix expression of an expression tree.
+     * Please see http://en.wikipedia.org/wiki/Reverse_Polish_notation to for the usage of postfix expression.
+     * @param root
+     */
 
     public void postOrder(TreeNode root){
         if(root == null){
