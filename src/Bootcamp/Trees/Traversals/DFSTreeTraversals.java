@@ -56,7 +56,7 @@ public class DFSTreeTraversals {
     }
 
     public void preOrderItr(TreeNode root){
-        Deque<TreeNode> stack = new LinkedList<TreeNode>();
+        Deque<TreeNode> stack = new LinkedList<>();
         stack.addFirst(root);
         while(!stack.isEmpty()){
             root = stack.pollFirst();
