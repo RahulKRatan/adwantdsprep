@@ -6,7 +6,7 @@ public class BinaryTreeRightSideView {
     TreeNode root;
 
     public List<Integer> rightSideView(TreeNode root) {
-
+            
 
         return null;
     }
