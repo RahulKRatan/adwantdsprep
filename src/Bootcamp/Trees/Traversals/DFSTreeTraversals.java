@@ -20,8 +20,8 @@ public class DFSTreeTraversals {
     TreeNode TreeNode;
 
     /**
-     * In case of binary search trees (BST), Inorder traversal gives nodes in non-decreasing order.
-     * To get nodes of BST in non-increasing order, a variation of Inorder traversal where Inorder traversal s reversed can be used.
+     * In case of binary search trees (BST), Inorder traversal gives nodes in increasing order.
+     * To get nodes of BST in decreasing order, a variation of Inorder traversal where Inorder traversal s reversed can be used.
      * @param root
      */
     public void inOrder(TreeNode root){
