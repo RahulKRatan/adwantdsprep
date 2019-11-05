@@ -55,17 +55,6 @@ public class DFSTreeTraversals {
         preOrder(root.right);
     }
 
-    public void postOrder(TreeNode root){
-        if(root == null){
-            return;
-        }
-        postOrder(root.left);
-        postOrder(root.right);
-        System.out.print(root.val + " ");
-    }
-
-
-
     public void preOrderItr(TreeNode root){
         Deque<TreeNode> stack = new LinkedList<TreeNode>();
         stack.addFirst(root);
@@ -79,6 +68,15 @@ public class DFSTreeTraversals {
                 stack.addFirst(root.left);
             }
         }
+    }
+
+    public void postOrder(TreeNode root){
+        if(root == null){
+            return;
+        }
+        postOrder(root.left);
+        postOrder(root.right);
+        System.out.print(root.val + " ");
     }
 
     public void postOrderItr(TreeNode root){
