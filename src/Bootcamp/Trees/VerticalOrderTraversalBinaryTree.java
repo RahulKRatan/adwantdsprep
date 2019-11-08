@@ -11,6 +11,6 @@ public class VerticalOrderTraversalBinaryTree {
     }
 
     public static void main(String[] args) {
-        
+
     }
 }
