@@ -6,6 +6,13 @@ import java.util.*;
 /**
  * The video to explain this code is here: https://www.youtube.com/watch?v=nPtARJ2cYrg
  * Time and Space - O(N)
+ * Complexities
+ * n = total amount of nodes in the binary tree
+ * m = total edges
+ * Time: O( n + m )
+ * This is standard to Breadth First Search. We upper bound the time by the number of nodes we can visit and edges we can traverse (at maximum).
+ * Space: O( n )
+ * We have a hashtable upper bounded by n mappings, a mapping to each node's parent.
  *
  */
 public class AllNodesDistanceKBinaryTree {
@@ -15,9 +22,19 @@ public class AllNodesDistanceKBinaryTree {
         Map<TreeNode, TreeNode> nodeToParentMap = new HashMap();
         populateNodeToParentMap(nodeToParentMap, root, null);
 
+         /*
+        Create the queue that we will use for the breadth first search.
+        Add the start node to the queue
+         */
         Queue<TreeNode> queue = new LinkedList();
         queue.add(target);
-
+        /*
+         The is an undirected graph now that we can go to and from nodes.
+         Before we could only go down the tree.
+         Therefore, we need a hashtable to keep track of nodes we have
+         visited so that we do not go back and revisit what has already
+         been processed and cause an infinite cycle
+        */
         Set<TreeNode> seen = new HashSet();
         seen.add(target);
 
@@ -51,6 +68,10 @@ public class AllNodesDistanceKBinaryTree {
             return new ArrayList<>();
         }
 
+    /*
+    When this recursion is done we will know all nodes' parents. The tree then
+    can be treated and searched like any other graph
+    */
     private static void populateNodeToParentMap(Map<TreeNode, TreeNode> nodeToParentMap, TreeNode root, TreeNode parent) {
         if (root == null) {
             return;
