@@ -1,46 +1,65 @@
 package Bootcamp.Trees;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class AllNodesDistanceKBinaryTree {
     TreeNode node;
-    static Map<TreeNode, Integer> map = new HashMap<>();
     public static List<Integer> distanceK(TreeNode root, TreeNode target, int K) {
-        List<Integer> res = new LinkedList<>();
-        find(root, target);
-        dfs(root, target, K, map.get(root), res);
-        return res;
+
+        Map<TreeNode, TreeNode> nodeToParentMap = new HashMap();
+        populateNodeToParentMap(nodeToParentMap, root, null);
+
+        Queue<TreeNode> queue = new LinkedList();
+        queue.add(target);
+
+        Set<TreeNode> seen = new HashSet();
+        seen.add(target);
+
+        int currentLayer = 0;
+
+        while (!queue.isEmpty()) {
+            if (currentLayer == K) {
+                return extractLayerFromQueue(queue);
+            }
+            int layerSize = queue.size();
+            for (int i = 0; i < layerSize; i++) {
+                TreeNode currentNode = queue.poll();
+                if (currentNode.left != null && !seen.contains(currentNode.left)) {
+                    seen.add(currentNode.left);
+                    queue.offer(currentNode.left);
+                }
+                if (currentNode.right != null && !seen.contains(currentNode.right)) {
+                    seen.add(currentNode.right);
+                    queue.offer(currentNode.right);
+                }
+                TreeNode parentOfCurrentNode = nodeToParentMap.get(currentNode);
+                if (parentOfCurrentNode != null && !seen.contains(parentOfCurrentNode)) {
+                    seen.add(parentOfCurrentNode);
+                    queue.offer(parentOfCurrentNode);
+                }
+
+            }
+            currentLayer++;
+
+        }
+            return new ArrayList<>();
+        }
+
+    private static void populateNodeToParentMap(Map<TreeNode, TreeNode> nodeToParentMap, TreeNode root, TreeNode parent) {
+        if (root == null) {
+            return;
+        }
+        nodeToParentMap.put(root, parent);
+        populateNodeToParentMap(nodeToParentMap, root.left, root);
+        populateNodeToParentMap(nodeToParentMap, root.right, root);
     }
 
-    // find target node first and store the distance in that path that we could use it later directly
-    private static int find(TreeNode root, TreeNode target) {
-        if (root == null) return -1;
-        if (root == target) {
-            map.put(root, 0);
-            return 0;
+    private static List<Integer> extractLayerFromQueue(Queue<TreeNode> queue) {
+        List<Integer> extractedList = new ArrayList();
+        for (TreeNode node: queue) {
+            extractedList.add(node.val);
         }
-        int left = find(root.left, target);
-        if (left >= 0) {
-            map.put(root, left + 1);
-            return left + 1;
-        }
-        int right = find(root.right, target);
-        if (right >= 0) {
-            map.put(root, right + 1);
-            return right + 1;
-        }
-        return -1;
-    }
-
-    private static void dfs(TreeNode root, TreeNode target, int K, int length, List<Integer> res) {
-        if (root == null) return;
-        if (map.containsKey(root)) length = map.get(root);
-        if (length == K) res.add(root.val);
-        dfs(root.left, target, K, length + 1, res);
-        dfs(root.right, target, K, length + 1, res);
+        return extractedList;
     }
 
     public static void main(String[] args) {
