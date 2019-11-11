@@ -1,21 +1,28 @@
 package Bootcamp.Trees;
 
+import java.util.LinkedList;
+
+/**
+ * Time complexity : O(H+k), where HH is a tree height. This complexity is defined by the stack, which contains at least H+k elements, since before starting to pop out one has to go down to a leaf. This results in \mathcal{O}(\log N + k)O(logN+k) for the balanced tree and \mathcal{O}(N + k)O(N+k) for completely unbalanced tree with all the nodes in the left subtree.
+ * Space complexity : O(H+k), the same as for time complexity, O(N+k) in the worst case, and O(logN+k) in the average case.
+ *
+ * Iterative form of inorder traversal
+ *
+ */
 public class KSmallestElement {
     TreeNode root;
     static int kth_smallest_element(TreeNode root, int k) {
-        int count = countNodes(root.left);
-        if(k <= count){
-            return kth_smallest_element(root.left, k);
-        }else if (k > count + 1) {
-            return kth_smallest_element(root.right, k-1-count);
+        LinkedList<TreeNode> stack = new LinkedList<>();
+
+        while (true) {
+            while (root != null) {
+                stack.add(root);
+                root = root.left;
+            }
+            root = stack.removeLast();
+            if (--k == 0) return root.val;
+            root = root.right;
         }
-        return root.val;
-    }
-
-    static int countNodes(TreeNode n) {
-        if (n == null) return 0;
-
-        return 1 + countNodes(n.left) + countNodes(n.right);
     }
 
 
