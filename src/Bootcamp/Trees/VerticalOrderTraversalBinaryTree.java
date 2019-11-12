@@ -1,60 +1,55 @@
 package Bootcamp.Trees;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class VerticalOrderTraversalBinaryTree {
     TreeNode root;
+    static class TempNode {
+        int hd; // horizontal distance
+        TreeNode root;
+        public TempNode(int hd, TreeNode root) {
+            this.hd = hd;
+            this.root = root;
+        }
+    }
 
     public static List<List<Integer>> verticalTraversal(TreeNode root) {
-        List<Location> locations = new ArrayList<>();
-        dfs(root, 0, 0, locations);
-        Collections.sort(locations);
-        return groupByVerticals(locations);
-    }
+        List<List<Integer>> res = new ArrayList<>();
+        if (root == null) return res;
+        Map<Integer, List<Integer>> map = new HashMap<>();
+        int minHd = Integer.MAX_VALUE; // need to maintain this so we know length of horizontal distance and whats its min and max to loop and retrieve
+        int maxHd = Integer.MIN_VALUE;
 
-    private static void dfs(TreeNode root, int x, int y, List<Location> locations) {
-        if (root == null)
-            return;
-        locations.add(new Location(x, y, root.val));
-        dfs(root.left, x - 1, y + 1, locations); // left child
-        dfs(root.right, x + 1, y + 1, locations); // right child
-    }
+        Queue<TempNode> q = new LinkedList<>();
+        q.offer(new TempNode(0, root));
+        while (!q.isEmpty()) {
+            TempNode cur = q.poll();
+            TreeNode node = cur.root;
+            int hd = cur.hd;
+            map.putIfAbsent(hd, new ArrayList<>());
+            map.get(hd).add(node.val);
+            minHd = Math.min(minHd, hd);
+            maxHd = Math.max(maxHd, hd);
 
-    private static List<List<Integer>> groupByVerticals(List<Location> locations) {
-        List<List<Integer>> vot = new ArrayList<>();
-        vot.add(new ArrayList<>());
-        int prev = locations.get(0).x;
-        for (Location loc : locations) {
-            if (loc.x != prev) {
-                prev = loc.x;
-                vot.add(new ArrayList<>());
+            if (node.left != null) {
+                q.offer(new TempNode(hd - 1, node.left));
             }
-            vot.get(vot.size() - 1).add(loc.val);
-        }
-        return vot;
-    }
 
-    static class Location implements Comparable<Location> {
-        int x;
-        int y;
-        int val;
-        Location(int x, int y, int val) {
-            this.x = x;
-            this.y = y;
-            this.val = val;
+            if (node.right != null) {
+                q.offer(new TempNode(hd + 1, node.right));
+            }
         }
 
-        @Override
-        public int compareTo(Location that) {
-            if (this.x != that.x) // left to right, x increases
-                return Integer.compare(this.x, that.x);
-            if (this.y != that.y) // top to bottom, y increases
-                return Integer.compare(this.y, that.y);
-            return Integer.compare(this.val, that.val);
+        for (int i = minHd; i <= maxHd; i++) {
+            res.add(map.get(i));
         }
+
+        return res;
+
     }
+
+
+
 
 
     public static void main(String[] args) {
@@ -64,7 +59,8 @@ public class VerticalOrderTraversalBinaryTree {
         tree.root.right = new TreeNode(3);
         tree.root.left.right = new TreeNode(5);
         tree.root.right.right = new TreeNode(4);
-        verticalTraversal(tree.root);
+        List<List<Integer>> result =verticalTraversal(tree.root);
+        System.out.println(result);
     }
 }
 
