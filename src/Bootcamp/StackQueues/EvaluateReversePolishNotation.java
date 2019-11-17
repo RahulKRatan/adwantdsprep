@@ -1,25 +1,23 @@
 package Bootcamp.StackQueues;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class EvaluateReversePolishNotation {
 
     public static int evalRPN(String[] tokens) {
-        Stack<String> stack = new Stack<>();
+        Deque<String> stack = new ArrayDeque<>();
         List<String> notations = new ArrayList<>();
         notations.add("+");notations.add("-");notations.add("*");notations.add("/");
 
         for(String s : tokens){
             if(notations.contains(s)){
-                int a = Integer.valueOf(stack.pop());
-                int b = Integer.valueOf(stack.pop());
-                if(s == "+"){
+                int a = Integer.parseInt(stack.pop());
+                int b = Integer.parseInt(stack.pop());
+                if(s.equals("+")){
                     stack.push(String.valueOf(a+b));
-                }else if(s == "-"){
+                }else if(s.equals("-")){
                     stack.push(String.valueOf(b-a));
-                }else if(s == "*"){
+                }else if(s.equals("*")){
                     stack.push(String.valueOf(a*b));
                 }else {
                     stack.push(String.valueOf(b/a));
