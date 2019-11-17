@@ -9,7 +9,7 @@ Space complexity : O(k) to store the heap elements.
 
 Store elements in map heap and then poll upto k-1. return heap.poll()
 
-Hoare's selection algorithm - try this out *****
+Hoare's selection algorithm ( Quick Select ) - try this out *****
 This would be step 1: Partition and 2: Select
 */
 
