@@ -9,10 +9,13 @@ public class FindAllAnagramsString {
     public static List<Integer> findAnagrams(String s, String p) {
         List<Integer> result = new LinkedList<>();
         if(p.length()> s.length()) return result;
+
         Map<Character, Integer> map = new HashMap<>();
+
         for(char c : p.toCharArray()){
             map.put(c, map.getOrDefault(c, 0) + 1);
         }
+
         int counter = map.size();
 
         int begin = 0, end = 0;
