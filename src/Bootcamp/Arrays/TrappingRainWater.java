@@ -9,7 +9,7 @@ package Bootcamp.Arrays;
  *    left[i]  - max height on left side of Tower[i].
  *    right[i] - max height on right side of Tower[i].
  * 2: Calculate for each tower:
- *    rainwater = rainwater + Max(Min(left[i], right[i]) - height[i], 0);
+ *    rainwater = rainwater + (Min(left[i], right[i]) - height[i]);
  *
  *    Refer image in files
  */
