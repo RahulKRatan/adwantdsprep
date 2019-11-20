@@ -30,7 +30,7 @@ public class Candy {
             }
 
             result += Math.max(cur, candies[i]);
-            candies[i] = cur;
+            candies[i] = cur;  // updating candies position with new value
         }
 
         return result;
