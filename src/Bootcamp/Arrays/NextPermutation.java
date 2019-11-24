@@ -36,6 +36,7 @@ public class NextPermutation {
             }
         }
 
+        // if the numbers are in descending order then no more to permutate.. just reverse the numbert
         if (mark == -1) {
             reverse(nums, 0, nums.length - 1);
             return;
