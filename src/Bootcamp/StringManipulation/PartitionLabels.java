@@ -12,7 +12,7 @@ import java.util.List;
  *
  * Time Complexity: O(N), where N is the length of S.
  *
- * Space Complexity: O(N)
+ * Space Complexity: O(1) we are only using constant 26 character length string
  */
 public class PartitionLabels {
 
