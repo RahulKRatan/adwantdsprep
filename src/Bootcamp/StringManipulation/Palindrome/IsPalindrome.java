@@ -1,5 +1,8 @@
 package Bootcamp.StringManipulation.Palindrome;
 
+/**
+ * The following is a solution with O(n) time complexity and O(1) space complexity.
+ */
 public class IsPalindrome {
 
     public static boolean isPalindrome(String s) {
@@ -21,7 +24,7 @@ public class IsPalindrome {
     }
 
     public static void main(String[] args) {
-        String str = "0P";
+        String str = "A man, a plan, a canal: Panama";
         System.out.print(isPalindrome(str));
     }
 }
