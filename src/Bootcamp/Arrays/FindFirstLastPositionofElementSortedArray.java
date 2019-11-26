@@ -1,5 +1,12 @@
 package Bootcamp.Arrays;
 
+/**
+ Time complexity : O(log{10}(n)
+
+ Space complexity : O(1)O(1)
+
+ All work is done in place, so the overall memory usage is constant.
+ */
 
 public class FindFirstLastPositionofElementSortedArray {
 
