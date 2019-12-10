@@ -7,7 +7,6 @@ public class IntegerToEnglishWords {
 
     public static String numberToWords(int num) {
         if (num == 0) return "Zero";
-
         int i = 0;
         String words = "";
 
@@ -17,7 +16,6 @@ public class IntegerToEnglishWords {
             num /= 1000;
             i++;
         }
-
         return words.trim();
     }
 
@@ -33,6 +31,6 @@ public class IntegerToEnglishWords {
     }
 
     public static void main(String[] args) {
-        System.out.println(numberToWords(124));
+        System.out.println(numberToWords(1245678));
     }
 }
