@@ -13,8 +13,8 @@ public class Graph<T>{
     boolean isDirected = false;
 
     public Graph(boolean isDirected){
-        allEdges = new ArrayList<Edge<T>>();
-        allVertex = new HashMap<Long,Vertex<T>>();
+        allEdges = new ArrayList<>();
+        allVertex = new HashMap<>();
         this.isDirected = isDirected;
     }
 
