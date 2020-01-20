@@ -2,6 +2,8 @@ package Bootcamp.Arrays;
 
 
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.PriorityQueue;
 
 /**
  * Chronological Ordering
@@ -50,8 +52,8 @@ public class MeetingRoomsII {
         return rooms;
     }
 
-    /*
-     public int minMeetingRooms(Interval[] intervals) {
+
+     public static int minMeetingRooms(Interval[] intervals) {
 
     // Check for the base case. If there are no intervals, return 0
     if (intervals.length == 0) {
@@ -96,7 +98,7 @@ public class MeetingRoomsII {
     // The size of the heap tells us the minimum rooms required for all the meetings.
     return allocator.size();
   }
-     */
+
     public static void main(String[] args) {
         int[][] ints = new int[][]{{0,30},{5,10},{15,20}};
         System.out.println(minMeetingRooms(ints));
