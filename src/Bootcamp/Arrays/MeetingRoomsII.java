@@ -19,6 +19,14 @@ import java.util.Arrays;
  * Time Complexity: O(NlogN) because all we are doing is sorting the two arrays for start timings and end timings individually and each of them would contain NN elements considering there are NN intervals.
  *
  * Space Complexity: O(N) because we create two separate arrays of size NN, one for recording the start times and one for the end times.
+ *
+ * 2nd option :
+ * Sort the given meetings by their start time.
+ * Initialize a new min-heap and add the first meeting's ending time to the heap. We simply need to keep track of the ending times as that tells us when a meeting room will get free.
+ * For every meeting room check if the minimum element of the heap i.e. the room at the top of the heap is free or not.
+ * If the room is free, then we extract the topmost element and add it back with the ending time of the current meeting we are processing.
+ * If not, then we allocate a new room and add it to the heap.
+ * After processing all the meetings, the size of the heap will tell us the number of rooms allocated. This will be the minimum number of rooms needed to accommodate all the meetings.
  */
 public class MeetingRoomsII {
 
@@ -42,6 +50,53 @@ public class MeetingRoomsII {
         return rooms;
     }
 
+    /*
+     public int minMeetingRooms(Interval[] intervals) {
+
+    // Check for the base case. If there are no intervals, return 0
+    if (intervals.length == 0) {
+      return 0;
+    }
+
+    // Min heap
+    PriorityQueue<Integer> allocator =
+        new PriorityQueue<Integer>(
+            intervals.length,
+            new Comparator<Integer>() {
+              public int compare(Integer a, Integer b) {
+                return a - b;
+              }
+            });
+
+    // Sort the intervals by start time
+    Arrays.sort(
+        intervals,
+        new Comparator<Interval>() {
+          public int compare(Interval a, Interval b) {
+            return a.start - b.start;
+          }
+        });
+
+    // Add the first meeting
+    allocator.add(intervals[0].end);
+
+    // Iterate over remaining intervals
+    for (int i = 1; i < intervals.length; i++) {
+
+      // If the room due to free up the earliest is free, assign that room to this meeting.
+      if (intervals[i].start >= allocator.peek()) {
+        allocator.poll();
+      }
+
+      // If a new room is to be assigned, then also we add to the heap,
+      // If an old room is allocated, then also we have to add to the heap with updated end time.
+      allocator.add(intervals[i].end);
+    }
+
+    // The size of the heap tells us the minimum rooms required for all the meetings.
+    return allocator.size();
+  }
+     */
     public static void main(String[] args) {
         int[][] ints = new int[][]{{0,30},{5,10},{15,20}};
         System.out.println(minMeetingRooms(ints));
