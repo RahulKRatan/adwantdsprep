@@ -58,6 +58,6 @@ public class RearrangeStringKDistanceApart {
     }
 
     public static void main(String[] args) {
-        System.out.println(rearrangeString("aaadbbcc",2));
+        System.out.println(rearrangeString("aaabc",3));
     }
 }
