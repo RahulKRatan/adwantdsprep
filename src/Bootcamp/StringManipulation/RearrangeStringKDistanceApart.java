@@ -1,7 +1,6 @@
 package Bootcamp.StringManipulation;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.PriorityQueue;
 
@@ -23,13 +22,11 @@ public class RearrangeStringKDistanceApart {
         }
 
         //sort the chars by frequency
-        PriorityQueue<Character> queue = new PriorityQueue<Character>(new Comparator<Character>(){
-            public int compare(Character c1, Character c2){
-                if(map.get(c2).intValue()!=map.get(c1).intValue()){
-                    return map.get(c2)-map.get(c1);
-                }else{
-                    return c1.compareTo(c2);
-                }
+        PriorityQueue<Character> queue = new PriorityQueue<>((c1, c2) -> {
+            if(map.get(c2).intValue()!=map.get(c1).intValue()){
+                return map.get(c2)-map.get(c1);
+            }else{
+                return c1.compareTo(c2);
             }
         });
 
@@ -42,7 +39,7 @@ public class RearrangeStringKDistanceApart {
 
         while(!queue.isEmpty()){
             int cnt = Math.min(k, len);
-            ArrayList<Character> temp = new ArrayList<Character>();
+            ArrayList<Character> temp = new ArrayList<>();
             for(int i=0; i<cnt; i++){
                 if(queue.isEmpty())
                     return "";
