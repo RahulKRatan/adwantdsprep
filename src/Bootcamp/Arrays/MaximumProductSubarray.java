@@ -1,5 +1,10 @@
 package Bootcamp.Arrays;
 
+/**
+ * Loop through the array, each time remember the max and min value for the previous product,
+ * the most important thing is to update the max and min value: we have to compare among max * A[i],
+ * min * A[i] as well as A[i], since this is product, a negative * negative could be positive.
+ */
 public class MaximumProductSubarray {
     public static int maxProduct(int[] nums) {
         if (nums.length == 0) return 0;
