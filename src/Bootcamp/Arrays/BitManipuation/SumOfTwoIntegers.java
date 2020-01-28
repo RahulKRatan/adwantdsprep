@@ -33,7 +33,8 @@ package Bootcamp.Arrays.BitManipuation;
  * 3    =>  011
  * 2    =>  010
  * 3&2  =>  010
- * now we need to add it to the previous value we generated i.e ( 3 ^ 2), but the carry should be added to the left bit of the one which genereated it.
+ * now we need to add it to the previous value we generated i.e ( 3 ^ 2),
+ * but the carry should be added to the left bit of the one which genereated it.
  * so we left shift it by one so that it gets added at the right spot.
  *
  * Hence (3&2)<<1 => 100
