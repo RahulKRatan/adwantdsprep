@@ -25,7 +25,8 @@ package Bootcamp.Arrays.BitManipuation;
  * 3^2=> 001
  * Here we can see XOR just fell short with the carry generated at the second bit.
  * So how can we find the carry ? The carry is generated when both the bits are set,
- * i.e (1,1) will generate carry but (0,1 or 1,0 or 0,0) won't generate a carry, so which bitwise operator can do that ? AND gate ofcourse.
+ * i.e (1,1) will generate carry but (0,1 or 1,0 or 0,0) won't generate a carry,
+ * so which bitwise operator can do that ? AND gate ofcourse.
  *
  * To find the carry we can do
  *
