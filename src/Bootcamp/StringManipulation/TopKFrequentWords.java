@@ -25,7 +25,7 @@ import java.util.*;
 public class TopKFrequentWords {
 
     public static List<String> topKFrequent(String[] words, int k) {
-        Map<String, Integer> count = new HashMap();
+        Map<String, Integer> count = new HashMap<>();
         for (String word: words) {
             count.put(word, count.getOrDefault(word, 0) + 1);
         }
