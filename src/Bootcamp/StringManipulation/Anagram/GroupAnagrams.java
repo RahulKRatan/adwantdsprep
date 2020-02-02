@@ -19,25 +19,23 @@ import java.util.List;
 public class GroupAnagrams {
 
     public static List<List<String>> groupAnagrams(String[] strs) {
-        HashMap<String,List<String>> temp = new HashMap<>();
-        List<List<String>> result = new ArrayList<>();
+        HashMap<String,List<String>> tempResult = new HashMap<>();
         for(String str : strs){
             char[] chars = str.toCharArray();
             Arrays.sort(chars);
             String sorted = new String(chars);
-            if(temp.containsKey(sorted)){
-                List<String> abc = temp.get(sorted);
+            if(tempResult.containsKey(sorted)){
+                List<String> abc = tempResult.get(sorted);
                 abc.add(str);
-                temp.put(sorted,abc);
+                tempResult.put(sorted,abc);
             }
             else {
                 List<String> cde = new ArrayList<>();
                 cde.add(str);
-                temp.put(sorted,cde);
+                tempResult.put(sorted,cde);
             }
         }
-        result.addAll(temp.values());
-        return result;
+        return new ArrayList<>(tempResult.values());
     }
 
     public static void main(String[] args) {
