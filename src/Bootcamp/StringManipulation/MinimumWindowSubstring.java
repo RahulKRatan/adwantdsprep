@@ -5,49 +5,52 @@ import java.util.HashMap;
 public class MinimumWindowSubstring {
 
     public static String minWindow(String s, String t) {
-        if(s == null || s.length() < t.length() || s.length() == 0){
-            return "";
+        HashMap<Character, Integer> goal = new HashMap<>();
+        int goalSize = t.length();
+        int minLen = Integer.MAX_VALUE;
+        String result = "";
+
+        //target dictionary
+        for(int k=0; k<t.length(); k++){
+            goal.put(t.charAt(k), goal.getOrDefault(t.charAt(k), 0)+1);
         }
-        HashMap<Character,Integer> map = new HashMap<>();
-        for(char c : t.toCharArray()){
-            if(map.containsKey(c)){
-                map.put(c,map.get(c)+1);
-            }else{
-                map.put(c,1);
+
+        int i=0;
+        int total=0;
+        HashMap<Character, Integer> map = new HashMap<>();
+        for(int j=0; j<s.length(); j++){
+            char c = s.charAt(j);
+            if(!goal.containsKey(c)){
+                continue;
+            }
+
+            //if c is a target character in the goal, and count is < goal, increase the total
+            int count = map.getOrDefault(c, 0);
+            if(count<goal.get(c)){
+                total++;
+            }
+
+            map.put(c, count+1);
+
+            //when total reaches the goal, trim from left until no more chars can be trimmed.
+            if(total==goalSize){
+                while(!goal.containsKey(s.charAt(i)) || map.get(s.charAt(i))>goal.get(s.charAt(i))){
+                    char pc = s.charAt(i);
+                    if(goal.containsKey(pc) && map.get(pc)>goal.get(pc)){
+                        map.put(pc, map.get(pc)-1);
+                    }
+
+                    i++;
+                }
+
+                if(minLen>j-i+1){
+                    minLen = j-i+1;
+                    result = s.substring(i, j+1);
+                }
             }
         }
 
-        int left = 0;
-        int minLeft = 0;
-        int minLen = s.length()+1;
-        int count = 0;
-        for(int right = 0; right < s.length(); right++){
-            if(map.containsKey(s.charAt(right))){
-                map.put(s.charAt(right),map.get(s.charAt(right))-1);
-                if(map.get(s.charAt(right)) >= 0){
-                    count ++;
-                }
-                while(count == t.length()){
-                    if(right-left+1 < minLen){
-                        minLeft = left;
-                        minLen = right-left+1;
-                    }
-                    if(map.containsKey(s.charAt(left))){
-                        map.put(s.charAt(left),map.get(s.charAt(left))+1);
-                        if(map.get(s.charAt(left)) > 0){
-                            count --;
-                        }
-                    }
-                    left ++ ;
-                }
-            }
-        }
-        if(minLen>s.length())
-        {
-            return "";
-        }
-
-        return s.substring(minLeft,minLeft+minLen);
+        return result;
     }
     public static void main(String[] args) {
         String s = "ADOBECODEBANC";
