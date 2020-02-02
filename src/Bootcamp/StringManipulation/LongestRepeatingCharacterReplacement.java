@@ -14,7 +14,8 @@ public class LongestRepeatingCharacterReplacement {
             if (counter < map.get(ch)) counter = map.get(ch);
             // check how many chars to "flip" by looking at the delta between the
             // length of the string and the highest frequency char. If <= k, no problem. Otherwise, move window
-            while(!(right - left - counter <= k)) { // apply De Morgan and make it right - left - counter > k
+            // apply De Morgan and make it right - left - counter > k
+            while (k < right - left - counter) {
                 char tmp = s.charAt(left);
                 map.put(tmp, map.get(tmp) - 1);
                 counter = getMax(map);
