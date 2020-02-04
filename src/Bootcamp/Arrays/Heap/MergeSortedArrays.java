@@ -1,9 +1,6 @@
-package Bootcamp.Arrays;
+package Bootcamp.Arrays.Heap;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class MergeSortedArrays {
 
@@ -18,16 +15,17 @@ public class MergeSortedArrays {
             }
             lists.add(intList.iterator());
         }
-        PriorityQueue<ArrayEntry> minHeap = new PriorityQueue<>(arr.length,(s1,s2)-> Integer.compare(s1.value,s2.value));
+        PriorityQueue<ArrayEntry> minHeap = new PriorityQueue<>(arr.length, Comparator.comparingInt(s -> s.value));
         for(int i=0;i<lists.size();i++){
             minHeap.add(new ArrayEntry(lists.get(i).next(),i));
         }
 
-        while ( !minHeap.isEmpty()){
+        while (!minHeap.isEmpty()){
             ArrayEntry arrayEntry = minHeap.poll();
             res.add(arrayEntry.value);
-            if(lists.get(arrayEntry.arrayId).hasNext()){
-                minHeap.add(new ArrayEntry(lists.get(arrayEntry.arrayId).next(),arrayEntry.arrayId));
+            int id = arrayEntry.arrayId;
+            if(lists.get(id).hasNext()){
+                minHeap.add(new ArrayEntry(lists.get(id).next(),id));
             }
         }
         int ans[] = new int[res.size()];
