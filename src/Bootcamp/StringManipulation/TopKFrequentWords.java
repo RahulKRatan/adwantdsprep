@@ -31,17 +31,17 @@ public class TopKFrequentWords {
         }
 
         // Building heap - important
-        PriorityQueue<String> heap = new PriorityQueue<String>(
+        PriorityQueue<String> minHeap = new PriorityQueue<String>(
                 (w1, w2) -> count.get(w1).equals(count.get(w2)) ?
                         w2.compareTo(w1) : count.get(w1) - count.get(w2) );
 
         for (String word: count.keySet()) {
-            heap.offer(word);
-            if (heap.size() > k) heap.poll();
+            minHeap.offer(word);
+            if (minHeap.size() > k) minHeap.poll();
         }
 
-        List<String> ans = new ArrayList();
-        while (!heap.isEmpty()) ans.add(heap.poll());
+        List<String> ans = new ArrayList<>();
+        while (!minHeap.isEmpty()) ans.add(minHeap.poll());
         Collections.reverse(ans);
         return ans;
     }
