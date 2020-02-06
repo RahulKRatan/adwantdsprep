@@ -6,23 +6,23 @@ public class MergeKLists {
 
     public static Node mergeKLists(List<Node> lists) {
         Comparator<Node> comparator = Comparator.comparingInt(o -> o.val);
-        Queue<Node> queue = new PriorityQueue<>(comparator);
+        Queue<Node> minHeap = new PriorityQueue<>(comparator);
 
         for(Node node: lists){
             if(node != null) {
-                queue.add(node);
+                minHeap.add(node);
             }
         }
 
         Node head = new Node(0);
         Node point = head;
 
-        while(!queue.isEmpty()){
-            point.next = queue.poll();
+        while(!minHeap.isEmpty()){
+            point.next = minHeap.poll();
             point = point.next;
             Node next = point.next;
             if(next!=null){
-                queue.add(next);
+                minHeap.add(next);
             }
 
         }
