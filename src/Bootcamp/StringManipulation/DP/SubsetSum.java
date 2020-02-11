@@ -3,6 +3,10 @@ package Bootcamp.StringManipulation.DP;
 
 /**
  * https://youtu.be/K20Tx8cdwYY?t=1227
+ * https://github.com/mission-peace/interview/blob/master/src/com/interview/dynamic/SubsetSum.java
+ *
+ * * Time complexity - O(input.size * total_sum)
+ *  * Space complexity - O(input.size*total_sum)
  */
 public class SubsetSum {
 
