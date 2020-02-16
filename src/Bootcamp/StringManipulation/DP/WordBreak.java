@@ -51,6 +51,9 @@ public class WordBreak {
         return T[s.length()];
     }
 
+    /*
+    recursive solution
+     */
     public boolean wordBreakRecursive(String s, List<String> wordDict) {
         return word_Break(s, new HashSet(wordDict), 0);
     }
