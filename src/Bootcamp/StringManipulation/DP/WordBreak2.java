@@ -5,6 +5,11 @@ import java.util.List;
 import java.util.Set;
 
 public class WordBreak2 {
+
+    /*
+    recursive solution
+     */
+
     public List<String> wordBreak(String s, Set<String> wordDict) {
         return word_Break(s, wordDict, 0);
     }
