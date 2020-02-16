@@ -8,28 +8,6 @@ import java.util.Set;
 /**
  * https://www.youtube.com/watch?v=hLQYQ4zj0qg  - best explanation
  *
- * https://github.com/mission-peace/interview/blob/master/src/com/interview/dynamic/BreakMultipleWordsWithNoSpaceIntoSpace.java
- * Time complexity : O(n^2)
- *
- * Space complexity : O(n). Length of pp array is n+1n+1.
- *
- *  * Given a string and a dictionary, split this string into multiple words such that
- *  * each word belongs in dictionary.
- *  *
- *  * e.g peanutbutter -> pea nut butter
- *  * e.g Iliketoplay -> I like to play
- *  *
- *  * Solution
- *  * DP solution to this problem
- *  * if( input[i...j] belongs in dictionary) T[i][j] = i
- *  * else{
- *  *     T[i][j] = k if T[i][k-1] != -1 && T[k][j] != -1
- *  *
- *  * Test cases
- *  * 1) Empty string
- *  * 2) String where entire string is in dictionary
- *  * 3) String which cannot be split into words which are in dictionary
- *  * 3) String which can be split into words which are in dictionary
  */
 public class WordBreak {
 
