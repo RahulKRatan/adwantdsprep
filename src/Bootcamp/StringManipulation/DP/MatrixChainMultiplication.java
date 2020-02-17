@@ -32,6 +32,8 @@ public class MatrixChainMultiplication {
 
     /*
     Dynamic programming
+    Time Complexity: O(n^3)
+    Auxiliary Space: O(n^2)
      */
     // Matrix Ai has dimension p[i-1] x p[i] for i = 1..n
     static int MatrixChainOrder(int p[], int n)
