@@ -21,9 +21,7 @@ public class MatrixChainMultiplication {
         // return the minimum count
         for (int next=start; next<end; next++)
         {
-            int count = MatrixChainOrder(arr, start, next) +
-                    MatrixChainOrder(arr, next+1, end) +
-                    arr[start-1]*arr[next]*arr[end];
+            int count = MatrixChainOrder(arr, start, next) + MatrixChainOrder(arr, next+1, end) + arr[start-1]*arr[next]*arr[end];
 
             if (count < min)
                 min = count;
