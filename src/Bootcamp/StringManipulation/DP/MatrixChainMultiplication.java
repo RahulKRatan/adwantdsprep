@@ -6,11 +6,12 @@ public class MatrixChainMultiplication {
     /*
     Recursive solution
      */
-    public static int MatrixChainOrder(int p[], int i, int j)
+    public static int MatrixChainOrder(int arr[], int start, int end)
     {
 
-        if (i == j)
-        return 0;
+        if (start == end) {
+            return 0;
+        }
 
         int min = Integer.MAX_VALUE;
 
@@ -18,11 +19,11 @@ public class MatrixChainMultiplication {
         // and last matrix, recursively calculate count of
         // multiplications for each parenthesis placement and
         // return the minimum count
-        for (int k=i; k<j; k++)
+        for (int next=start; next<end; next++)
         {
-            int count = MatrixChainOrder(p, i, k) +
-                    MatrixChainOrder(p, k+1, j) +
-                    p[i-1]*p[k]*p[j];
+            int count = MatrixChainOrder(arr, start, next) +
+                    MatrixChainOrder(arr, next+1, end) +
+                    arr[start-1]*arr[next]*arr[end];
 
             if (count < min)
                 min = count;
