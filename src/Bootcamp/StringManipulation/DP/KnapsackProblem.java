@@ -45,13 +45,12 @@ Recursion tree for Knapsack capacity 2 units and 3 items of 1 unit weight.
      */
     static int knapSackDP(int W, int wt[], int val[], int n)
     {
-        int i, w;
         int K[][] = new int[n+1][W+1];
 
         // Build table K[][] in bottom up manner
-        for (i = 0; i <= n; i++)
+        for (int i = 0; i <= n; i++)
         {
-            for (w = 0; w <= W; w++)
+            for (int w = 0; w <= W; w++)
             {
                 if (i==0 || w==0)
                     K[i][w] = 0;
