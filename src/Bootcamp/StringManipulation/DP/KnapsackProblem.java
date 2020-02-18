@@ -40,7 +40,7 @@ Recursion tree for Knapsack capacity 2 units and 3 items of 1 unit weight.
 
     // Returns the maximum value that can be put in a knapsack of capacity W
     /*
-    
+    Time Complexity: O(nW) where n is the number of items and W is the capacity of knapsack.
      */
     static int knapSackDP(int W, int wt[], int val[], int n)
     {
