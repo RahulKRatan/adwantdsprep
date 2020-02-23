@@ -1,4 +1,4 @@
-package Bootcamp.StringManipulation.DP;
+package Bootcamp.DP;
 
 
 /**
