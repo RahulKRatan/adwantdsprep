@@ -2,15 +2,21 @@ package Bootcamp.LinkedList;
 
 public class ReverseLinkedList {
     public static Node reverseList(Node head) {
-        Node prev = null;
-        Node curr = head;
-        while (curr != null) {
-            Node nextTemp = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = nextTemp;
+        if(head==null||head.next==null)
+            return head;
+
+        Node p1 = head;
+        Node p2 = p1.next;
+
+        head.next = null;
+        while(p1!=null&& p2!=null){
+            Node t = p2.next;
+            p2.next = p1;
+            p1 = p2;
+            p2 = t;
         }
-        return prev;
+
+        return p1;
     }
 /*
 We always put a node's previous node as one's next,
