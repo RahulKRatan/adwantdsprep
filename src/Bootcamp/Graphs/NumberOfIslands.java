@@ -42,7 +42,7 @@ public class NumberOfIslands {
     }
 
     public static void main(String[] args) {
-        char[][] chars = new char[][]{{'1','1','1','1','0'},{'1','1','0','1','0'},{'1','1','0','0','0'},{'0','0','0','0','0'}};
+        char[][] chars = new char[][]{};
         System.out.println(numIslands(chars));
     }
 }
