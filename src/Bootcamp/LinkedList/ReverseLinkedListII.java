@@ -14,18 +14,18 @@ public class ReverseLinkedListII {
         Node pre = dummy; // make a pointer pre as a marker for the node before reversing
         for(int i = 0; i<m-1; i++) pre = pre.next;
 
-        Node start = pre.next; // a pointer to the beginning of a sub-list that will be reversed
-        Node then = start.next; // a pointer to a node that will be reversed
+        Node first = pre.next; // a pointer to the beginning of a sub-list that will be reversed
+        Node second = first.next; // a pointer to a node that will be reversed
 
-        // 1 - 2 -3 - 4 - 5 ; m=2; n =4 ---> pre = 1, start = 2, then = 3
+        // 1 - 2 -3 - 4 - 5 ; m=2; n =4 ---> pre = 1, first = 2, second = 3
         // dummy-> 1 -> 2 -> 3 -> 4 -> 5
 
         for(int i=0; i<n-m; i++)
         {
-            start.next = then.next;
-            then.next = pre.next;
-            pre.next = then;
-            then = start.next;
+            first.next = second.next;
+            second.next = pre.next;
+            pre.next = second;
+            second = first.next;
         }
 
         // first reversing : dummy->1 - 3 - 2 - 4 - 5; pre = 1, start = 2, then = 4
