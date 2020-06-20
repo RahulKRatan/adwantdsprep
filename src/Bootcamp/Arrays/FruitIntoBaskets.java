@@ -10,6 +10,6 @@ public class FruitIntoBaskets {
 
 
     public static void main(String[] args) {
-
+        int[] fruits = new int[]{0,1,2,2};
     }
 }
