@@ -2,74 +2,49 @@ package Bootcamp.Sorting;
 
 public class MergeSort {
 
-    public static void mergeSort(int[] arr,int l, int r){
-        if(l >= r)
+    public static void mergeSort(int[] a, int n) {
+        if (n < 2) {
             return;
-        int m = l + (r-l)/2; // ** this is to avoid overflow problem.. if start and end are two large integers.
-        mergeSort(arr,l,m);
-        mergeSort(arr,m+1,r);
-        merge(arr,l,m,r);
+        }
+        int mid = n / 2;
+        int[] l = new int[mid];
+        int[] r = new int[n - mid];
+
+        for (int i = 0; i < mid; i++) {
+            l[i] = a[i];
+        }
+        for (int i = mid; i < n; i++) {
+            r[i - mid] = a[i];
+        }
+        mergeSort(l, mid);
+        mergeSort(r, n - mid);
+
+        merge(a, l, r, mid, n - mid);
     }
 
-    public static void merge(int[] arr, int l, int m, int r){
-        // Find sizes of two subarrays to be merged
-        int n1 = m - l + 1;
-        int n2 = r - m;
+    public static void merge(
+            int[] a, int[] l, int[] r, int left, int right) {
 
-        /* Create temp arrays */
-        int L[] = new int [n1];
-        int R[] = new int [n2];
-
-        /*Copy data to temp arrays*/
-        for (int i=0; i<n1; ++i)
-            L[i] = arr[l + i];
-        for (int j=0; j<n2; ++j)
-            R[j] = arr[m + 1+ j];
-
-
-        /* Merge the temp arrays */
-
-        // Initial indexes of first and second subarrays
-        int i = 0, j = 0;
-
-        // Initial index of merged subarry array
-        int k = l;
-        while (i < n1 && j < n2)
-        {
-            if (L[i] <= R[j])
-            {
-                arr[k] = L[i];
-                i++;
+        int i = 0, j = 0, k = 0;
+        while (i < left && j < right) {
+            if (l[i] <= r[j]) {
+                a[k++] = l[i++];
             }
-            else
-            {
-                arr[k] = R[j];
-                j++;
+            else {
+                a[k++] = r[j++];
             }
-            k++;
         }
-
-        /* Copy remaining elements of L[] if any */
-        while (i < n1)
-        {
-            arr[k] = L[i];
-            i++;
-            k++;
+        while (i < left) {
+            a[k++] = l[i++];
         }
-
-        /* Copy remaining elements of R[] if any */
-        while (j < n2)
-        {
-            arr[k] = R[j];
-            j++;
-            k++;
+        while (j < right) {
+            a[k++] = r[j++];
         }
-
     }
 
     public static void main(String[] args) {
         int[] arr = new int[]{15,20,2,4,25,3,14,19};
-        mergeSort(arr,0,arr.length-1);
+        mergeSort(arr,arr.length);
         for(int i=0;i<arr.length;i++){
             System.out.println(arr[i]);
         }
