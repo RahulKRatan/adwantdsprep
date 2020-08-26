@@ -6,3 +6,19 @@ Reflection is a language's ability to inspect and dynamically call classes, meth
     -https://www.youtube.com/watch?v=elFmT_d_OYE
 
 Design Patterns used in Spring framework:
+
+
+Single vs Prototype beans
+This means that once a singleton bean is initialized, the same instance will be reused throughout the application context.
+Unlike singleton beans, Spring will provide you with a new instance of the prototype bean every-time the bean is requested.
+    - https://nullbeans.com/prototype-vs-singleton-spring-beans-differences-and-uses/
+    - https://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/beans.html#beans-factory-scopes
+
+IoC, DIP, DI, IoC container ( aim is to have loosely coupled design )
+IoC, DIP - Design principles provide high level guidelines to design better software applications like SOLID
+IoC - Factory, Abstract Factory , DI , Template method , Strategy patterns use IoC
+The IoC principle suggests to invert the control. This means to delegate the control to another class. In other words, invert the dependency creation control from class A to another class
+DIP - High-level modules should not depend on low-level modules. Both should depend on the abstraction. Abstractions should not depend on details. Details should depend on abstractions.
+DI - Dependency Injection is a design pattern which implements the IoC principle to invert the creation of dependent objects.
+IoC container - framework
+    -https://www.tutorialsteacher.com/ioc/introduction
