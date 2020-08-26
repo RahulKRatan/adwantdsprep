@@ -1,0 +1,94 @@
+Certification to do:
+https://www.coursera.org/learn/site-reliability-engineering-slos
+
+
+Prep tips:
+https://medium.com/@yashgirdhar/11-companies-55-interviews-9-offers-including-google-and-amazon-heres-what-i-have-to-share-293852c1c98f
+
+Big O Cheat sheet:
+https://www.bigocheatsheet.com/
+https://stackoverflow.com/questions/487258/what-is-a-plain-english-explanation-of-big-o-notation
+
+14 Algo Patterns - Very good read:
+    - https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed
+
+
+Amazon & Microsoft online questions to be reviewed -
+    - https://leetcode.com/discuss/interview-question/398023/Microsoft-Online-Assessment-Questions - [Msft Codility]
+    - https://leetcode.com/discuss/interview-question/344650/Amazon-Online-Assessment-Questions - [Amzn Online Assessment]
+    - https://leetcode.com/discuss/interview-question/481968/amazon-interview-problems-list-updated [Amzn in general only]
+    - https://www.youtube.com/playlist?list=PLLucmoeZjtMR990BPePcn5WgoCM_OX0YB [Amzn Leadership principles to be reviewed]
+    - https://leetcode.com/discuss/interview-question/437082/Amazon-Behavioral-questions-or-Leadership-Principles-or-LP [Amzn Leadership principles to be reviewed]
+    - https://leetcode.com/discuss/interview-question/488887/amazon-final-interview-questions-sde1 [more Amzn interview questions]
+    - https://leetcode.com/discuss/interview-experience/495385/microsoft-azure-onsite-interview-experience (good read before MSFT onsite event)
+
+LeetCode Discussion related to OOD problems, quite useful for interviews:
+    - https://leetcode.com/discuss/interview-question/object-oriented-design/?currentPage=1&orderBy=hot&query=
+    - https://leetcode.com/discuss/interview-question/system-design?currentPage=1&orderBy=hot&query=
+
+Problems to go over before any FAANG & M onsite:
+    - https://leetcode.com/discuss/career/449135/How-to-effectively-use-LeetCode-to-prepare-for-interviews
+
+
+Concepts covered:
+    - DFS
+    - BFS
+    - Arrays
+    - String
+    - Trees
+    - 2D Arrays
+    - Recursion
+    - DP
+    - Greedy
+    - OOPs Design
+
+Theoretical Topics to covers:
+    - Good link to go through before interview: https://github.com/anshuj11/interviewPrep/wiki/Triplebyte-Mock-Interview---9-7
+    - Good read about Bloom filters :-
+        *https://medium.com/datadriveninvestor/bloom-filter-a-simple-but-interesting-data-structure-37fd53b11606
+        *https://brilliant.org/wiki/bloom-filter/
+    - Mutex, Deadlock, Semaphores, etc with their implementations. Key differences between Mutex vs Semaphores.
+    - Good read about Infrastructure as code. IAC techs (my personal interest Terraform (Orchestrator) | Ansible (Configuration Management)
+        *https://blog.gruntwork.io/why-we-use-terraform-and-not-chef-puppet-ansible-saltstack-or-cloudformation-7989dad2865c
+    - java vs Scala
+
+Resources to prepare for DP:
+    - https://leetcode.com/discuss/general-discussion/475924/my-experience-and-notes-for-learning-dp
+    - https://leetcode.com/problems/house-robber/discuss/156523/From-good-to-great.-How-to-approach-most-of-DP-problems.
+    - https://leetcode.com/discuss/general-discussion/458695/dynamic-programming-patterns
+    - https://leetcode.com/discuss/general-discussion/491522/dynamic-programming-questions-thread (compiled list of some commonly asked interview DP Questions)
+
+Resources to prepare System Design:
+    - https://twitter.com/HenryR/status/1094033131399565313 (Twitter thread on System Design - Worth read)
+    - https://landing.google.com/sre/workbook/chapters/non-abstract-design/ (Good Read - Design of Adwords)
+    - https://xpertsession.com/blog/what-you-need-to-know-about-the-system-design-interview/
+    - https://github.com/resumejob/system-design-algorithms
+    - https://leetcode.com/discuss/interview-question/483813/how-would-you-design-yelp-facebook-check-in
+    - https://leetcode.com/discuss/interview-question/341980/Amazon-or-System-Design-or-System-to-capture-unique-addresses-in-the-entire-world (System to capture unique addresses in the entire world | Amazon)
+    - https://leetcode.com/discuss/interview-question/system-design/496042/design-video-sharing-platform-like-youtube (Discussion on Video Sharing platform, design discussion)
+
+Resources for Data Structures Implementation:
+    - https://github.com/YogenRaii/java-core/blob/master/src/main/java/com/eprogrammerz/examples/ds/custom/map/MyMap.java - HashMap implementation Java
+    - https://dzone.com/articles/custom-hashmap-implementation-in-java
+
+Channels to prepare DS/Design concepts:
+    - https://www.youtube.com/channel/UCMNkvKnD3mo3Jj9eTwJllWw
+    - https://www.youtube.com/channel/UCmJz2DV1a3yfgrR7GqRtUUA (preferred)
+    - https://www.youtube.com/user/tusharroy2525
+    - https://www.youtube.com/channel/UCRPMAqdtSgd0Ipeef7iFsKw/playlists
+
+
+Resources to read about concurrency/multithreading concepts:
+    - https://www.vogella.com/tutorials/JavaConcurrency/article.html#concurrency
+    - https://www.baeldung.com/java-mutex
+    - http://tutorials.jenkov.com/java-util-concurrent/executorservice.html
+    - https://www.geeksforgeeks.org/mutex-vs-semaphore/
+    - https://mkyong.com/java/java-thread-mutex-and-semaphore-example/
+    - http://tutorials.jenkov.com/java-concurrency/blocking-queues.html
+
+Resources to read about networking concepts:
+    - https://hpbn.co/
+
+
+Ascii Table I refer:
+    - https://en.wikipedia.org/wiki/File:ASCII-Table.svg
