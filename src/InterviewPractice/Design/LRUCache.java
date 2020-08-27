@@ -23,22 +23,23 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 
-class Node{
+class DLLNode{
     int key;
     int value;
-    Node prev;
-    Node next;
+    DLLNode prev;
+    DLLNode next;
 
-    public Node(int key, int value){
+    public DLLNode(int key, int value){
         this.key = key;
         this.value = value;
     }
 }
+
 public class LRUCache {
     int capacity;
-    HashMap<Integer, Node> map = new HashMap<>();
-    Node head = null;
-    Node end = null;
+    HashMap<Integer, DLLNode> map = new HashMap<>();
+    DLLNode head = null;
+    DLLNode end = null;
 
     public LRUCache(int capacity) {
         this.capacity = capacity;
@@ -46,17 +47,16 @@ public class LRUCache {
 
     public int get(int key) {
         if (map.containsKey(key)) {
-            Node n = map.get(key);
+            DLLNode n = map.get(key);
             delete(n);
             setHead(n);
             return n.value;
         }
-
         return -1;
     }
 
     /*This method will delete node*/
-    public void delete(Node node) {
+    public void delete(DLLNode node) {
         if (node.prev != null) {
             node.prev.next = node.next;
         } else {
@@ -72,39 +72,34 @@ public class LRUCache {
     }
 
     /*This method will make passed node as head*/
-    public void setHead(Node node) {
+    public void setHead(DLLNode node) {
         node.next = head;
         node.prev = null;
-
-        if (head != null)
+        if (head != null) {
             head.prev = node;
-
+        }
         head = node;
-
-        if (end == null)
+        if (end == null) {
             end = head;
+        }
     }
 
     public void set(int key, int value) {
         if (map.containsKey(key)) {
             // update the old value
-            Node old = map.get(key);
+            DLLNode old = map.get(key);
             old.value = value;
             delete(old);
             setHead(old);
-        } else {
-            Node newNode = new Node(key, value);
+        }
+        else {
+            DLLNode newNode = new DLLNode(key, value);
             if (map.size() >= capacity) {
-
                 map.remove(end.key);
                 // remove last node
                 delete(end);
-                setHead(newNode);
-
-            } else {
-                setHead(newNode);
             }
-
+            setHead(newNode);
             map.put(key, newNode);
         }
     }
