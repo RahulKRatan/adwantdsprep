@@ -10,10 +10,17 @@ package InterviewPractice.Design;
  */
 
 /**
- *  Solution :
+ *  Solution 1:
  *  Hashmap + DoubleLinkedList
+ *
+ *  Solution 2:
+ *  LinkedHashMap
+ *
  */
+
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 
 class Node{
@@ -118,4 +125,34 @@ public class LRUCache {
 
     }
 }
+
+/*
+LinkedHashMap implementation
+
+Several points to mention:
+
+In the constructor, the third boolean parameter specifies the ordering mode. If we set it to true, it will be in access order. (https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html#LinkedHashMap-int-float-boolean-)
+By overriding removeEldestEntry in this way, we do not need to take care of it ourselves. It will automatically remove the least recent one when the size of map exceeds the specified capacity.(https://docs.oracle.com/javase/8/docs/api/java/util/LinkedHashMap.html#removeEldestEntry-java.util.Map.Entry-)
+
+*/
+
+class LRUCache2 {
+        private LinkedHashMap<Integer, Integer> map;
+        private final int CAPACITY;
+        public LRUCache2(int capacity) {
+            CAPACITY = capacity;
+            map = new LinkedHashMap<Integer, Integer>(capacity, 0.75f, true){
+                protected boolean removeEldestEntry(Map.Entry eldest) {
+                    return size() > CAPACITY;
+                }
+            };
+        }
+        public int get(int key) {
+            return map.getOrDefault(key, -1);
+        }
+        public void set(int key, int value) {
+            map.put(key, value);
+        }
+}
+
 
