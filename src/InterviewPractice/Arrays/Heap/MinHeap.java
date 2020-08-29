@@ -8,8 +8,7 @@ public class MinHeap {
 
     private static final int FRONT = 1;
 
-    public MinHeap(int maxsize)
-    {
+    public MinHeap(int maxsize) {
         this.maxsize = maxsize;
         this.size = 0;
         Heap = new int[this.maxsize + 1];
@@ -19,30 +18,26 @@ public class MinHeap {
     // Function to return the position of
     // the parent for the node currently
     // at pos
-    private int parent(int pos)
-    {
+    private int parent(int pos) {
         return pos / 2;
     }
 
     // Function to return the position of the
     // left child for the node currently at pos
-    private int leftChild(int pos)
-    {
+    private int leftChild(int pos) {
         return (2 * pos);
     }
 
     // Function to return the position of
     // the right child for the node currently
     // at pos
-    private int rightChild(int pos)
-    {
+    private int rightChild(int pos) {
         return (2 * pos) + 1;
     }
 
     // Function that returns true if the passed
     // node is a leaf node
-    private boolean isLeaf(int pos)
-    {
+    private boolean isLeaf(int pos) {
         if (pos >= (size / 2) && pos <= size) {
             return true;
         }
@@ -50,8 +45,7 @@ public class MinHeap {
     }
 
     // Function to swap two nodes of the heap
-    private void swap(int fpos, int spos)
-    {
+    private void swap(int fpos, int spos) {
         int tmp;
         tmp = Heap[fpos];
         Heap[fpos] = Heap[spos];
@@ -59,8 +53,7 @@ public class MinHeap {
     }
 
     // Function to heapify the node at pos
-    private void minHeapify(int pos)
-    {
+    private void minHeapify(int pos) {
 
         // If the node is a non-leaf node and greater
         // than any of its child
@@ -86,8 +79,7 @@ public class MinHeap {
     }
 
     // Function to insert a node into the heap
-    public void insert(int element)
-    {
+    public void insert(int element) {
         if (size >= maxsize) {
             return;
         }
@@ -101,8 +93,7 @@ public class MinHeap {
     }
 
     // Function to print the contents of the heap
-    public void print()
-    {
+    public void print() {
         for (int i = 1; i <= size / 2; i++) {
             System.out.print(" PARENT : " + Heap[i]
                     + " LEFT CHILD : " + Heap[2 * i]
@@ -113,8 +104,7 @@ public class MinHeap {
 
     // Function to build the min heap using
     // the minHeapify
-    public void minHeap()
-    {
+    public void minHeap() {
         for (int pos = (size / 2); pos >= 1; pos--) {
             minHeapify(pos);
         }
@@ -122,8 +112,7 @@ public class MinHeap {
 
     // Function to remove and return the minimum
     // element from the heap
-    public int remove()
-    {
+    public int remove() {
         int popped = Heap[FRONT];
         Heap[FRONT] = Heap[size--];
         minHeapify(FRONT);
