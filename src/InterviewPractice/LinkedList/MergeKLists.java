@@ -24,7 +24,6 @@ public class MergeKLists {
             if(next!=null){
                 minHeap.add(next);
             }
-
         }
         return head.next;
     }
