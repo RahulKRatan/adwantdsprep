@@ -18,8 +18,7 @@ public class TopK {
         }
 
         // decreasing comparator
-        PriorityQueue<Map.Entry<Integer, Integer>> maxHeap =
-                new PriorityQueue<>((a,b)->(b.getValue()-a.getValue()));
+        Queue<Map.Entry<Integer, Integer>> maxHeap = new PriorityQueue<>((a,b)->(b.getValue()-a.getValue()));
 
         for(Map.Entry<Integer,Integer> entry: map.entrySet()){
             maxHeap.add(entry);
@@ -27,8 +26,7 @@ public class TopK {
 
         List<Integer> res = new ArrayList<>();
         while(res.size()<k){
-            Map.Entry<Integer, Integer> entry = maxHeap.poll();
-            res.add(entry.getKey());
+            res.add(maxHeap.poll().getKey());
         }
         return res;
     }
