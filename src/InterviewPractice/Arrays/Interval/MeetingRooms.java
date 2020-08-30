@@ -30,6 +30,11 @@ public class MeetingRooms {
      * The idea here is to sort the meetings by starting time. Then, go through the meetings one by one and make sure that each meeting ends before the next one starts.
      * @param intervals
      * @return
+     *
+     * Time complexity : O(nlogn). The time complexity is dominated by sorting. Once the array has been sorted, only O(n) time is taken to go through the array and determine if there is any overlap.
+     *
+     * Space complexity : O(1). Since no additional space is allocated.
+     *
      */
     public static boolean canAttendMeetings2(int[][] intervals) {
         Comparator<int[]> c=(int[] a, int[] b) -> (a[0]-b[0]);
