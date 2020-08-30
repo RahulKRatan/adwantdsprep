@@ -1,5 +1,12 @@
 Java Topics & Resources
 
+Comparator:
+input1.compareTo(input2) {40,10,50,60,19}
++ve -> swaps elements
+-ve -> doesn't swap
+0 -> both are same
+
+
 Reflection:
 Reflection is a language's ability to inspect and dynamically call classes, methods, attributes, etc. at runtime.
     -https://docs.oracle.com/javase/tutorial/reflect/index.html
