@@ -1,0 +1,12 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(äã™éùÿÿÿÿ8½Î’ÆÂ.
+W
+java:S1118":Add a private constructor to hide the implicit public one.(«±œƒ8½Î’ÆÂ.
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¿…®ùÿÿÿÿ8½Î’ÆÂ.
+X
+java:S1854";Remove this useless assignment to local variable "current".(ç”äÀ8½Î’ÆÂ.
+I
+java:S1481",Remove this unused "current" local variable.(ç”äÀ8½Î’ÆÂ.
+X	java:S125"<This block of commented-out lines of code should be removed.(ë¡ž©8½Î’ÆÂ.
+X	java:S125 "<This block of commented-out lines of code should be removed.(Ú°à¬8½Î’ÆÂ.
+X	java:S125#"<This block of commented-out lines of code should be removed.(Ú°à¬8½Î’ÆÂ.

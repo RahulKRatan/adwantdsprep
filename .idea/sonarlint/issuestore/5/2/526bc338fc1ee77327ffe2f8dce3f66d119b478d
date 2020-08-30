@@ -1,0 +1,7 @@
+
+H
+java:S1172X"+Remove this unused method parameter "user".(ûÈôó8Æê¤ïÂ.
+U	java:S106u"9Replace this use of System.out or System.err by a logger.(åá¹ó8¥š¨ïÂ.
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¬¾
+Z	java:S106m"9Replace this use of System.out or System.err by a logger.(¿¿±úÿÿÿÿ8¥š¨ïÂ.
+Z	java:S106e"9Replace this use of System.out or System.err by a logger.(õš‡àúÿÿÿÿ8¥š¨ïÂ.

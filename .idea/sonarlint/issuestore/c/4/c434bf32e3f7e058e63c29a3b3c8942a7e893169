@@ -1,0 +1,9 @@
+
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(€ú°s
+p	java:S116"ORename this field "Heap" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(âœÌòùÿÿÿÿ8îœäÙÃ.
+^
+java:S1126("AReplace this if-then-else statement by a single return statement.(³Îç8îœäÙÃ.
+Z	java:S106]"9Replace this use of System.out or System.err by a logger.(Š–øÿÿÿÿ8îœäÙÃ.
+Z	java:S106_"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ8îœäÙÃ.
+U	java:S106n"9Replace this use of System.out or System.err by a logger.(¨•±§8îœäÙÃ.
+Z	java:S106{"9Replace this use of System.out or System.err by a logger.(ÿ„‰Ëıÿÿÿÿ8îœäÙÃ.
