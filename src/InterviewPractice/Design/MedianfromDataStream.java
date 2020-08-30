@@ -14,20 +14,20 @@ import java.util.PriorityQueue;
 public class MedianfromDataStream {
 
     // max queue is always larger or equal to min queue
-    PriorityQueue<Integer> largerHalf = new PriorityQueue();
-    PriorityQueue<Integer> smallerHalf = new PriorityQueue(Comparator.reverseOrder());
+    PriorityQueue<Integer> largerHalfMinHeap = new PriorityQueue();
+    PriorityQueue<Integer> smallerHalfMaxHeap = new PriorityQueue(Comparator.reverseOrder());
 
     public void addNum(int num) {
-        smallerHalf.add(num);
-        largerHalf.add(smallerHalf.poll());
-        if (smallerHalf.size() < largerHalf.size()){
-            smallerHalf.add(largerHalf.poll());
+        smallerHalfMaxHeap.add(num);
+        largerHalfMinHeap.add(smallerHalfMaxHeap.poll());
+        if (smallerHalfMaxHeap.size() < largerHalfMinHeap.size()){
+            smallerHalfMaxHeap.add(largerHalfMinHeap.poll());
         }
     }
 
     public double findMedian() {
-        if (smallerHalf.size() == largerHalf.size()) return (smallerHalf.peek() + largerHalf.peek()) /  2.0;
-        else return smallerHalf.peek();
+        if (smallerHalfMaxHeap.size() == largerHalfMinHeap.size()) return (smallerHalfMaxHeap.peek() + largerHalfMinHeap.peek()) /  2.0;
+        else return smallerHalfMaxHeap.peek();
     }
 
     public static void main(String[] args) {
