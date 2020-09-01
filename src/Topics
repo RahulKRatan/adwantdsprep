@@ -1,4 +1,4 @@
-Frequently asked by topics:
+Frequently asked questions by topics:
 
 Heaps:
 -------
@@ -11,7 +11,51 @@ Find Median from Data Stream
 Sliding Window Maximum
 Top K Frequent Elements
 Range addition
+Employee Free Time
 
+Sliding window :
+------------------
+Minimum-window-substring
+longest substring without repeating characters ( * - tricky )
+Sliding window maximum
+Longest substring with at most k distinct characters
+Longest repeating character replacement ( ** - tricky )
+Find all anagrams in a string
+longest substring with at most two distinct characters
+substring with concatenation of all words
+
+Merge intervals
+-----------------
+Merge intervals
+Insert intervals
+Meeting room 1, 2
+Non overlapping intervals
+Maximum CPU Load
+Employee Free Time
+Interval List Intersections
+
+Two pointers
+-------------
+Remove Duplicates from Sorted Array
+Two Sum II - Input array is sorted
+Reverse Words in a String II
+Rotate Array
+Valid Palindrome
+Container With Most Water
+Product of Array Except Self
+2,3,4 sum
+Trapping rain water
+Partition Labels
+Merge Sorted Array
+Palindrome Linked List
+Move Zeroes
+Find the Duplicate Number
+Minimum Size Subarray Sum
+Sort Colors
+3Sum Closest
+Remove Nth Node From End of List
+Partition List
+Intersection of Two Arrays
 
 BFS:
 -----
