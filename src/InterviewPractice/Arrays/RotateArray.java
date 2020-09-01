@@ -1,7 +1,7 @@
 package InterviewPractice.Arrays;
 
 /*
-Time complexity : O(n) nn elements are reversed a total of three times.
+Time complexity : O(n) n elements are reversed a total of three times.
 Space complexity : O(1). No extra space is used.
  */
 
