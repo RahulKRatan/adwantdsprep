@@ -2,7 +2,6 @@ package InterviewPractice.Arrays.Interval;
 
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
@@ -26,14 +25,17 @@ import java.util.PriorityQueue;
  *
  * 2nd option :
  * Sort the given meetings by their start time.
- * Initialize a new min-heap and add the first meeting's ending time to the heap. We simply need to keep track of the ending times as that tells us when a meeting room will get free.
+ * Initialize a new min-heap and add the first meeting's ending time to the heap. We simply need to keep track of the
+ * ending times as that tells us when a meeting room will get free.
  * For every meeting room check if the minimum element of the heap i.e. the room at the top of the heap is free or not.
  * If the room is free, then we extract the topmost element and add it back with the ending time of the current meeting we are processing.
  * If not, then we allocate a new room and add it to the heap.
- * After processing all the meetings, the size of the heap will tell us the number of rooms allocated. This will be the minimum number of rooms needed to accommodate all the meetings.
+ * After processing all the meetings, the size of the heap will tell us the number of rooms allocated.
+ * This will be the minimum number of rooms needed to accommodate all the meetings.
  */
 public class MeetingRoomsII {
 
+    //2ms
     public static int minMeetingRooms(int[][] intervals) {
         int[] left = new int[intervals.length];
         int[] right = new int[intervals.length];
@@ -54,33 +56,33 @@ public class MeetingRoomsII {
         return rooms;
     }
 
-    public static int minMeetingRooms(Interval[] intervals) {
+    //10ms
+    public static int minMeetingRooms2(int[][] intervals) {
 
     // Check for the base case. If there are no intervals, return 0
     if (intervals.length == 0) {
       return 0;
     }
-
     // Min heap
-    PriorityQueue<Integer> allocator = new PriorityQueue<Integer>(intervals.length, Comparator.comparingInt(a -> a));
+    PriorityQueue<Integer> allocator = new PriorityQueue<>(intervals.length,(a,b)->(a-b));
 
     // Sort the intervals by start time
-    Arrays.sort(intervals, Comparator.comparingInt(a -> a.start));
+    Arrays.sort(intervals,(a,b)->(a[0]-b[0]));
 
     // Add the first meeting
-    allocator.add(intervals[0].end);
+    allocator.add(intervals[0][1]);
 
     // Iterate over remaining intervals
     for (int i = 1; i < intervals.length; i++) {
 
       // If the room due to free up the earliest is free, assign that room to this meeting.
-      if (intervals[i].start >= allocator.peek()) {
+      if (intervals[i][0] >= allocator.peek()) {
         allocator.poll();
       }
 
       // If a new room is to be assigned, then also we add to the heap,
       // If an old room is allocated, then also we have to add to the heap with updated end time.
-      allocator.add(intervals[i].end);
+      allocator.add(intervals[i][1]);
     }
 
     // The size of the heap tells us the minimum rooms required for all the meetings.
