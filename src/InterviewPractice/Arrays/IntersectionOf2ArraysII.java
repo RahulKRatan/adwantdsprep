@@ -3,6 +3,12 @@ package InterviewPractice.Arrays;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * Time Complexity: O(n+m), where nn and mm are the lengths of the arrays.
+ * We iterate through the first, and then through the second array; insert and lookup operations in the hash map take a constant time.
+ *
+ * Space Complexity: O(min(n,m)). We use hash map to store numbers (and their counts) from the smaller array.
+ */
 public class IntersectionOf2ArraysII {
 
     public static int[] intersection(int[] nums1, int[] nums2) {
