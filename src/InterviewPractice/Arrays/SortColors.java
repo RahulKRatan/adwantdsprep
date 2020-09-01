@@ -7,8 +7,8 @@ package InterviewPractice.Arrays;
  * Space complexity : O}(1) since it's a constant space solution.
  *
  * Algorithm :
- * if arr[i] is red - swap arr[i] with arr[red] and increment red & i
- * if arr[i] is blue - swap arr[i] with arr[blue] and decrement blue and i
+ * if arr[i] is red - swap arr[i] with arr[red/first] and increment red & i
+ * if arr[i] is blue - swap arr[i] with arr[blue/third] and decrement blue and i
  * else just increment i ( in case the element is green )
  *
  */
@@ -35,7 +35,7 @@ public class SortColors {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{2,0,1};
+        int[] nums = new int[]{2,0,2,1,1,0};
         int[] result = sortColors(nums);
         System.out.println(result);
     }
