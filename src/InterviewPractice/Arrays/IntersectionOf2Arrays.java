@@ -11,6 +11,7 @@ public class IntersectionOf2Arrays {
         if(nums1.length == 0 || nums2.length == 0)
             return new int[]{};
         HashSet<Integer> intersection = new HashSet<>();
+
         for (int i : nums1) {
             intersection.add(i); // 4,7,9,6
         }
