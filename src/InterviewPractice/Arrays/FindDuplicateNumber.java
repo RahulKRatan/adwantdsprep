@@ -15,6 +15,9 @@ package InterviewPractice.Arrays;
  * In phase 2, we give the tortoise a second chance by slowing down the hare,
  * so that it now moves with the speed of tortoise: tortoise = nums[tortoise], hare = nums[hare].
  * The tortoise is back at the starting position, and the hare starts from the intersection point.
+ *
+ * linkedlist-> files -> hare-tortoise image. F = B
+ *
  */
 
 
@@ -23,20 +26,20 @@ public class FindDuplicateNumber {
     public static int findDuplicate(int[] nums){
         // Find the intersection point of the two runners.
         int tortoise = nums[0];
-        int hare = nums[0];
-        do {
+        int hare = nums[nums[0]];
+        while (tortoise != hare){
             tortoise = nums[tortoise];
             hare = nums[nums[hare]];
-        } while (tortoise != hare);
+        }
 
         // Find the "entrance" to the cycle.
-        tortoise = nums[0];
+        hare = 0;
         while (tortoise != hare) {
             tortoise = nums[tortoise];
             hare = nums[hare];
         }
 
-        return hare;
+        return tortoise;
     }
 
     public static void main(String[] args) {
