@@ -84,7 +84,6 @@ Validate Binary Search Tree
 Binary Tree Vertical Order Traversal
 Convert Sorted List to Binary Search Tree
 
-
 Trees:
 -----
 Binary Tree Right Side View
@@ -100,7 +99,6 @@ Validate Binary Search Tree
 Serialize and Deserialize N-ary Tree
 Invert Binary Tree
 Maximum Depth of Binary Tree
-
 
 DP:
 -----
@@ -139,7 +137,6 @@ Subsets
 Palindrome Partitioning
 Knight’s Tour Problem
 Rat In A Maze Puzzle
-
 
 Greedy
 ------
@@ -185,7 +182,6 @@ String to Integer (atoi)
 String Compression
 Multiply Strings
 
-
 Arrays:
 -------
 Rotate Image
@@ -195,7 +191,6 @@ Next Permutation
 Search in Rotated Sorted Array
 Spiral Matrix
 First Missing Positive
-
 
 Graphs:
 -------
@@ -207,3 +202,6 @@ Sorting&Searching
 -----------------
 Time Based Key-Value Store
 Random Pick with Weight
+Search a 2D Matrix II
+Find First and Last Position of Element in Sorted Array
+Pow(x, n)
