@@ -71,7 +71,25 @@ Trees:
 
 DP:
 -----
-
+Word Break 1, 2
+Maximum Subarray
+Best Time to Buy and Sell Stock
+Decode Ways
+Coin Change
+Maximal Rectangle
+Maximal Square
+Regular Expression Matching
+Longest Increasing Subsequence
+Longest Palindromic Substring
+Longest Common Subsequence
+Maximum Product Subarray
+Minimum Path Sum
+Climbing Stairs
+Edit Distance
+0-1 Knapsack Problem
+Matrix Chain Multiplication
+Partition problem
+Rod Cutting
 
 Backtracking
 ------------
@@ -92,11 +110,22 @@ Rat In A Maze Puzzle
 
 Greedy
 ------
-
+Job Sequencing Problem
+Activity Selection Problem
+Find minimum time to finish all jobs with given constraints
+Partition Labels
+Remove K Digits
 
 LinkedList:
 ----------
-
+Add Two Numbers
+Merge k Sorted Lists
+Merge 2 Sorted Lists
+Reverse Linked List
+Copy List with Random Pointer
+Reverse Nodes in k-Group
+Sort List
+Linked List Cycle I, II
 
 Recursion:
 ----------
