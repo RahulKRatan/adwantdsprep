@@ -1,4 +1,4 @@
-package InterviewPractice.Arrays;
+package InterviewPractice.DP;
 
 public class MaximumSubarray {
 
