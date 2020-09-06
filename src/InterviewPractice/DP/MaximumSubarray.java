@@ -8,11 +8,11 @@ package InterviewPractice.DP;
 public class MaximumSubarray {
 
     public static int maxSubArray(int[] array) {
-        int currentMax = Integer.MIN_VALUE;
-        int totalMax =  Integer.MIN_VALUE;
+        int currentMax = array[0];
+        int totalMax =  array[0];
 
-        for(int i = 0; i < array.length; i++){
-            currentMax = Math.max(currentMax, 0) + array[i];
+        for(int i = 1; i < array.length; i++){
+            currentMax = Math.max(currentMax+array[i], array[i]);
             totalMax = Math.max(totalMax, currentMax);
         }
         return totalMax;
@@ -23,3 +23,23 @@ public class MaximumSubarray {
         System.out.println(maxSubArray(nums));
     }
 }
+
+/*
+Time Complexity: O(N)
+Space Complexity: O(N)
+
+public int Kadanes(int[] array){
+    int n = array.length;
+    int[] dp = new int[n];
+
+    //base condition
+    dp[0] = array[0];
+
+    int answer = Integer.MIN_VALUE;
+    for(int i = 1; i < n; i++){
+        dp[i] = Math.max(dp[i - 1], 0) + array[i];
+        answer = Math.max(answer, dp[i]);
+    }
+    return answer;
+}
+ */
