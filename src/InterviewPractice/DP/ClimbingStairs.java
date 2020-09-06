@@ -1,16 +1,42 @@
 package InterviewPractice.DP;
 
+import java.time.Duration;
+import java.time.Instant;
+
+/**
+ * Time -> 2 power n for recursive. and o(n) for DP and recur with memo
+ */
 public class ClimbingStairs {
 
-    // Recursive - TLE error
-    public static int climbStairs(int n) {
-        if(n < 0){
+    public static int climbStairsMemo(int n) {
+        int memo[] = new int[n + 1];
+        return climb_Stairs(0, n, memo);
+    }
+    public static int climb_Stairs(int i, int n, int memo[]) {
+        if (i > n) {
             return 0;
         }
-        if(n == 0){
+        if (i == n) {
             return 1;
         }
-        return climbStairs(n-1) + climbStairs(n-2);
+        if (memo[i] > 0) {
+            return memo[i];
+        }
+        memo[i] = climb_Stairs(i + 1, n, memo) + climb_Stairs(i + 2, n, memo);
+        return memo[i];
+    }
+
+    public static int climbStairsRecur(int n) {
+        return climbStairs(0, n);
+    }
+    public static int climbStairs(int i,int n) {
+        if (i > n) {
+            return 0;
+        }
+        if (i == n) {
+            return 1;
+        }
+        return climbStairs(i + 1, n) + climbStairs(i + 2, n);
     }
 
     // DP - valid solution
@@ -25,29 +51,18 @@ public class ClimbingStairs {
         return result[n];
     }
 
-    /*
-    Memoization
-     public int climbStairs(int n) {
-        int memo[] = new int[n + 1];
-        return climb_Stairs(0, n, memo);
-    }
-    public int climb_Stairs(int i, int n, int memo[]) {
-        if (i > n) {
-            return 0;
-        }
-        if (i == n) {
-            return 1;
-        }
-        if (memo[i] > 0) {
-            return memo[i];
-        }
-        memo[i] = climb_Stairs(i + 1, n, memo) + climb_Stairs(i + 2, n, memo);
-        return memo[i];
-    }
-     */
-
     public static void main(String[] args) {
-        System.out.println(climbStairs(44));
+        Instant start = Instant.now();
+        System.out.println(climbStairsRecur(44));
+        Instant end = Instant.now();
+        System.out.println("Recursive duration: "+Duration.between(start, end).getNano());
+        Instant start2 = Instant.now();
         System.out.println(DPclimbStairs(44));
+        Instant end2 = Instant.now();
+        System.out.println("DP duration: "+Duration.between(start2, end2).getNano());
+        Instant start3 = Instant.now();
+        System.out.println(climbStairsMemo(44));
+        Instant end3 = Instant.now();
+        System.out.println("DP duration: "+Duration.between(start3, end3).getNano());
     }
 }
