@@ -1,5 +1,9 @@
 package InterviewPractice.StringManipulation.Palindrome;
 
+/**
+ * Time complexity : O(n^2)
+ * Space complexity : O(1).
+ */
 public class LongestPalindromicSubstring {
     private static int lo, maxLen;
     public static String longestPalindrome(String s) {
