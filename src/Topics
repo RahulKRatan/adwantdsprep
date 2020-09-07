@@ -106,6 +106,8 @@ Word Break 1, 2
 Maximum Subarray
 Best Time to Buy and Sell Stock
 Decode Ways
+Unique Paths
+Climbing Stairs
 Coin Change
 Maximal Rectangle
 Maximal Square
@@ -115,7 +117,6 @@ Longest Palindromic Substring
 Longest Common Subsequence
 Maximum Product Subarray
 Minimum Path Sum
-Climbing Stairs
 Edit Distance
 0-1 Knapsack Problem
 Matrix Chain Multiplication
