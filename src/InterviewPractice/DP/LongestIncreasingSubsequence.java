@@ -26,10 +26,10 @@ public class LongestIncreasingSubsequence {
             return 0;
         }
         int T[] = new int[arr.length];
-        int actualSolution[] = new int[arr.length];
+       // int actualSolution[] = new int[arr.length];
         for(int i=0; i < arr.length; i++){
             T[i] = 1;
-            actualSolution[i] = i;
+            //actualSolution[i] = i;
         }
 
         for(int i=1; i < arr.length; i++){
@@ -37,7 +37,7 @@ public class LongestIncreasingSubsequence {
                 if(arr[i] > arr[j]){
                         T[i] = Integer.max(T[i], T[j] + 1);
                         //set the actualSolution to point to guy before me
-                        actualSolution[i] = j;
+                        //actualSolution[i] = j;
 
                 }
             }
@@ -51,7 +51,7 @@ public class LongestIncreasingSubsequence {
             }
         }
 
-        //lets print the actual solution
+       /* //lets print the actual solution
         int t;
         int newT = maxIndex;
         do{
@@ -59,7 +59,7 @@ public class LongestIncreasingSubsequence {
             System.out.print(arr[t] + " ");
             newT = actualSolution[t];
         }while(t != newT);
-        System.out.println();
+        System.out.println();*/
 
         return T[maxIndex];
     }
@@ -97,3 +97,37 @@ RECURSIVE WAY OF DOING IT
     }
 
 */
+
+/* O(nlogn) solution using binary search
+
+class Solution {
+    public int lengthOfLIS(int[] nums) {
+        if(nums==null || nums.length==0)
+        return 0;
+
+    ArrayList<Integer> list = new ArrayList<>();
+
+    for(int num: nums){
+        if(list.size()==0 || num>list.get(list.size()-1)){
+            list.add(num);
+        }else{
+            int i=0;
+            int j=list.size()-1;
+
+            while(i<j){
+                int mid = (i+j)/2;
+                if(list.get(mid) < num){
+                    i=mid+1;
+                }else{
+                    j=mid;
+                }
+            }
+
+            list.set(j, num);
+        }
+    }
+
+    return list.size();
+    }
+}
+ */
