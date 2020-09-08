@@ -34,3 +34,8 @@ IoC container - framework
 System design calculations : https://systemdesigntutorial.com/system-design/system-design-calculations
 
 serialVersionUId -> This is required in cases where your class structure changes between serialization and deserialization. A changed class structure will cause the JVM to give an exception in the de-serializing process
+
+Backtracking:
+https://leetcode.com/problems/palindrome-partitioning/discuss/182307/Java:-Backtracking-Template-General-Approach
+https://leetcode.com/problems/subsets/discuss/187733/BackTrack-Template-Make-backtracking-Easy!!!
+https://leetcode.com/problems/permutations/discuss/18239/A-general-approach-to-backtracking-questions-in-Java-(Subsets-Permutations-Combination-Sum-Palindrome-Partioning)
