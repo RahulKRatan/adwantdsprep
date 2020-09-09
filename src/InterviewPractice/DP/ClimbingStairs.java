@@ -1,8 +1,5 @@
 package InterviewPractice.DP;
 
-import java.time.Duration;
-import java.time.Instant;
-
 /**
  * Time -> 2 power n for recursive. and o(n) for DP and recur with memo
  */
@@ -52,17 +49,8 @@ public class ClimbingStairs {
     }
 
     public static void main(String[] args) {
-        Instant start = Instant.now();
         System.out.println(climbStairsRecur(44));
-        Instant end = Instant.now();
-        System.out.println("Recursive duration: "+Duration.between(start, end).getNano());
-        Instant start2 = Instant.now();
         System.out.println(DPclimbStairs(44));
-        Instant end2 = Instant.now();
-        System.out.println("DP duration: "+Duration.between(start2, end2).getNano());
-        Instant start3 = Instant.now();
         System.out.println(climbStairsMemo(44));
-        Instant end3 = Instant.now();
-        System.out.println("DP duration: "+Duration.between(start3, end3).getNano());
     }
 }
