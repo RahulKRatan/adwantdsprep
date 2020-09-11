@@ -20,6 +20,7 @@ import InterviewPractice.StackQueues.LargestAreaInHistogram;
  *  *
  *  * References:
  *  * http://www.careercup.com/question?id=6299074475065344
+ *  https://www.youtube.com/watch?v=g8bSdXCG-lA&ab_channel=TusharRoy-CodingMadeSimple
  */
 public class MaximalRectangle {
 
