@@ -15,6 +15,8 @@ package InterviewPractice.DP;
  * 3)Using the value and coordinates of maximum entry in S[i],print
          sub-matrix of M[][]
  *
+ * https://www.youtube.com/watch?v=_Lf1looyJMU&t=2s&ab_channel=TusharRoy-CodingMadeSimples
+ *
  */
 public class MaximalSquare {
 
