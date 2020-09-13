@@ -5,8 +5,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class SubsetsWithDuplicates {
-
-
     public static List<List<Integer>> subsetBacktracking(int[] nums) {
         Arrays.sort(nums);
         List<List<Integer>> result = new ArrayList<>();
@@ -30,5 +28,4 @@ public class SubsetsWithDuplicates {
         List<List<Integer>> result2 = subsetBacktracking(nums);
         System.out.println(result2);
     }
-
 }
