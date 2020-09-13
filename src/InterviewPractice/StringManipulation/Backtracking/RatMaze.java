@@ -1,7 +1,10 @@
 package InterviewPractice.StringManipulation.Backtracking;
 
 /* Java program to solve Rat in a Maze problem using
-backtracking */
+backtracking
+https://www.geeksforgeeks.org/rat-in-a-maze-backtracking-2/
+
+*/
 
 public class RatMaze {
 
@@ -10,8 +13,7 @@ public class RatMaze {
 
     /* A utility function to print solution matrix
     sol[N][N] */
-    void printSolution(int sol[][])
-    {
+    void printSolution(int sol[][]) {
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++)
                 System.out.print(" " + sol[i][j] + " ");
@@ -21,8 +23,7 @@ public class RatMaze {
 
     /* A utility function to check if x, y is valid
         index for N*N maze */
-    boolean isSafe(int maze[][], int x, int y)
-    {
+    boolean isSafe(int maze[][], int x, int y) {
         // if (x, y outside maze) return false
         return (x >= 0 && x < N && y >= 0 && y < N && maze[x][y] == 1);
     }
