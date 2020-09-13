@@ -1,0 +1,9 @@
+
+Q	java:S106"9Replace this use of System.out or System.err by a logger.(®ıáëûÿÿÿÿ
+R
+java:S2589"7Remove this expression which always evaluates to "true"(Ö”Ò²8™Ù­»Æ.
+Q
+java:S2589"7Remove this expression which always evaluates to "true"(½¥ B8™Ù­»Æ.
+J
+java:S1656"/Remove or correct this useless self-assignment.(²¶şô8™Ù­»Æ.
+m	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(êÁˆ

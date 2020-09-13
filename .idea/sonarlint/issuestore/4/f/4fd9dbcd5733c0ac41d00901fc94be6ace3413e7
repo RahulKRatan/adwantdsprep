@@ -1,0 +1,9 @@
+
+:
+java:S1659"!Declare "end" on a separate line.(ÂÑ³‡ùÿÿÿÿ
+m	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(þÔÙ
+:
+java:S1659"!Declare "len" on a separate line.(ÂÑ³‡ùÿÿÿÿ
+>
+java:S1659"%Declare "counter" on a separate line.(ÂÑ³‡ùÿÿÿÿ
+L	java:S106"9Replace this use of System.out or System.err by a logger.(«ñ¤ã

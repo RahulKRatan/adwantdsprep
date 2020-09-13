@@ -1,0 +1,8 @@
+
+Q	java:S106"9Replace this use of System.out or System.err by a logger.(®ýáëûÿÿÿÿ
+k	java:S127"XRefactor the code in order to not assign to this loop counter from within the loop body.(þÙÉ”
+m	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‡€ùÿ
+d	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·™ðˆ
+i	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëŒ´Îþÿÿÿÿ
+T	java:S125"<This block of commented-out lines of code should be removed.(Ö¡Ñ¹ûÿÿÿÿ
+d	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ìÓÙó

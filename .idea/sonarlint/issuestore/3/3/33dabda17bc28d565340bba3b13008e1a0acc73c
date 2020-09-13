@@ -1,10 +1,10 @@
 
-k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ˆÂşÿÿÿÿ
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(êÁˆ
-g
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ÚøØ
-S
-java:S1197"8Move the array designator from the variable to the type.(³ˆÂşÿÿÿÿ
-S
-java:S1197@"8Move the array designator from the variable to the type.(Ó¬Ğ˜şÿÿÿÿ
-M	java:S106h"9Replace this use of System.out or System.err by a logger.(¶±ªq
+e
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(ÚøØ
+Q
+java:S1197"8Move the array designator from the variable to the type.(Ó¬Ğ˜şÿÿÿÿ
+m	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(êÁˆ
+K	java:S106"9Replace this use of System.out or System.err by a logger.(¶±ªq
+Q
+java:S1197"8Move the array designator from the variable to the type.(³ˆÂşÿÿÿÿ
+i	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³ˆÂşÿÿÿÿ

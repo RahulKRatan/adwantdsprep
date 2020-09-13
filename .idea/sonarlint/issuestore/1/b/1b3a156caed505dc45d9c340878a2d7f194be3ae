@@ -1,0 +1,14 @@
+
+C
+java:S3740"/Provide the parametrized type for this generic.(—¿á§
+m	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‡€ùÿ
+6
+java:S3010""Remove this assignment of "delta".(—¿á§
+T
+java:S1854"@Remove this useless assignment to local variable "myCalendarII".(—³¼ß
+Q	java:S106"9Replace this use of System.out or System.err by a logger.(¼´ƒâÿÿÿÿÿ
+Q	java:S106"9Replace this use of System.out or System.err by a logger.(­ËËùÿÿÿÿ
+Q	java:S106"9Replace this use of System.out or System.err by a logger.(ê×õıÿÿÿÿ
+Q	java:S106"9Replace this use of System.out or System.err by a logger.(¤åØ¨ûÿÿÿÿ
+E
+java:S1481"1Remove this unused "myCalendarII" local variable.(—³¼ß

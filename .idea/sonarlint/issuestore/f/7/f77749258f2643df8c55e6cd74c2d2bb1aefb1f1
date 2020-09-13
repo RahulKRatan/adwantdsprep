@@ -1,0 +1,7 @@
+
+m	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¬±Ÿ”
+4
+java:S3626"Remove this redundant jump.(Øáéıÿÿÿÿ
+B
+java:S5413")Verify that "remove()" is used correctly.(ˆ·èùÿÿÿÿ
+Q	java:S106"9Replace this use of System.out or System.err by a logger.(¸šñÙüÿÿÿÿ

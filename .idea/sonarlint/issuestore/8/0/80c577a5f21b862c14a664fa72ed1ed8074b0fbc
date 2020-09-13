@@ -1,0 +1,15 @@
+
+m	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾“
+:
+java:S3010"!Remove this assignment of "rows".(ú‹­°ıÿÿÿÿ
+:
+java:S3010"!Remove this assignment of "cols".(ªïµ¬ûÿÿÿÿ
+Q	java:S106"9Replace this use of System.out or System.err by a logger.(û³€Èûÿÿÿÿ
+N
+java:S2209"5Change this instance-reference to a static reference.(û³€Èûÿÿÿÿ
+K	java:S106"9Replace this use of System.out or System.err by a logger.(´Êˆ$
+H
+java:S2209"5Change this instance-reference to a static reference.(´Êˆ$
+L	java:S106"9Replace this use of System.out or System.err by a logger.(ª‹ÂĞ
+I
+java:S2209"5Change this instance-reference to a static reference.(ª‹ÂĞ

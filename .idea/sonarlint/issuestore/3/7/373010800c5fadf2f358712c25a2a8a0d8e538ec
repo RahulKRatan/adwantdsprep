@@ -1,0 +1,5 @@
+
+Q	java:S106"9Replace this use of System.out or System.err by a logger.(®ýáëûÿÿÿÿ
+m	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¬±Ÿ”
+w	java:S127"XRefactor the code in order to not assign to this loop counter from within the loop body.(°ñÆõþÿÿÿÿ8²‹¼ûÆ.
+[	java:S125"<This block of commented-out lines of code should be removed.(êÛÖøÿÿÿÿ8ŠºûÆ.

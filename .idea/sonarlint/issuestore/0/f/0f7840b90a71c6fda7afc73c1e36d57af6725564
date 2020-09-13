@@ -1,0 +1,18 @@
+
+C
+java:S3740"/Provide the parametrized type for this generic.(•§²È
+m	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾“
++
+java:S1700"Rename field "maxStack"(üÒŸ
+i
+java:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(¥”®¼ÿÿÿÿÿ
+d
+java:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(üÒŸ
+d
+java:S1149"PReplace the synchronized class "Stack" by an unsynchronized one such as "Deque".(•§²È
+6
+java:S3010""Remove this assignment of "stack".(¨ú‰Å
+>
+java:S3010"%Remove this assignment of "maxStack".(˜È×“ÿÿÿÿÿ
+I
+java:S2209"5Change this instance-reference to a static reference.(ËÔüƒ

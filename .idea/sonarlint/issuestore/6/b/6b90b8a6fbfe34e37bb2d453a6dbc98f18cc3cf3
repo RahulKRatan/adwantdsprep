@@ -1,0 +1,18 @@
+
+d	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ– †
+m	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¡â´ÿ
+k	java:S116"SRename this field "TreeNode" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íä€òþÿÿÿÿ
+L	java:S106"9Replace this use of System.out or System.err by a logger.(‹ƒ³À
+P
+java:S1117"<Rename "TreeNode" which hides the field declared at line 20.(µ– †
+K	java:S106"9Replace this use of System.out or System.err by a logger.(±˜©w
+L	java:S106"9Replace this use of System.out or System.err by a logger.(‹ƒ³À
+L	java:S106"9Replace this use of System.out or System.err by a logger.(‹ƒ³À
+L	java:S106"9Replace this use of System.out or System.err by a logger.(‹ƒ³À
+Q	java:S106"9Replace this use of System.out or System.err by a logger.(ƒ¢š¯úÿÿÿÿ
+L	java:S106"9Replace this use of System.out or System.err by a logger.(‡Š¶é
+L	java:S106"9Replace this use of System.out or System.err by a logger.(‡Š¶é
+Q
+java:S1197"8Move the array designator from the variable to the type.(¡þÏÖøÿÿÿÿ
+Q	java:S106"9Replace this use of System.out or System.err by a logger.(ªÓ¼áþÿÿÿÿ
+Q	java:S106"9Replace this use of System.out or System.err by a logger.(ªÓ¼áþÿÿÿÿ
