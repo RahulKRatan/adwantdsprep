@@ -2,7 +2,6 @@ package InterviewPractice.StringManipulation.Backtracking;
 
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -14,59 +13,68 @@ import java.util.List;
  * Time complexity O(n*n)
  * Space complexity O(n*n)
  * Also https://algorithms.tutorialhorizon.com/backtracking-n-queens-problem/
+ * https://leetcode.com/problems/n-queens/discuss/19945/*Java*-When-you-are-familiar-with-backtracking-you'll-find-this-solution-straightforward-(5ms-beats-84)
+ * https://github.com/labuladong/fucking-algorithm/blob/english/think_like_computer/DetailsaboutBacktracking.md
+ * https://www.youtube.com/watch?v=xouin83ebxE&ab_channel=TusharRoy-CodingMadeSimple
  */
 public class NQueens {
 
     public static List<List<String>> solveNQueens(int n) {
-        char[][] board = new char[n][n];
-        for(int i = 0; i < n; i++)
-            for(int j = 0; j < n; j++)
-                board[i][j] = '.';
         List<List<String>> res = new ArrayList<>();
-        dfs(board, 0, res);
+        if(n<1) return res;
+        char[][] board = new char[n][n];
+        for(char[] row : board) {
+            for(int j=0; j<n; j++) {
+                row[j] = '.';
+            }
+        }
+        solve(board, n, 0, res);
         return res;
     }
-
-    private static void dfs(char[][] board, int colIndex, List<List<String>> res) {
-        if(colIndex == board.length) {
-            res.add(construct(board));
-            return;
-        }
-
-        for(int i = 0; i < board.length; i++) {
-            if(validate(board, i, colIndex)) {
-                board[i][colIndex] = 'Q';
-                dfs(board, colIndex + 1, res);
-                board[i][colIndex] = '.';
+    // Path:The rows smaller than row in the board have been successfully placed the queens
+    // Seletion List: all columns in 'rowth' row are queen's seletions
+    // End condition: row meets the last line of board(n)
+    private static void solve(char[][] board, int N, int row, List<List<String>> res) {
+        if(row==N) { // done soving, simply add the board into the result
+            List<String> list = new ArrayList<>();
+            for(int i = 0; i < N; i++) {
+                list.add(String.valueOf(board[i]));
             }
+            res.add(list);
+        }
+        for(int col=0; col<N; col++) {
+            if(!isSafe(board,row, col)) continue;
+            board[row][col] = 'Q'; // greedy
+            solve(board, N, row+1, res);
+            board[row][col] = '.'; // backtrack
         }
     }
+    private static boolean isSafe(char[][] board,int row, int col) {
 
-    private static boolean validate(char[][] board, int x, int y) {
-        for(int i = 0; i < board.length; i++) {
-            for(int j = 0; j < y; j++) {
-                if(board[i][j] == 'Q' && (x + j == y + i || x + y == i + j || x == i))
-                    return false;
-            }
+        int n = board.length;
+        // Check if share the same column
+        for (int i = 0; i < n; i++) {
+            if (board[i][col] == 'Q')
+                return false;
         }
 
+        // Check if share the same right diagonal
+        for (int i = row - 1, j = col + 1;
+             i >= 0 && j < n; i--, j++) {
+            if (board[i][j] == 'Q')
+                return false;
+        }
+        // Check if share the same left diagonal
+        for (int i = row - 1, j = col - 1;
+             i >= 0 && j >= 0; i--, j--) {
+            if (board[i][j] == 'Q')
+                return false;
+        }
         return true;
     }
-
-    private static List<String> construct(char[][] board) {
-        List<String> res = new LinkedList<>();
-        for(int i = 0; i < board.length; i++) {
-            String s = new String(board[i]);
-            res.add(s);
-        }
-        return res;
-    }
-
 
     public static void main(String args[]) {
         List<List<String>> result = solveNQueens(4);
         System.out.println(result);
     }
-
-
 }
