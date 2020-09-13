@@ -34,8 +34,8 @@ public class KnightTour {
         }
         // mark the current cell is as used
         solution[row][column] = path++;
-        // if (index == 50) {
-        if (index == N * N - 1) {
+
+        if (path == N * N) { // index == N*N-1
             // if we are here means we have solved the problem
             return true;
         }
