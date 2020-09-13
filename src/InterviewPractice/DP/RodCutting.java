@@ -3,6 +3,7 @@ package InterviewPractice.DP;
 /*
 https://www.radford.edu/~nokie/classes/360/dp-rod-cutting.html
 https://www.geeksforgeeks.org/cutting-a-rod-dp-13/
+https://www.youtube.com/watch?v=WL_oRZdh8M0&ab_channel=AlgorithmswithAttitude
  */
 public class RodCutting {
 
