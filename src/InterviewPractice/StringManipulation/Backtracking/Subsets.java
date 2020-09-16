@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *  O(2 power n ) and space is O(N)
+ *  O(2 power n ) and
+ *  space is O(N)
  *  https://labuladong.gitbook.io/algo-en/iii.-algorithmic-thinking/subset_permutation_combination
  *  https://github.com/labuladong/fucking-algorithm/blob/english/think_like_computer/DetailsaboutBacktracking.md
  */
