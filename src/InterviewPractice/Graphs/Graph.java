@@ -8,6 +8,7 @@ import java.util.Map;
 
 public class Graph<T>{
 
+
     private List<Edge<T>> allEdges;
     private Map<Long,Vertex<T>> allVertex;
     boolean isDirected = false;
