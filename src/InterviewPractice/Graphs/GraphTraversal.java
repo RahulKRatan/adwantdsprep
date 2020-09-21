@@ -66,7 +66,6 @@ public class GraphTraversal {
         graph.addEdge(6, 5);
         //  graph.addEdge(5, 1);
         graph.addEdge(5,3);
-
         GraphTraversal g = new GraphTraversal();
         g.BFS(graph);
         g.DFS(graph);
