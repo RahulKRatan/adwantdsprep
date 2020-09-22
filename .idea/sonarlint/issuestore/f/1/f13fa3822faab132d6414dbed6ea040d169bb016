@@ -1,12 +1,10 @@
 
-m	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¡â´ÿ
-N
-java:S1854":Remove this useless assignment to local variable "result".(’ïÔñ
-L	java:S106"9Replace this use of System.out or System.err by a logger.(‹ƒ³À
-Q
-java:S1197"8Move the array designator from the variable to the type.(º ìıÿÿÿÿ
-Q	java:S106"9Replace this use of System.out or System.err by a logger.(õËØÑıÿÿÿÿ
-?
-java:S1481"+Remove this unused "result" local variable.(’ïÔñ
-O	java:S125"<This block of commented-out lines of code should be removed.(Âóöœ
-T	java:S125"<This block of commented-out lines of code should be removed.(ÒÌâ–øÿÿÿÿ
+S	java:S106\"9Replace this use of System.out or System.err by a logger.(õËØÑıÿÿÿÿ
+A
+java:S1481("+Remove this unused "result" local variable.(’ïÔñ
+S
+java:S1197S"8Move the array designator from the variable to the type.(º ìıÿÿÿÿ
+N	java:S106J"9Replace this use of System.out or System.err by a logger.(‹ƒ³À
+P
+java:S1854(":Remove this useless assignment to local variable "result".(’ïÔñ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¡â´ÿ
