@@ -10,6 +10,7 @@ public class DecodeString {
         Stack<String> resStack = new Stack<>(); // resStack will always have recent calculated result
         int index = 0;
         while (index < s.length()) {
+
             if (Character.isDigit(s.charAt(index))) {
                 int count = 0;
                 while (Character.isDigit(s.charAt(index))) {
@@ -18,11 +19,13 @@ public class DecodeString {
                 }
                 countStack.push(count);
             }
+
             else if (s.charAt(index) == '[') {
                 resStack.push(res); // pushing previous calculated result
                 res = "";
                 index++;
             }
+
             else if (s.charAt(index) == ']') {
                 StringBuilder temp = new StringBuilder (resStack.pop());
                 int repeatTimes = countStack.pop();
@@ -32,6 +35,7 @@ public class DecodeString {
                 res = temp.toString();
                 index++;
             }
+
             else {
                 res += s.charAt(index++);
             }
