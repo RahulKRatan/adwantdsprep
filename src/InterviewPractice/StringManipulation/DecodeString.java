@@ -2,6 +2,9 @@ package InterviewPractice.StringManipulation;
 
 import java.util.Stack;
 
+/**
+ * Time Complexity: O(maxK⋅n), maxK is the maximum value of k in the string s. Example, for s = 1000[a200b]], maxK is 10001000
+ */
 public class DecodeString {
 
     public static String decodeString(String s) {
@@ -9,7 +12,7 @@ public class DecodeString {
         Stack<Integer> countStack = new Stack<>(); // num of times to iterate
         Stack<String> resStack = new Stack<>(); // resStack will always have recent calculated result
         int index = 0;
-        
+
         while (index < s.length()) {
 
             if (Character.isDigit(s.charAt(index))) {
