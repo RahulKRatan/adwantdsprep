@@ -9,6 +9,7 @@ public class DecodeString {
         Stack<Integer> countStack = new Stack<>(); // num of times to iterate
         Stack<String> resStack = new Stack<>(); // resStack will always have recent calculated result
         int index = 0;
+        
         while (index < s.length()) {
 
             if (Character.isDigit(s.charAt(index))) {
