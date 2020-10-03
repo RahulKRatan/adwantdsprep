@@ -1,18 +1,18 @@
 
-N	java:S106L"9Replace this use of System.out or System.err by a logger.(‹ƒ³À
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¡â´ÿ
 f	java:S117&"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µ– †
-N	java:S106c"9Replace this use of System.out or System.err by a logger.(‹ƒ³À
 M	java:S1061"9Replace this use of System.out or System.err by a logger.(±˜©w
-N	java:S106 "9Replace this use of System.out or System.err by a logger.(‹ƒ³À
-m	java:S116"SRename this field "TreeNode" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íä€òşÿÿÿÿ
+S	java:S106u"9Replace this use of System.out or System.err by a logger.(ƒ¢š¯úÿÿÿÿ
 O	java:S106„"9Replace this use of System.out or System.err by a logger.(‡Š¶é
-T	java:S106"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ
-R
-java:S1117&"<Rename "TreeNode" which hides the field declared at line 20.(µ– †
+O	java:S106‡"9Replace this use of System.out or System.err by a logger.(‡Š¶é
+N	java:S106L"9Replace this use of System.out or System.err by a logger.(‹ƒ³À
 T
 java:S1197"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿ
+N	java:S106 "9Replace this use of System.out or System.err by a logger.(‹ƒ³À
+T	java:S106"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ
 T	java:S106›"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ
-S	java:S106u"9Replace this use of System.out or System.err by a logger.(ƒ¢š¯úÿÿÿÿ
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¡â´ÿ
-O	java:S106‡"9Replace this use of System.out or System.err by a logger.(‡Š¶é
+R
+java:S1117&"<Rename "TreeNode" which hides the field declared at line 20.(µ– †
+m	java:S116"SRename this field "TreeNode" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(íä€òşÿÿÿÿ
 N	java:S106B"9Replace this use of System.out or System.err by a logger.(‹ƒ³À
+N	java:S106c"9Replace this use of System.out or System.err by a logger.(‹ƒ³À

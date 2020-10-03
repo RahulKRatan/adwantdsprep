@@ -2,7 +2,7 @@ package InterviewPractice.StringManipulation;
 
 public class MinimumRemoveMakeValidParentheses {
     public static String minRemoveToMakeValid(String s) {
-
+        
         return s;
     }
 
