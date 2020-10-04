@@ -28,7 +28,7 @@ public class BasicCalculator {
         int sign = 1;
         int num = 0;
 
-        Deque<Integer> stack = new LinkedList<>();
+        Deque<Integer> stack = new LinkedList<>(); //Use stack to save signs.
         stack.push(sign);
 
         for(int i = 0; i < s.length(); i++) {
