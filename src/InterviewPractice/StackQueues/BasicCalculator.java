@@ -1,6 +1,7 @@
 package InterviewPractice.StackQueues;
 
-import java.util.Stack;
+import java.util.Deque;
+import java.util.LinkedList;
 
 /**
  * Principle:
@@ -27,7 +28,7 @@ public class BasicCalculator {
         int sign = 1;
         int num = 0;
 
-        Stack<Integer> stack = new Stack<Integer>();
+        Deque<Integer> stack = new LinkedList<>();
         stack.push(sign);
 
         for(int i = 0; i < s.length(); i++) {
@@ -49,7 +50,7 @@ public class BasicCalculator {
             }
         }
 
-        result += sign * num;
+        result += sign * num; //Add the last num. This is because we only add number after '+' / '-'
         return result;
     }
 
