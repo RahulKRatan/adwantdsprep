@@ -1,4 +1,4 @@
-package InterviewPractice.StringManipulation;
+package InterviewPractice.StackQueues;
 
 import java.util.*;
 
