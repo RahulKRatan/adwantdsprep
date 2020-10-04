@@ -1,17 +1,18 @@
 package InterviewPractice.StringManipulation;
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.Stack;
+import java.util.*;
 
+/**
+ *
+ */
 public class MinimumRemoveMakeValidParentheses {
     public static String minRemoveToMakeValid(String s) {
         Set<Integer> indexesToRemove = new HashSet<>();
-        Stack<Integer> stack = new Stack<>();
+        Deque<Integer> stack = new LinkedList<>();
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '(') {
                 stack.push(i);
-            } if (s.charAt(i) == ')') {
+            }else if (s.charAt(i) == ')') {
                 if (stack.isEmpty()) {
                     indexesToRemove.add(i);
                 } else {
