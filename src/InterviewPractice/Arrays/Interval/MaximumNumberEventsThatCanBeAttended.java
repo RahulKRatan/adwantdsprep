@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+/**
+ *  Time : O(nlogn)
+ */
 public class MaximumNumberEventsThatCanBeAttended {
 
     public static int maxEvents(int[][] events) {
