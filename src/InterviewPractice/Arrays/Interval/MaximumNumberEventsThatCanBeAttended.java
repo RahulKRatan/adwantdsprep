@@ -2,17 +2,25 @@ package InterviewPractice.Arrays.Interval;
 
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.PriorityQueue;
 
 public class MaximumNumberEventsThatCanBeAttended {
 
     public static int maxEvents(int[][] events) {
-        Comparator<int[]> c= Comparator.comparingInt((int[] a) -> a[0]);
-        Arrays.sort(events, c);
-        int count = 1;
-        for(int i=0; i<events.length-1; i++)
-            if(events[i][1]<=events[i+1][0]) count+=1;
-
-        return count;
+        PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+        Arrays.sort(events, Comparator.comparingInt(a -> a[0]));
+        int i = 0, res = 0, d = 0, n = events.length;
+        while (!minHeap.isEmpty() || i < n) {
+            if (minHeap.isEmpty())
+                d = events[i][0];
+            while (i < n && events[i][0] <= d)
+                minHeap.offer(events[i++][1]);
+            minHeap.poll();
+            ++res; ++d;
+            while (!minHeap.isEmpty() && minHeap.peek() < d)
+                minHeap.poll();
+        }
+        return res;
     }
 
     public static void main(String[] args) {
