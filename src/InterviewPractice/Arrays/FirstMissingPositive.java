@@ -5,7 +5,7 @@ package InterviewPractice.Arrays;
  * Space complexity : O(1) since this is a constant space solution.
  *
  * Inspiration from https://www.geeksforgeeks.org/find-duplicates-in-on-time-and-constant-extra-space/
- *
+ * Given an unsorted integer array, find the smallest missing positive integer.
  */
 public class FirstMissingPositive {
 
