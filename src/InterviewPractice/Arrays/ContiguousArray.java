@@ -2,6 +2,9 @@ package InterviewPractice.Arrays;
 
 import java.util.HashMap;
 
+/*
+Given a binary array, find the maximum length of a contiguous subarray with equal number of 0 and 1.
+ */
 public class ContiguousArray {
 
     public static int findMaxLength(int[] nums) {
