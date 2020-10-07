@@ -33,6 +33,4 @@ public class AsteroidCollision {
         int[] asteroids = new int[]{8,-8};
         System.out.println(asteroidCollision(asteroids));
     }
-
-
 }
