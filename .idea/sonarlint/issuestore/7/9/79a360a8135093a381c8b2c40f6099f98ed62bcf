@@ -1,8 +1,8 @@
 
-T	java:S106x"9Replace this use of System.out or System.err by a logger.(ŒÒˆG8ŸïÕõÂ.
-u	java:S116‰"SRename this field "CAPACITY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÚ¸ñøÿÿÿÿ8èÃãõÂ.
 Z	java:S106w"9Replace this use of System.out or System.err by a logger.(Ÿ·ÕÚıÿÿÿÿ8ŸïÕõÂ.
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾“
+Z	java:S106v"9Replace this use of System.out or System.err by a logger.(¬®³ˆÿÿÿÿÿ8ŸïÕõÂ.
 X
 java:S1161":Add the "@Override" annotation above this method signature(Íó€Ù8èÃãõÂ.
-Z	java:S106v"9Replace this use of System.out or System.err by a logger.(¬®³ˆÿÿÿÿÿ8ŸïÕõÂ.
+T	java:S106x"9Replace this use of System.out or System.err by a logger.(ŒÒˆG8ŸïÕõÂ.
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¾“
+u	java:S116‰"SRename this field "CAPACITY" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÙÚ¸ñøÿÿÿÿ8èÃãõÂ.

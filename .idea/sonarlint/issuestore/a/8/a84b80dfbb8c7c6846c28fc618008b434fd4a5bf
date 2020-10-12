@@ -1,15 +1,15 @@
 
-m	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ãç“š
-K
-java:S1197"8Move the array designator from the variable to the type.(Î©Ìv
-L
-java:S1197"8Move the array designator from the variable to the type.(Â …ˆ
-L
-java:S1197"8Move the array designator from the variable to the type.(ÄÂËÓ
-L	java:S106"9Replace this use of System.out or System.err by a logger.(º¼É°
-Q	java:S106"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ
-Q
-java:S1197"8Move the array designator from the variable to the type.(º ìıÿÿÿÿ
-Q
-java:S1197"8Move the array designator from the variable to the type.(ÀÊà¢ıÿÿÿÿ
-L	java:S106"9Replace this use of System.out or System.err by a logger.(–áŸ…
+S
+java:S1197E"8Move the array designator from the variable to the type.(º ìıÿÿÿÿ
+N	java:S106M"9Replace this use of System.out or System.err by a logger.(–áŸ…
+S	java:S106A"9Replace this use of System.out or System.err by a logger.(ªÓ¼áşÿÿÿÿ
+N
+java:S1197<"8Move the array designator from the variable to the type.(ÄÂËÓ
+N
+java:S1197,"8Move the array designator from the variable to the type.(Â …ˆ
+N	java:S106@"9Replace this use of System.out or System.err by a logger.(º¼É°
+S
+java:S1197G"8Move the array designator from the variable to the type.(ÀÊà¢ıÿÿÿÿ
+M
+java:S1197"8Move the array designator from the variable to the type.(Î©Ìv
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ãç“š

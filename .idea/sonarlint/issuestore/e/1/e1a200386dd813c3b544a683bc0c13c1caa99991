@@ -1,0 +1,11 @@
+
+i
+java:S3824"NReplace this "Map.get()" and condition with a call to "Map.computeIfAbsent()".(Ÿ»ñ”øÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‡€ùÿ
+9
+java:S1659"#Declare "right" on a separate line.(Ô€ë
+>
+java:S1659"#Declare "count" on a separate line.(‘£€÷ûÿÿÿÿ
+O
+java:S2864$"4Iterate over the "entrySet" instead of the "keySet".(€‡«şÿÿÿÿ
+S	java:S106."9Replace this use of System.out or System.err by a logger.(Ìšêìşÿÿÿÿ

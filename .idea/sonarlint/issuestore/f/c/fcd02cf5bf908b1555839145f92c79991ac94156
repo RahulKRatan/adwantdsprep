@@ -1,9 +1,9 @@
 
-V	java:S125"<This block of commented-out lines of code should be removed.(¬ÙÅŠ8Ö¥ÀÄ.
-A
-java:S1659"!Declare "end" on a separate line.(Û‚ÌÎøÿÿÿÿ8›¹î¿Ä.
-l
-java:S1871"LThis branch's code block is the same as the block for the branch on line 22.(›ÿ¤Áüÿÿÿÿ8›¹î¿Ä.
-m	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(şÔÙ
+E
+java:S1659
+"#Declare "right" on a separate line.(ÙŞá¹ûÿÿÿÿ8›¹î¿Ä.
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(şÔÙ
 C
-java:S1659"#Declare "right" on a separate line.(ÙŞá¹ûÿÿÿÿ8›¹î¿Ä.
+java:S1659&"!Declare "end" on a separate line.(Û‚ÌÎøÿÿÿÿ8›¹î¿Ä.
+n
+java:S1871"LThis branch's code block is the same as the block for the branch on line 22.(›ÿ¤Áüÿÿÿÿ8›¹î¿Ä.

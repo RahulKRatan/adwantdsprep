@@ -1,5 +1,5 @@
 
-m	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‡€ùÿ
-7
-java:S1659"#Declare "count" on a separate line.(¿âµÖ
-Q	java:S106"9Replace this use of System.out or System.err by a logger.(…Æ‹ôúÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‡€ùÿ
+S	java:S106)"9Replace this use of System.out or System.err by a logger.(…Æ‹ôúÿÿÿÿ
+9
+java:S1659	"#Declare "count" on a separate line.(¿âµÖ
