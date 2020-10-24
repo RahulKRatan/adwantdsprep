@@ -1,4 +1,4 @@
-package InterviewPractice.Arrays;
+package InterviewPractice.DP;
 
 /*
 Time complexity : O(n). Single pass.
