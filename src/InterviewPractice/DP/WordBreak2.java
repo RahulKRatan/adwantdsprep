@@ -23,7 +23,7 @@ public class WordBreak2 {
         }
         for (String word : wordDict) {
             if (s.startsWith(word)) {
-                List<String>sublist = DFS(s.substring(word.length()), wordDict, map);
+                List<String> sublist = DFS(s.substring(word.length()), wordDict, map);
                 for (String sub : sublist)
                     res.add(word + (sub.isEmpty() ? "" : " ") + sub);
             }
