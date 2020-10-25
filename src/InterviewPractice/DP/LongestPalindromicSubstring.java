@@ -1,4 +1,4 @@
-package InterviewPractice.StringManipulation.Palindrome;
+package InterviewPractice.DP;
 
 /**
  * Time complexity : O(n^2)
