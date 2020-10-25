@@ -37,33 +37,46 @@ public class WordBreak {
 
     /*
     recursive solution
+    O(n power n) and size -> O(N)
      */
     // returns true if the word can be segmented into parts such
     // that each part is contained in dictionary
-    public static boolean wordBreak(String word)
-    {
-        int size = word.length();
-
-        // base case
-        if (size == 0)
+    public boolean wordBreakRecursive(String s, List<String> wordDict) {
+        return word_Break(s, new HashSet(wordDict), 0);
+    }
+    public boolean word_Break(String s, Set<String> wordDict, int start) {
+        if (start == s.length()) {
             return true;
-
-        //else check for all words
-        for (int i = 1; i <= size; i++)
-        {
-            // Now we will first divide the word into two parts ,
-            // the prefix will have a length of i and check if it is
-            // present in dictionary ,if yes then we will check for
-            // suffix of length size-i recursively. if both prefix and
-            // suffix are present the word is found in dictionary.
-
-            if (dictionary.contains(word.substring(0,i)) &&
-                    wordBreak(word.substring(i,size)))
-                return true;
         }
-
-        // if all cases failed then return false
+        for (int end = start + 1; end <= s.length(); end++) {
+            if (wordDict.contains(s.substring(start, end)) && word_Break(s, wordDict, end)) {
+                return true;
+            }
+        }
         return false;
+    }
+
+    /*
+        recursion with memo
+        O(N * 2) with O(N)
+     */
+    public boolean wordBreakMemo(String s, List<String> wordDict) {
+        return word_BreakMem(s, new HashSet(wordDict), 0, new Boolean[s.length()]);
+    }
+    public boolean word_BreakMem(String s, Set<String> wordDict, int start, Boolean[] memo) {
+        if (start == s.length()) {
+            return true;
+        }
+        if (memo[start] != null) {
+            return memo[start];
+        }
+        for (int end = start + 1; end <= s.length(); end++) {
+            if (wordDict.contains(s.substring(start, end)) && word_BreakMem(s, wordDict, end, memo)) {
+                memo[start] = true;
+                return memo[start];
+            }
+        }
+        return memo[start] = false;
     }
 
     public static void main(String[] args) {
