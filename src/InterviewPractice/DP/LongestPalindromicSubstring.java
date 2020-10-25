@@ -3,6 +3,9 @@ package InterviewPractice.DP;
 /**
  * Time complexity : O(n^2)
  * Space complexity : O(1).
+ *
+ * we need to save start index i.e. lo and maxLength i.e. maxLen to find substring of palindrome
+ *
  */
 public class LongestPalindromicSubstring {
     private static int lo, maxLen;
