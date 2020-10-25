@@ -32,16 +32,16 @@ public class MaximalRectangle {
         int maxArea = 0;
         int area;
         LargestAreaInHistogram largestAreaInHistogram = new LargestAreaInHistogram();
-        for (char[] chars : matrix) {
-            for (int j = 0; j < temp.length; j++) {
-                if (chars[j] == '0') {
+        for(int i=0; i < matrix.length; i++){
+            for(int j=0; j < temp.length; j++){
+                if(matrix[i][j] == '0'){
                     temp[j] = 0;
-                } else {
-                    temp[j] += Character.getNumericValue(chars[j]);
+                }else{
+                    temp[j] += Character.getNumericValue(matrix[i][j]);
                 }
             }
             area = largestAreaInHistogram.largestRectangleArea(temp);
-            if (area > maxArea) {
+            if(area > maxArea){
                 maxArea = area;
             }
         }
