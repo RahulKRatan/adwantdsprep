@@ -1,4 +1,4 @@
-package InterviewPractice.StringManipulation.Backtracking;
+package InterviewPractice.Backtracking;
 
 import java.util.ArrayList;
 import java.util.Arrays;
