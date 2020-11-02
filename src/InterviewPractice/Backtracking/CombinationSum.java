@@ -7,6 +7,8 @@ import java.util.List;
 /**
 Since we are using backtracking here,
  I think the time complexity would be exponential -> O(2^n)
+ Time  O(2^n)
+ Space O(2^n)
  */
 
 
@@ -32,7 +34,7 @@ public class CombinationSum {
 
     public static void main(String[] args) {
         int[] nums = new int[]{2,3,6,7};
-            List<List<Integer>> res = combinationSum(nums,7);
+        List<List<Integer>> res = combinationSum(nums,7);
         System.out.println(res);
 
     }
