@@ -1,5 +1,11 @@
 package InterviewPractice.Arrays;
 
+/**
+ * T : O(N)
+ * S : O(1)
+ */
+
+
 public class MinimumCostMoveChipsTheSamePosition {
 
     public static int minCostToMoveChips(int[] position) {
