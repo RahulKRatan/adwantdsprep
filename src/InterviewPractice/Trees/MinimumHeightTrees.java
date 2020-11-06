@@ -13,6 +13,7 @@ public class MinimumHeightTrees {
     public static void main(String[] args) {
         int[][] edges = new int[][]{{3,0},{3,1},{3,2},{3,4},{5,4}};
         List<Integer> result = findMinHeightTrees(6,edges);
+        System.out.println(result);
     }
 
 }
