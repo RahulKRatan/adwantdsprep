@@ -16,7 +16,6 @@ public class ZigzagLevelOrder {
         q.add(root);
         boolean order = true; // this is insert elements alternatively
         int size = 1;
-
         while(!q.isEmpty()) {
             List<Integer> tmp = new ArrayList<>();
             for(int i = 0; i < size; ++i) {
