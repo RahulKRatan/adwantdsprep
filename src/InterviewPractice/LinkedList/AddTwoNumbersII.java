@@ -1,17 +1,18 @@
 package InterviewPractice.LinkedList;
 
-import java.util.Stack;
+import java.util.Deque;
+import java.util.LinkedList;
 
 public class AddTwoNumbersII {
 
     public static Node addTwoNumbers(Node l1, Node l2) {
-        Stack<Integer> s1 = new Stack<>();
-        Stack<Integer> s2 = new Stack<>();
+        Deque<Integer> s1 = new LinkedList<>();
+        Deque<Integer> s2 = new LinkedList<>();
 
         while(l1 != null) {
             s1.push(l1.val);
             l1 = l1.next;
-        };
+        }
         while(l2 != null) {
             s2.push(l2.val);
             l2 = l2.next;
@@ -19,9 +20,9 @@ public class AddTwoNumbersII {
 
         int sum = 0;
         Node result = new Node(0);
-        while (!s1.empty() || !s2.empty()) {
-            if (!s1.empty()) sum += s1.pop();
-            if (!s2.empty()) sum += s2.pop();
+        while (!s1.isEmpty() || !s2.isEmpty()) {
+            if (!s1.isEmpty()) sum += s1.pop();
+            if (!s2.isEmpty()) sum += s2.pop();
             result.val = sum % 10;
             Node head = new Node(sum / 10);
             head.next = result;
