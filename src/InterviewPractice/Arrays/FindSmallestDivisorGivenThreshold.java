@@ -1,7 +1,14 @@
 package InterviewPractice.Arrays;
 
 /**
- * 
+ * Explanation
+ * Binary search the result.
+ * If the sum > threshold, the divisor is too small.
+ * If the sum <= threshold, the divisor is big enough.
+ *
+ * Complexity
+ * Time O(NlogM), where M = max(A)
+ * Space O(1)
  */
 
 public class FindSmallestDivisorGivenThreshold {
