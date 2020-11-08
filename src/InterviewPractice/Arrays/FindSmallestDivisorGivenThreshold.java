@@ -9,6 +9,18 @@ package InterviewPractice.Arrays;
  * Complexity
  * Time O(NlogM), where M = max(A)
  * Space O(1)
+ *
+ * More Good Binary Search Problems
+ * Here are some similar binary search problems.
+ * Also find more explanations.
+ * Good luck and have fun.
+ *
+ * Divide Chocolate
+ * Capacity To Ship Packages In N Days
+ * Koko Eating Bananas
+ * Minimize Max Distance to Gas Station
+ * Split Array Largest Sum
+ *
  */
 
 public class FindSmallestDivisorGivenThreshold {
