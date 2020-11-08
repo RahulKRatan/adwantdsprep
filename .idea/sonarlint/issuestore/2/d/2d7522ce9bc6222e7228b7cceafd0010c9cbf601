@@ -1,7 +1,7 @@
 
-m	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(êÁˆ
-K
-java:S1197"8Move the array designator from the variable to the type.(†­Ëv
-L
-java:S1197"8Move the array designator from the variable to the type.(‰ÊçŒ
-Q	java:S106"9Replace this use of System.out or System.err by a logger.(Í ñşÿÿÿÿ
+S	java:S106Q"9Replace this use of System.out or System.err by a logger.(Í ñşÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(êÁˆ
+M
+java:S1197"8Move the array designator from the variable to the type.(†­Ëv
+N
+java:S1197&"8Move the array designator from the variable to the type.(‰ÊçŒ

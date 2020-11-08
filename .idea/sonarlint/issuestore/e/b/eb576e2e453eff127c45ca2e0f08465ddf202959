@@ -1,5 +1,14 @@
 
-m	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Í¡çà
-[	java:S125"<This block of commented-out lines of code should be removed.(ÊÃÜ√˛ˇˇˇˇ8Ôüˇ‚≈.
-L	java:S106"9Replace this use of System.out or System.err by a logger.(˚Í√¥
-d	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡Ÿ€•
+K
+java:S1121O".Extract the assignment out of this expression.(„Ú«√8ıÔ›Ú’.
+P
+java:S1068".Remove this unused "dictionary" private field.(ÇÅ∏¸¸ˇˇˇˇ8Â˙€Ú’.
+Q
+java:S3740-"/Provide the parametrized type for this generic.(î¢√¯ˇˇˇˇ8Â˙€Ú’.
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡Ÿ€•
+N	java:S106V"9Replace this use of System.out or System.err by a logger.(˚Í√¥
+Q
+java:S3740@"/Provide the parametrized type for this generic.(›Âˇ’¸ˇˇˇˇ8ıÔ›Ú’.
+j	java:S100B"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÑµáŒ8ıÔ›Ú’.
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Í¡çà
+o	java:S100/"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“ÈÓæ˝ˇˇˇˇ8Â˙€Ú’.

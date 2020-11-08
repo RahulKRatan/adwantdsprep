@@ -1,24 +1,24 @@
 
-Q
-java:S1197"8Move the array designator from the variable to the type.(Ï«ïåùÿÿÿÿ
-f	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï«ïåùÿÿÿÿ
-m	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(êÁˆ
-L
-java:S1197"8Move the array designator from the variable to the type.(¹¥õå
-Q
-java:S1197"8Move the array designator from the variable to the type.(‰àõúûÿÿÿÿ
-2
-java:S1659"Declare "q" on a separate line.(é œI
-2
-java:S1659"Declare "k" on a separate line.(é œI
-f	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰àõúûÿÿÿÿ
-c	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é œI
-2
-java:S1659"Declare "L" on a separate line.(é œI
-Q
-java:S1197"8Move the array designator from the variable to the type.(ãËÉåùÿÿÿÿ
-2
-java:S1659"Declare "j" on a separate line.(é œI
-L	java:S106"9Replace this use of System.out or System.err by a logger.(”Ò¿†
-Q
-java:S1197"8Move the array designator from the variable to the type.(º ìıÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(êÁˆ
+N	java:S106T"9Replace this use of System.out or System.err by a logger.(”Ò¿†
+h	java:S100("NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰àõúûÿÿÿÿ
+S
+java:S1197O"8Move the array designator from the variable to the type.(º ìıÿÿÿÿ
+4
+java:S1659/"Declare "q" on a separate line.(é œI
+h	java:S100	"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï«ïåùÿÿÿÿ
+N
+java:S1197-"8Move the array designator from the variable to the type.(¹¥õå
+S
+java:S1197("8Move the array designator from the variable to the type.(‰àõúûÿÿÿÿ
+S
+java:S1197Q"8Move the array designator from the variable to the type.(ãËÉåùÿÿÿÿ
+e	java:S117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é œI
+4
+java:S1659/"Declare "j" on a separate line.(é œI
+4
+java:S1659/"Declare "k" on a separate line.(é œI
+S
+java:S1197	"8Move the array designator from the variable to the type.(Ï«ïåùÿÿÿÿ
+4
+java:S1659/"Declare "L" on a separate line.(é œI

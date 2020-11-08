@@ -1,0 +1,13 @@
+
+{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¼¼â£ûÿÿÿÿ8Œí‹ìÖ.
+
+java:S2681$"|This line will not be executed in a loop; only the first line of this 2-line block will be. The rest will execute only once.(ŞÒ—üÿÿÿÿ8Œí‹ìÖ.
+Z
+java:S1197"8Move the array designator from the variable to the type.(ì»•åÿÿÿÿÿ8Œí‹ìÖ.
+U
+java:S1197
+"8Move the array designator from the variable to the type.(ğû» 8Œí‹ìÖ.
+U
+java:S1197"8Move the array designator from the variable to the type.(ÓäÏ8Œí‹ìÖ.
+Z	java:S106#"9Replace this use of System.out or System.err by a logger.(‘¸ÉÏøÿÿÿÿ8Œí‹ìÖ.
+Z	java:S106$"9Replace this use of System.out or System.err by a logger.(ŞÒ—üÿÿÿÿ8Œí‹ìÖ.

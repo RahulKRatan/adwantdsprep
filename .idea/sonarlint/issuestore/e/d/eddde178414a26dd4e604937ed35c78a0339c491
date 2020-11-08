@@ -1,7 +1,7 @@
 
-?
-java:S1659"&Declare "totalMax" on a separate line.(ÍÈ•Ãûÿÿÿÿ
-:
-java:S1659"!Declare "min" on a separate line.(ÍÈ•Ãûÿÿÿÿ
-m	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(êÁˆ
-L	java:S106"9Replace this use of System.out or System.err by a logger.(Ò„µ›
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(êÁˆ
+<
+java:S1659"!Declare "min" on a separate line.(ÍÈ•Ãûÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Ò„µ›
+A
+java:S1659"&Declare "totalMax" on a separate line.(ÍÈ•Ãûÿÿÿÿ
