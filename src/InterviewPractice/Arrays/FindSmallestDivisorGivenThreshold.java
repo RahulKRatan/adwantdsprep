@@ -21,6 +21,7 @@ package InterviewPractice.Arrays;
  * Minimize Max Distance to Gas Station
  * Split Array Largest Sum
  *
+ * ceilVal = (a+b-1) / b
  */
 
 public class FindSmallestDivisorGivenThreshold {
@@ -29,7 +30,7 @@ public class FindSmallestDivisorGivenThreshold {
         while (left < right) {
             int m = (left + right) / 2, sum = 0;
             for (int i : nums)
-                sum += Math.ceil(i/m);
+                sum += Math.ceil(1.0 * i/m); // sum += (i + m - 1) / m; or (a / b) + (a % b);
             if (sum > threshold)
                 left = m + 1;
             else
