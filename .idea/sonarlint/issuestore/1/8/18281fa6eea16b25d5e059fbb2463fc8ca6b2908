@@ -1,0 +1,7 @@
+
+>
+java:S1659"!Declare "sum" on a separate line.(ÖßçÏ8å°ŸÒÚ.
+Z	java:S106+"9Replace this use of System.out or System.err by a logger.(ŠÌİıÿÿÿÿ8«¤‹²Ú.
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‡€ùÿ
+E
+java:S1659"#Declare "right" on a separate line.(ı‚½ìûÿÿÿÿ8å°ŸÒÚ.

@@ -1,8 +1,8 @@
 
 R
-java:S18540"7Remove this useless assignment to local variable "res".(±½äÏüÿÿÿÿ
+java:S2589"7Remove this expression which always evaluates to "true"(ˆÕ¯úÿÿÿÿ
 o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ü¹”ô
 C
 java:S14810"(Remove this unused "res" local variable.(±½äÏüÿÿÿÿ
 R
-java:S2589"7Remove this expression which always evaluates to "true"(ˆÕ¯úÿÿÿÿ
+java:S18540"7Remove this useless assignment to local variable "res".(±½äÏüÿÿÿÿ
