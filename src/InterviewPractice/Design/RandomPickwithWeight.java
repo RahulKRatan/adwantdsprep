@@ -1,5 +1,10 @@
 package InterviewPractice.Design;
 
+
+/**
+ * In other words, the probability that a number got picked is proportional to the value of the number, with regards to the total sum of all numbers.
+ * Once we randomly generate the target offset, the task is now boiled down to finding the range that this target falls into.
+ */
 public class RandomPickwithWeight {
     private static int[] prefixSums;
     private static int totalSum;
