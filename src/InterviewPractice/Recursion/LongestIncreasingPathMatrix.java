@@ -1,4 +1,4 @@
-package InterviewPractice.Arrays;
+package InterviewPractice.Recursion;
 
 /**
  * To get max length of increasing sequences:
