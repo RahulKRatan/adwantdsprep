@@ -24,13 +24,13 @@ public class CountOfSmallerNumbersAfterSelf {
         count = new int[size];
         int[] indexes = new int[size];
         for(int i = 0; i < size; i++){
-            indexes[i] = i;
+            indexes[i] = i; // indexes = [0,1,2,3]
         }
         mergesort(nums, indexes, 0, size - 1);
         for(int i = 0; i < size; i++){
-            result.add(count[i]);
+            result.add(count[i]); // count = [2,1,1,0]
         }
-        return result;
+        return result; // result = [2,1,1,0]
     }
 
     private static void mergesort(int[] nums, int[] indexes, int start, int end){
