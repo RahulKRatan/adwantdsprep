@@ -28,7 +28,7 @@ public class CountOfSmallerNumbersAfterSelf {
         }
         mergesort(nums, indexes, 0, size - 1);
         for(int i = 0; i < size; i++){
-            result.add(count[i]); // count = [2,1,1,0]
+            result.add(count[i]); // count = [2,1,1,0] && indexes = [3,1,0,2]
         }
         return result; // result = [2,1,1,0]
     }
@@ -46,35 +46,35 @@ public class CountOfSmallerNumbersAfterSelf {
 
     private static void merge(int[] nums, int[] indexes, int start, int end){
         int mid = (start + end) / 2;
-        int left_index = start;
-        int right_index = mid+1;
+        int leftIndex = start;
+        int rightIndex = mid+1;
         int rightcount = 0;
-        int[] new_indexes = new int[end - start + 1];
+        int[] newIndexes = new int[end - start + 1]; // temp index to track sorted indexes
 
-        int sort_index = 0;
-        while(left_index <= mid && right_index <= end){
-            if(nums[indexes[right_index]] < nums[indexes[left_index]]){
-                new_indexes[sort_index] = indexes[right_index];
-                rightcount++;
-                right_index++;
+        int sortIndex = 0;
+        while(leftIndex <= mid && rightIndex <= end){
+            if(nums[indexes[rightIndex]] < nums[indexes[leftIndex]]){
+                newIndexes[sortIndex] = indexes[rightIndex];
+                rightcount++;//When we move a number from right[] into the new sorted array, we increase rightcount by 1.
+                rightIndex++;
             }else{
-                new_indexes[sort_index] = indexes[left_index];
-                count[indexes[left_index]] += rightcount;
-                left_index++;
+                newIndexes[sortIndex] = indexes[leftIndex];
+                count[indexes[leftIndex]] += rightcount;//When we move a number from left[] into the new sorted array, we increase count[ index of the number ] by rightcount.
+                leftIndex++;
             }
-            sort_index++;
+            sortIndex++;
         }
-        while(left_index <= mid){
-            new_indexes[sort_index] = indexes[left_index];
-            count[indexes[left_index]] += rightcount;
-            left_index++;
-            sort_index++;
+        while(leftIndex <= mid){
+            newIndexes[sortIndex] = indexes[leftIndex];
+            count[indexes[leftIndex]] += rightcount;
+            leftIndex++;
+            sortIndex++;
         }
-        while(right_index <= end){
-            new_indexes[sort_index++] = indexes[right_index++];
+        while(rightIndex <= end){
+            newIndexes[sortIndex++] = indexes[rightIndex++];
         }
-        for(int i = start; i <= end; i++){
-            indexes[i] = new_indexes[i - start];
+        for(int i = start; i <= end; i++){ // Important step to rearrange indexes
+            indexes[i] = newIndexes[i - start];
         }
     }
 
