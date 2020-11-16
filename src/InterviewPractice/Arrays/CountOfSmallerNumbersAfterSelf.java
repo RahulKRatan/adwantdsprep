@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Brute force method is O(N*N)
+ * This is based on Inversion count algorithm
+ * https://www.educative.io/edpresso/how-to-count-the-number-of-inversions-in-an-array
+ * https://medium.com/@ssbothwell/counting-inversions-with-merge-sort-4d9910dc95f0
+ * https://www.cp.eng.chula.ac.th/~prabhas//teaching/algo/algo2008/count-inv.htm
+ *
  * The basic idea is to do merge sort to nums[]. To record the result,
  * we need to keep the index of each number in the original array.
  * So instead of sort the number in nums, we sort the indexes of each number.
@@ -14,6 +20,8 @@ import java.util.List;
  * We keep a rightcount to record how many numbers from right[] we have added and keep an array count[] to record the result.
  * When we move a number from right[] into the new sorted array, we increase rightcount by 1.
  * When we move a number from left[] into the new sorted array, we increase count[ index of the number ] by rightcount.
+  Time : O(NLOGN)
+  Space : O(N)
  */
 public class CountOfSmallerNumbersAfterSelf {
     static int[] count;
