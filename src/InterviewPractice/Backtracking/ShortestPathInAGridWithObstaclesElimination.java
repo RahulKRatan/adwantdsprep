@@ -29,7 +29,7 @@ public class ShortestPathInAGridWithObstaclesElimination {
                 int[] curr = queue.poll();
                 int i = curr[0], j = curr[1], k = curr[2];
                 if (i == grid.length - 1 && j == grid[0].length - 1)
-                    return steps;
+                    return steps; // we reached shortest path
                 for (int d = 1; d < directions.length; d++) {
                     int x = i + directions[d-1];
                     int y = j + directions[d];
