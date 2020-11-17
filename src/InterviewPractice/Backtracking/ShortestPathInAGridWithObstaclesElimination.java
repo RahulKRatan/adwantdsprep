@@ -11,6 +11,7 @@ import java.util.Set;
  * It's guaranteed to be the shortest path.
  * Maintain the state of visited node + obstaclesEliminated (i,j,k).
  *  BFS O(MNK) time | O(MNK) space
+ *  https://leetcode.com/problems/shortest-path-in-a-grid-with-obstacles-elimination/discuss/452009/Java-Straightforward-DFS-with-memoization-%2B-BFS
  */
 public class ShortestPathInAGridWithObstaclesElimination {
     public static int shortestPath(int[][] grid, int k) {
