@@ -1,4 +1,4 @@
-package InterviewPractice.Backtracking;
+package InterviewPractice.Graphs;
 
 import java.util.HashSet;
 import java.util.LinkedList;
