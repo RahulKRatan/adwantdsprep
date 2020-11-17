@@ -1,5 +1,9 @@
 package InterviewPractice.Graphs;
 
+/**
+ * The idea is to count the area of each island using dfs.
+ * During the dfs, we set the value of each point in the island to 0. The time complexity is O(mn).
+ */
 public class MaxAreaOfIsland {
     public static int maxAreaOfIsland(int[][] grid) {
         //initialize number of islands to zero
