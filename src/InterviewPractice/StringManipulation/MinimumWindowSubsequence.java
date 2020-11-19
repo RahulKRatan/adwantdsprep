@@ -11,14 +11,14 @@ import java.util.Map;
  * eg: for the string s = abcdebdde and t = bde, we should traverse s string until we find first e,
  * i.e. abcde, then traverse back from current "e" to find if we have other combination of bde with smaller
  * length.
- * @param right: fast pointer that always points the last character of T in S
- * @param left: slow pointer that used to traverse back when right pointer find the last character of T in S
- * @param tIndex: third pointer used to scan string T
- * @param minLen: current minimum length of subsequence
+ *  right: fast pointer that always points the last character of T in S
+ *  left: slow pointer that used to traverse back when right pointer find the last character of T in S
+ *  tIndex: third pointer used to scan string T
+ *  minLen: current minimum length of subsequence
  * */
 public class MinimumWindowSubsequence {
     public static String minWindow(String S, String T) {
-    
+
     }
 
     public static void main(String[] args) {
