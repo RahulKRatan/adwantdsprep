@@ -45,6 +45,6 @@ public class MinimumWindowSubsequence {
     }
 
     public static void main(String[] args) {
-    System.out.println(minWindow());
+    System.out.println(minWindow("abcdebdde","bde"));
     }
 }
