@@ -1,11 +1,17 @@
 package InterviewPractice.StackQueues;
 
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
+/**
+ * Time Complexity: O(N), where N is the length of pushed and popped.
+ *
+ * Space Complexity: O(N).
+ */
 public class ValidateStackSequences {
     public static boolean validateStackSequences(int[] pushed, int[] popped) {
         int length = pushed.length;
-        Stack<Integer> stack = new Stack();
+        Deque<Integer> stack = new ArrayDeque<>();
 
         int j = 0;
         for (int x: pushed) {
