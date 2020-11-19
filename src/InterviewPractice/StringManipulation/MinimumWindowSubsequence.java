@@ -12,6 +12,7 @@ package InterviewPractice.StringManipulation;
  *  left: slow pointer that used to traverse back when right pointer find the last character of T in S
  *  tIndex: third pointer used to scan string T
  *  minLen: current minimum length of subsequence
+ *  TIME O(ST), SPACE O(1)
  * */
 public class MinimumWindowSubsequence {
     public static String minWindow(String S, String T) {
