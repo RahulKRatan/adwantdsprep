@@ -3,45 +3,22 @@ package InterviewPractice.StringManipulation;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * we can conduct two steps by using two pointers for this probelm:
+ * 1. check feasibility from left to right
+ * 2. check optimization from right to left
+ * we can traverse from left to right, find a possible candidate until reach the first ending character of T
+ * eg: for the string s = abcdebdde and t = bde, we should traverse s string until we find first e,
+ * i.e. abcde, then traverse back from current "e" to find if we have other combination of bde with smaller
+ * length.
+ * @param right: fast pointer that always points the last character of T in S
+ * @param left: slow pointer that used to traverse back when right pointer find the last character of T in S
+ * @param tIndex: third pointer used to scan string T
+ * @param minLen: current minimum length of subsequence
+ * */
 public class MinimumWindowSubsequence {
     public static String minWindow(String S, String T) {
-        if(T.length()> S.length()) return "";
-        Map<Character, Integer> map = new HashMap<>();
-        for(char c : T.toCharArray()){
-            map.put(c, map.getOrDefault(c,0) + 1);
-        }
-        int counter = map.size();
-
-        int begin = 0, end = 0;
-        int head = 0;
-        int len = Integer.MAX_VALUE;
-
-        while(end < S.length()){
-            char c = S.charAt(end);
-            if( map.containsKey(c) ){
-                map.put(c, map.get(c)-1);
-                if(map.get(c) == 0) counter--;
-            }
-            end++;
-
-            while(counter == 0){
-                char tempc = S.charAt(begin);
-                if(map.containsKey(tempc)){
-                    map.put(tempc, map.get(tempc) + 1);
-                    if(map.get(tempc) > 0){
-                        counter++;
-                    }
-                }
-                if(end-begin < len){
-                    len = end - begin;
-                    head = begin;
-                }
-                begin++;
-            }
-
-        }
-        if(len == Integer.MAX_VALUE) return "";
-        return S.substring(head, head+len);
+    
     }
 
     public static void main(String[] args) {
