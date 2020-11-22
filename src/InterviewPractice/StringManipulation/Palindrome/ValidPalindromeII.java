@@ -5,13 +5,17 @@ public class ValidPalindromeII {
         int i=0;
         int j=s.length()-1;
         boolean deleted = false;
-        while(i<j){
+        while(i<=j){
             if(s.charAt(i)==s.charAt(j)){
                 i++;
                 j--;
             }else if(s.charAt(i)!=s.charAt(j) && !deleted){
                 deleted = true;
-                j--;
+                if(s.charAt(i+1) == s.charAt(j)) {
+                    i++;
+                }else {
+                    j--;
+                }
             }else {
                 return false;
             }
@@ -20,6 +24,6 @@ public class ValidPalindromeII {
     }
 
     public static void main(String[] args) {
-        System.out.println(validPalindrome("abca"));
+        System.out.println(validPalindrome("abca"));//"deeee", "abc", "eeeed"
     }
 }
