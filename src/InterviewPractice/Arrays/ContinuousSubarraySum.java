@@ -3,7 +3,7 @@ package InterviewPractice.Arrays;
 public class ContinuousSubarraySum {
 
     public static boolean checkSubarraySum(int[] nums, int k) {
-            
+
         return false;
     }
 
