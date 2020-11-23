@@ -1,5 +1,16 @@
 package InterviewPractice.StringManipulation;
 
+/**
+ * We will form 2-D array of Strings.
+ * dp[i][j] = string from index i to index j in encoded form.
+ *
+ * We can write the following formula as:-
+ * dp[i][j] = min(dp[i][j], dp[i][k] + dp[k+1][j]) or if we can find some pattern in string from i to j which will result in more less length.
+ *
+ * Time Complexity = O(n^3)
+ * https://leetcode.com/problems/encode-string-with-shortest-length/discuss/95599/Accepted-Solution-in-Java
+ *
+ */
 public class EncodeStringWithShortestLength {
     public static String encode(String s) {
         String[][] dp = new String[s.length()][s.length()];
