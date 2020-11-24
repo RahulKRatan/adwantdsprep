@@ -46,7 +46,7 @@ Recursion tree for Knapsack capacity 2 units and 3 items of 1 unit weight.
     static int knapSackDP(int W, int wt[], int val[], int n)
     {
         // 2D array since we have two changing behavoirs of weight and values.
-        int K[][] = new int[n+1][W+1];
+        int Knapsack[][] = new int[n+1][W+1];
 
         // Build table K[][] in bottom up manner
         for (int i = 0; i <= n; i++)
@@ -54,15 +54,15 @@ Recursion tree for Knapsack capacity 2 units and 3 items of 1 unit weight.
             for (int w = 0; w <= W; w++)
             {
                 if (i==0 || w==0) // Base case as recursion
-                    K[i][w] = 0;
+                    Knapsack[i][w] = 0;
                 else if (wt[i-1] <= w)
-                    K[i][w] = Integer.max(val[i-1] + K[i-1][w-wt[i-1]],  K[i-1][w]); // if weight is less then Max of included and excluded item.
+                    Knapsack[i][w] = Integer.max(val[i-1] + Knapsack[i-1][w-wt[i-1]],  Knapsack[i-1][w]); // if weight is less then Max of included and excluded item.
                 else
-                    K[i][w] = K[i-1][w]; // if weight is greater than w then ignore
+                    Knapsack[i][w] = Knapsack[i-1][w]; // if weight is greater than w then ignore
             }
         }
 
-        return K[n][W];
+        return Knapsack[n][W];
     }
 
     public static void main(String args[])
