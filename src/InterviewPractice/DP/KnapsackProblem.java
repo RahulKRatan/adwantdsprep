@@ -1,5 +1,6 @@
 package InterviewPractice.DP;
 
+// Combinatorial optimization problems seeks max benefit with constraints. This is one of such problems.
 public class KnapsackProblem {
 
     /*
