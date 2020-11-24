@@ -35,7 +35,7 @@ Recursion tree for Knapsack capacity 2 units and 3 items of 1 unit weight.
             // Return the maximum of two cases:
             // (1) nth item included
             // (2) not included
-        else return Integer.max( val[n-1] + knapSack(W-wt[n-1], wt, val, n-1), knapSack(W, wt, val, n-1));
+        else return Integer.max( val[n-1] + knapSack(W-wt[n-1], wt, val, n-1), knapSack(W, wt, val, n-1)); // important first recursion - delete weight
     }
 
     // Returns the maximum value that can be put in a knapsack of capacity W
