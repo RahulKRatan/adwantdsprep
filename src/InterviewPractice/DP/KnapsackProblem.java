@@ -53,12 +53,12 @@ Recursion tree for Knapsack capacity 2 units and 3 items of 1 unit weight.
         {
             for (int w = 0; w <= W; w++)
             {
-                if (i==0 || w==0)
+                if (i==0 || w==0) // Base case as recursion
                     K[i][w] = 0;
                 else if (wt[i-1] <= w)
-                    K[i][w] = Integer.max(val[i-1] + K[i-1][w-wt[i-1]],  K[i-1][w]);
+                    K[i][w] = Integer.max(val[i-1] + K[i-1][w-wt[i-1]],  K[i-1][w]); // if weight is less then Max of included and excluded item.
                 else
-                    K[i][w] = K[i-1][w];
+                    K[i][w] = K[i-1][w]; // if weight is greater than w then ignore
             }
         }
 
