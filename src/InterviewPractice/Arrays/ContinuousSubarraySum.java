@@ -1,7 +1,23 @@
 package InterviewPractice.Arrays;
 
 import java.util.HashMap;
+// find i and j such that sum(arr[i:j)) % k = 0
 
+// accum[i] = sum(arr[0:i))
+// sum(arr[i:j)) = accum[j] - accum[i]
+
+// accum[j] = nj = a*k+b where a, b = divmod(nj, k)
+// accum[i] = ni = c*k+d where c, d = divmod(ni, k)
+// where 0<= b,d < k
+// sum(arr[i:j)) = accum[j] - accum[i] = (a-c) * k + (b - d)
+// we want that b = d
+
+// instead of accum[i] what we really want is:
+
+// r[i] = sum(arr[0:i)) % k
+// sum(arr[i:j)) is a mutilpe of k if r[j] = r[i]
+
+// cahche [sum(arr[0:i)) % k] -> i
 public class ContinuousSubarraySum {
 
     public static boolean checkSubarraySum(int[] nums, int k) {
