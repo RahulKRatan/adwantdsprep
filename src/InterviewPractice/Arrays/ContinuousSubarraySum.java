@@ -23,7 +23,7 @@ public class ContinuousSubarraySum {
     public static boolean checkSubarraySum(int[] nums, int k) {
         int sum = 0;
         HashMap< Integer, Integer > map = new HashMap < > ();
-        map.put(0, -1);
+        map.put(0, -1); // edge case for eg. 0,1,2,3 and k is 6. last element will have 0 and index would be 3-(-1)
         for (int i = 0; i < nums.length; i++) {
             sum += nums[i];
             if (k != 0)
