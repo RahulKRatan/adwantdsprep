@@ -18,6 +18,7 @@ import java.util.HashMap;
 // sum(arr[i:j)) is a mutilpe of k if r[j] = r[i]
 
 // cahche [sum(arr[0:i)) % k] -> i
+//https://www.youtube.com/watch?v=3kD0nuwyPj8&ab_channel=RenZhang
 public class ContinuousSubarraySum {
 
     public static boolean checkSubarraySum(int[] nums, int k) {
