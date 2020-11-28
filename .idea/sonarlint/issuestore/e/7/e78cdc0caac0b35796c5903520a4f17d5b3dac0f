@@ -1,9 +1,9 @@
 
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ãç“š
 :
-java:S1659"Declare "j" on a separate line.(ãäÚ‘üÿÿÿÿ
+java:S1659"Declare "k" on a separate line.(ãäÚ‘üÿÿÿÿ
 M	java:S1060"9Replace this use of System.out or System.err by a logger.(ÇÑ×
 o
 java:S3012"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(›ùÕ‚
 :
-java:S1659"Declare "k" on a separate line.(ãäÚ‘üÿÿÿÿ
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ãç“š
+java:S1659"Declare "j" on a separate line.(ãäÚ‘üÿÿÿÿ

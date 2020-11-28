@@ -1,0 +1,7 @@
+
+o
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(óµó®8Ä©Ñ’Ş.
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óµó®8ëê—Ş.
+U	java:S106D"9Replace this use of System.out or System.err by a logger.(³¨¢¥8†ù•’Ş.
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óµó®8ëê—Ş.
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(şÔÙ

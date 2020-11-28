@@ -1,0 +1,14 @@
+
+>
+java:S1116>"Remove this empty statement.(­«¢âùÿÿÿÿ8Î½ÏþÜ.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(°°÷±þÿÿÿÿ
+>
+java:S1116?"Remove this empty statement.(Ÿã¯þüÿÿÿÿ8Î½ÏþÜ.
+£
+java:S1186>"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(­«¢âùÿÿÿÿ8Î½ÏþÜ.
+9
+java:S1116@"Remove this empty statement.(¦Ð›Ù8Î½ÏþÜ.
+£
+java:S1186?"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ÿã¯þüÿÿÿÿ8Î½ÏþÜ.
+ž
+java:S1186@"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦Ð›Ù8Î½ÏþÜ.

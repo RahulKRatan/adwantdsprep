@@ -1,0 +1,11 @@
+
+H
+java:S14817"+Remove this unused "result" local variable.(í“œ€8¤äûøÜ.
+W
+java:S18547":Remove this useless assignment to local variable "result".(í“œ€8¤äûøÜ.
+n
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(Ø•¡s8¤äûøÜ.
+U	java:S1068"9Replace this use of System.out or System.err by a logger.(€Ö‚ë8¤äûøÜ.
+s	java:S127"XRefactor the code in order to not assign to this loop counter from within the loop body.(¥ûÖ,8¤äûøÜ.
+y	java:S127("XRefactor the code in order to not assign to this loop counter from within the loop body.(éªšñùÿÿÿÿ8¤äûøÜ.
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(şÔÙ

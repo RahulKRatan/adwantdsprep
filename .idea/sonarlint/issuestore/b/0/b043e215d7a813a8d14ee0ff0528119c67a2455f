@@ -1,0 +1,18 @@
+
+T	java:S106–"9Replace this use of System.out or System.err by a logger.(®ıáëûÿÿÿÿ
+N	java:S106\"9Replace this use of System.out or System.err by a logger.(¸“Ç™
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ğÌòî
+T	java:S106—"9Replace this use of System.out or System.err by a logger.(‡¼ñÍıÿÿÿÿ
+N	java:S106w"9Replace this use of System.out or System.err by a logger.(¸“Ç™
+T	java:S106Œ"9Replace this use of System.out or System.err by a logger.(€ØÖéøÿÿÿÿ
+N	java:S106e"9Replace this use of System.out or System.err by a logger.(¸“Ç™
+O	java:S106™"9Replace this use of System.out or System.err by a logger.(¯ÿ
+z
+java:S2234‹"^Parameters to towerOfHanoi have the same names but not the same order as the method arguments.(œ©ğÉÿÿÿÿÿ
+T	java:S106˜"9Replace this use of System.out or System.err by a logger.(±€ƒöøÿÿÿÿ
+N	java:S106Q"9Replace this use of System.out or System.err by a logger.(¸“Ç™
+u
+java:S2234"^Parameters to towerOfHanoi have the same names but not the same order as the method arguments.(üÈñ
+N	java:S106m"9Replace this use of System.out or System.err by a logger.(¸“Ç™
+R
+java:S1191"5Use classes from the Java API instead of Sun classes.(¤œĞ8Ï™ìÊÜ.
