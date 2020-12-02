@@ -27,7 +27,7 @@ public class MissingNumber {
     }
 
     public static void main(String[] args) {
-        int[] ints = new int[]{0,1};
+        int[] ints = new int[]{9,6,4,2,3,5,7,0,1};
         System.out.println(missingNumber(ints));
         System.out.println(missingNumberGaussFormula(ints));
     }
