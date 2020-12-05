@@ -14,6 +14,11 @@ public class RichestCustomerWealth {
         }
         return max;
     }
+    /*
+    public int maximumWealth(int[][] accounts) {
+        return Arrays.stream(accounts).mapToInt(i -> Arrays.stream(i).sum()).max().getAsInt();
+    }
+     */
 
     public static void main(String[] args) {
         int[][] accounts = new int[][]{{1,2,3},{3,2,1}};
