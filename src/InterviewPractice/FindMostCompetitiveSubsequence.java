@@ -43,6 +43,18 @@ public class FindMostCompetitiveSubsequence {
         }
         return result;
     }
+    /* using array
+     public int[] mostCompetitive(int[] A, int k) {
+        int stack[] = new int[k], n = A.length, j = 0;
+        for (int i = 0; i < n; ++i) {
+            while (j > 0 && stack[j - 1] > A[i] && j - 1 + n - i >= k)
+                j--;
+            if (j < k)
+                stack[j++] = A[i];
+        }
+        return stack;
+    }
+     */
 
     public static void main(String[] args) {
         int[] nums = new int[]{3,5,2,6};
