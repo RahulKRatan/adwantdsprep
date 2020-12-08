@@ -6,7 +6,7 @@ public class RankTeamsByVotes {
         return "";
     }
     public static void main(String[] args) {
-
+    String[] votes = new String[]{};
     }
 }
 
