@@ -2,6 +2,16 @@ package InterviewPractice.Arrays;
 
 import java.util.*;
 
+/**
+ * If M = 26 alphabet characters
+ * Java, O(NM+(M^2 * logM)), Sort by high rank vote to low rank vote
+ *
+ * Time O(NM) for iterating
+ * Time O(MMlogM) for sorting
+ * Space O(M^2)
+ * where N = votes.length and M = votes[0].length <= 26
+ *
+ */
 public class RankTeamsByVotes {
 
     public static String rankTeams(String[] votes) {
