@@ -3,7 +3,9 @@ package InterviewPractice.Arrays;
 import java.util.*;
 
 public class RankTeamsByVotes {
+
     public static String rankTeams(String[] votes) {
+
         Map<Character, int[]> map = new HashMap<>();
         int l = votes[0].length();
         for(String vote : votes){
