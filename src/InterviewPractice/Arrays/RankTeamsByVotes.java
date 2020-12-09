@@ -20,7 +20,7 @@ public class RankTeamsByVotes {
         list.sort((a, b) -> {
             for (int i = 0; i < l; i++) {
                 if (map.get(a)[i] != map.get(b)[i]) {
-                    return map.get(b)[i] - map.get(a)[i];
+                    return map.get(b)[i] - map.get(a)[i]; //a - b = ASC & b - a = DESC - because we want to sort in descending order of the number of occurences of the character. Only when there is a tie we want to sort based on natural ordering and hence doing "a - b" outside the for loop
                 }
             }
             return a - b;
