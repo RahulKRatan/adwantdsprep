@@ -40,9 +40,7 @@ public class RankTeamsByVotes {
         });
 
         StringBuilder sb = new StringBuilder();
-        for(char c : list){
-            sb.append(c);
-        }
+        list.forEach(s->sb.append(s));
         return sb.toString();
     }
     public static void main(String[] args) {
