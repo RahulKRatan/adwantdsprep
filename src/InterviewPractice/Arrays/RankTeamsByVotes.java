@@ -18,6 +18,8 @@ public class RankTeamsByVotes {
 
         Map<Character, int[]> map = new HashMap<>();
         int l = votes[0].length();
+
+        // Iterating and storing in map - A->5,0,0 || B->0,2,3 || C->0,3,2
         for(String vote : votes){
             for(int i = 0; i < l; i++){
                 char c = vote.charAt(i);
@@ -26,6 +28,7 @@ public class RankTeamsByVotes {
             }
         }
 
+        // Sorting the hashmap in descending order if no clash or natural ordering
         List<Character> list = new ArrayList<>(map.keySet());
         list.sort((a, b) -> {
             for (int i = 0; i < l; i++) {
