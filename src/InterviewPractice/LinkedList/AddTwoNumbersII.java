@@ -32,7 +32,6 @@ public class AddTwoNumbersII {
         return result.val == 0 ? result.next : result;
     }
 
-
     public static void main(String[] args) {
         Node first = new Node(2);
         first.next = new Node(4);
@@ -42,5 +41,4 @@ public class AddTwoNumbersII {
         second.next = new Node(6);
         second.next.next = new Node(4);
     }
-
 }
