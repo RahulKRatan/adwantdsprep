@@ -30,5 +30,4 @@ public class RemoveDuplicatesSortedListII {
         Node result = deleteDuplicates(first);
         System.out.println(result);
     }
-
 }
