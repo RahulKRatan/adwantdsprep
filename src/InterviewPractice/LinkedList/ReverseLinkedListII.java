@@ -43,6 +43,4 @@ public class ReverseLinkedListII {
         Node res = reverseBetween(head,2,4);
         System.out.println(res);
     }
-
-
 }
