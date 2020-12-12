@@ -4,8 +4,6 @@ package InterviewPractice.LinkedList;
  * Break list in the middle to two lists (use fast & slow pointers)
  * Reverse the order of the second list
  * Merge two list back together
- *
- *
  */
 
 public class ReorderList {
@@ -38,17 +36,13 @@ public class ReorderList {
                 p1 = temp1;
                 p2 = temp2;
             }
-
         }
-
     }
 
     public static Node reverseOrder(Node head){
-
         if (head == null || head.next == null) {
             return head;
         }
-
         Node pre = head;
         Node curr = pre.next;
 
@@ -69,5 +63,4 @@ public class ReorderList {
         first.next.next.next = new Node(4);
         reorderList(first);
     }
-
 }
