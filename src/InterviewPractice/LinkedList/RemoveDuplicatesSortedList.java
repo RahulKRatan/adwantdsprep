@@ -29,5 +29,4 @@ public class RemoveDuplicatesSortedList {
         Node result = deleteDuplicates(first);
         System.out.println(result);
     }
-
 }
