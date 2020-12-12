@@ -44,5 +44,4 @@ public class MergeKLists {
         list.add(third);
         System.out.println(mergeKLists(list));
     }
-
 }
