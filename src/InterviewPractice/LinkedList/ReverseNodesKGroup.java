@@ -55,7 +55,6 @@ public class ReverseNodesKGroup {
         return last;
     }
 
-
     public static void main(String[] args) {
         Node first = new Node(1);
         first.next = new Node(2);
@@ -64,6 +63,4 @@ public class ReverseNodesKGroup {
         first.next.next.next.next = new Node(5);
         System.out.println(reverseKGroup(first,2));
     }
-
-
 }
