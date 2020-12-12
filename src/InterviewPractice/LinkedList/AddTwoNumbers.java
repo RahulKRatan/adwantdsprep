@@ -22,8 +22,6 @@ public class AddTwoNumbers {
         return dummyHead.next;
     }
 
-
-
     public static void main(String[] args) {
         Node first = new Node(2);
         first.next = new Node(4);
@@ -36,6 +34,4 @@ public class AddTwoNumbers {
         Node result = addTwoNumbers(first,second);
         System.out.println(result);
     }
-
-
 }
