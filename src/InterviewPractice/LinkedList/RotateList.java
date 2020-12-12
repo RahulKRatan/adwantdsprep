@@ -2,19 +2,12 @@ package InterviewPractice.LinkedList;
 
 
 /**
- *
- * Algorithm
- *
+ * Algorithm:
  * The algorithm is quite straightforward :
- *
  * Find the old tail and connect it with the head old_tail.next = head to close the ring. Compute the length of the list n at the same time.
- *
  * Find the new tail, which is (n - k % n - 1)th node from the head and the new head, which is (n - k % n)th node.
- *
  * Break the ring new_tail.next = None and return new_head.
- *
  * Time complexity : O(N) where N is a number of elements in the list.
- *
  * Space complexity : O(1) since it's a constant space solution.
  */
 public class RotateList {
@@ -43,8 +36,6 @@ public class RotateList {
 
         return new_head;
     }
-
-
 
     public static void main(String[] args) {
         Node first = new Node(1);
