@@ -11,10 +11,8 @@ public class ConvertBinarNumberLinkedListToInteger {
             number = number + temp.val;
             temp = temp.next;
         }
-
         return binaryToInteger(number);
     }
-
     public static int binaryToInteger(String number){
         int result = 0;
         int size = number.length();
@@ -24,12 +22,9 @@ public class ConvertBinarNumberLinkedListToInteger {
         }
         return result;
     }
-
     /*
-
     Approach 1: num = num * 2 + x
     Approach 2: num = (num << 1) | x
-
       public int getDecimalValue(ListNode head) {
         int num = head.val;
         while (head.next != null) {
@@ -39,8 +34,6 @@ public class ConvertBinarNumberLinkedListToInteger {
         return num;
     }
      */
-
-
     public static void main(String[] args) {
         Node first = new Node(1);
         first.next = new Node(0);
@@ -48,6 +41,4 @@ public class ConvertBinarNumberLinkedListToInteger {
         first.next.next.next = new Node(0);
         System.out.println(getDecimalValue(first));
     }
-
-
 }
