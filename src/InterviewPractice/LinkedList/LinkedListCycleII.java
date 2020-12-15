@@ -14,8 +14,6 @@ package InterviewPractice.LinkedList;
  * We also know that this common point is one of the loop nodes (2 or 3 or 4 or 5 in the above diagram). We store the address of this common point in a pointer variable say ptr.
  * Then we initialize a counter with 1 and start from the common point and keeps on visiting next node and increasing the counter till we again reach the common point(ptr).
  * At that point, the value of the counter will be equal to the length of the loop.
- *
- *
  */
 public class LinkedListCycleII {
 
@@ -41,7 +39,6 @@ public class LinkedListCycleII {
             intersection = intersection.next;
             start = start.next;
         }
-
         return intersection;
     }
 
@@ -59,6 +56,4 @@ public class LinkedListCycleII {
         }
         return null;
     }
-
-
 }
