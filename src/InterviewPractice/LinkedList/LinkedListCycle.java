@@ -13,10 +13,8 @@ public class LinkedListCycle {
             if(slow == fast)
                 return true;
         }
-
         return false;
     }
-
     /* T - O(N) ; S - O(N)
     public boolean hasCycle(Node head) {
     Set<Node> nodesSeen = new HashSet<>();
@@ -31,5 +29,4 @@ public class LinkedListCycle {
     return false;
 }
      */
-
 }
