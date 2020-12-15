@@ -1,7 +1,6 @@
 package InterviewPractice.LinkedList;
 
 public class InsertionSortList {
-
     /*
         T : O(N2)
         S : O(1)
