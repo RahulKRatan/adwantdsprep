@@ -4,7 +4,6 @@ package InterviewPractice.LinkedList;
  *  time : O(N)
  */
 
-
 public class RemoveOddElements {
 
     public static Node removeOddElementsList(Node head){
@@ -28,8 +27,6 @@ public class RemoveOddElements {
         even.next = null;
         return head;
     }
-
-
     public static void main(String[] args) {
         Node first = new Node(1);
         first.next = new Node(3);
@@ -41,5 +38,4 @@ public class RemoveOddElements {
         Node result = removeOddElementsList(first);
         System.out.println(result);
     }
-
 }
