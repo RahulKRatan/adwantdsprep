@@ -49,8 +49,7 @@ public class SortList {
             p1 = p1.next;
             p2 = p2.next.next;
         }
-
-        return head;
+        return head; //never reaches here
     }
 
     //merge two list
