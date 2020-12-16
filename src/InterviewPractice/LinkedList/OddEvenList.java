@@ -22,14 +22,9 @@ public class OddEvenList {
             p2.next = p1.next;
             p2 = p2.next;
         }
-
         p1.next = connectNode;
-
         return result;
-
     }
-
-
     public static void main(String[] args) {
         Node first = new Node(1);
         first.next = new Node(2);
@@ -38,5 +33,4 @@ public class OddEvenList {
         first.next.next.next.next = new Node(5);
         System.out.println(oddEvenList(first));
     }
-
 }
