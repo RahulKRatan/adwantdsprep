@@ -28,6 +28,5 @@ public class RemoveZeroSumConsecutiveNodesLinkedList {
             cur = cur.next;
         }
         return dummy.next;
-
     }
 }
