@@ -1,13 +1,8 @@
 package InterviewPractice.LinkedList;
 
 /**
- *
  *  Refer to SwapNodes image in files
- *
  */
-
-
-
 public class SwapNodesInPairs {
 
     public static Node swapPairs(Node head) {
