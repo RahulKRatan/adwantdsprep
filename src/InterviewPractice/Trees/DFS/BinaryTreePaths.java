@@ -9,13 +9,27 @@ public class BinaryTreePaths {
     TreeNode node;
     public static List<String> binaryTreePaths(TreeNode root) {
         List<String> result = new ArrayList<>();
-
+        helper(root,result,new StringBuilder());
         return result;
     }
 
-    public void helper(){
+    public static void helper(TreeNode root,List<String> result,StringBuilder path){
+        if(root == null){
+            return;
+        }
 
+        path.append(root.val);
+
+        if(root.left == null && root.right == null){
+            result.add(path.toString());
+        }
+        else {
+            path.append("->");
+            helper(root.left, result, path);
+            helper(root.right, result, path);
+            }
     }
+    
 
     public static void main(String[] args) {
         BinaryTreePaths tree = new BinaryTreePaths();
