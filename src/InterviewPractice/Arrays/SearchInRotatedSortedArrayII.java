@@ -21,8 +21,11 @@ public class SearchInRotatedSortedArrayII {
                 else
                     end = mid - 1;
             }
+            //If we get here, that means nums[start] == nums[mid] == nums[end], then shifting out
+            //any of the two sides won't change the result but can help remove duplicate from
+            //consideration, here we just use end-- but left++ works too
             else {
-                start++;
+                start++; // or end--;
             }
         }
         return false;
