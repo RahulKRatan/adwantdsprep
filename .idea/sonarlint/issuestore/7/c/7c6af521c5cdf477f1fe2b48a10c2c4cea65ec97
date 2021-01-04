@@ -1,7 +1,0 @@
-
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¼¼â£ûÿÿÿÿ
-X
-java:S2259"BA "NullPointerException" could be thrown; "left" is nullable here.(¿¢µ
-x
-java:S2234"]Parameters to isSymmetric have the same names but not the same order as the method arguments.(™ğ‚úùÿÿÿÿ
-N	java:S106"9Replace this use of System.out or System.err by a logger.(ú¯´Ê
