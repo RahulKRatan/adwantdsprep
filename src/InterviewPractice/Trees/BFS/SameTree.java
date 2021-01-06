@@ -1,8 +1,14 @@
-package InterviewPractice.Trees;
+package InterviewPractice.Trees.BFS;
+
+import InterviewPractice.Trees.TreeNode;
 
 import java.util.ArrayDeque;
 
 /**
+ * Given the roots of two binary trees p and q, write a function to check if they are the same or not.
+ *
+ * Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
+ *
  * Time complexity : O(N) since each node is visited exactly once.
  *
  * Space complexity : O(log(N)) in the best case of completely balanced tree and O(N) in the worst case of completely unbalanced tree, to keep a deque.

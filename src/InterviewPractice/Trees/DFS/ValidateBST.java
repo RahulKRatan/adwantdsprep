@@ -1,6 +1,8 @@
-package InterviewPractice.Trees;
+package InterviewPractice.Trees.DFS;
 
-public class IsBST {
+import InterviewPractice.Trees.TreeNode;
+
+public class ValidateBST {
     TreeNode root;
     boolean isBST(TreeNode root){
         return isBST(root,Double.NEGATIVE_INFINITY, Double.POSITIVE_INFINITY);
@@ -17,7 +19,7 @@ public class IsBST {
     }
 
     public static void main(String[] args) {
-        IsBST tree = new IsBST();
+        ValidateBST tree = new ValidateBST();
         tree.root = new TreeNode(2);
         tree.root.left = new TreeNode(1);
         tree.root.right = new TreeNode(3);

@@ -2,6 +2,11 @@ package InterviewPractice.Trees.DFS;
 
 
 /*
+
+You are given a binary tree in which each node contains an integer value.
+Find the number of paths that sum to a given value.
+The path does not need to start or end at the root or a leaf, but it must go downwards (traveling only from parent nodes to child nodes).
+
 The first function pathSum() recursively calls itself for every child Node of root, returning 0 when finding a null Node.
 pathSum also calls pathSumFrom on its current Node. pathSumFrom recursively traverses the tree down,
 subtracting the nodes value from the sum. Doing this, keeps a running total of the sum of the visited nodes.

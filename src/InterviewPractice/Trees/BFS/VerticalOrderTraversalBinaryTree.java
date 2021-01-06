@@ -1,4 +1,6 @@
-package InterviewPractice.Trees;
+package InterviewPractice.Trees.BFS;
+
+import InterviewPractice.Trees.TreeNode;
 
 import java.util.*;
 
@@ -43,14 +45,8 @@ public class VerticalOrderTraversalBinaryTree {
         for (int i = minHd; i <= maxHd; i++) {
             res.add(map.get(i));
         }
-
         return res;
-
     }
-
-
-
-
 
     public static void main(String[] args) {
         VerticalOrderTraversalBinaryTree tree = new VerticalOrderTraversalBinaryTree();

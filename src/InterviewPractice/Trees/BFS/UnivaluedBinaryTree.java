@@ -1,4 +1,6 @@
-package InterviewPractice.Trees;
+package InterviewPractice.Trees.BFS;
+
+import InterviewPractice.Trees.TreeNode;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
@@ -23,6 +25,23 @@ public class UnivaluedBinaryTree {
         }
         return true;
     }
+
+    /*
+    DFS Solution :
+    Explanation
+    If a node has children,
+    every child tree should be unival tree and has same value.
+    Solution 1:
+    Check all nodes have the same value as root.
+
+    int val = -1;
+    public boolean isUnivalTree(TreeNode root) {
+        if (root == null) return true;
+        if (val < 0) val = root.val;
+        return root.val == val && isUnivalTree(root.left)  && isUnivalTree(root.right);
+    }
+
+     */
 
     public static void main(String[] args) {
         UnivaluedBinaryTree tree = new UnivaluedBinaryTree();

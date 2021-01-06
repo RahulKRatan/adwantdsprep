@@ -16,7 +16,7 @@ public class SubarraySumEqualsK {
         // Sliding window -- No, contains negative number
         // hashmap + preSum
         /*
-            1. Hashmap<sum[0,i - 1], frequency>
+           0 1. Hashmap<sum[0,i - 1], frequency>
             2. sum[i, j] = sum[0, j] - sum[0, i - 1]    --> sum[0, i - 1] = sum[0, j] - sum[i, j]
                    k           sum      hashmap-key     -->  hashmap-key  =  sum - k
             3. now, we have k and sum.

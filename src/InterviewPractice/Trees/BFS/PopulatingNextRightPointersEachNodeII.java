@@ -1,19 +1,16 @@
-package InterviewPractice.Trees;
+package InterviewPractice.Trees.BFS;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
 
 public class PopulatingNextRightPointersEachNodeII {
-
     class Node {
         public int val;
         public Node left;
         public Node right;
         public Node next;
-
         public Node() {
         }
-
         public Node(int _val, Node _left, Node _right,Node _next) {
             val = _val;
             left = _left;
@@ -45,10 +42,7 @@ public class PopulatingNextRightPointersEachNodeII {
                 }
                 prev = temp;
             }
-
         }
         return root;
     }
-
-
 }

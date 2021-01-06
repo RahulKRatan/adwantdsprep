@@ -1,4 +1,6 @@
-package InterviewPractice.Trees;
+package InterviewPractice.Trees.BFS;
+
+import InterviewPractice.Trees.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
