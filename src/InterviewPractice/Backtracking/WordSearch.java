@@ -1,4 +1,4 @@
-package InterviewPractice.StringManipulation;
+package InterviewPractice.Backtracking;
 
 //https://www.youtube.com/watch?v=oyRp1IKWqU4
 public class WordSearch {
