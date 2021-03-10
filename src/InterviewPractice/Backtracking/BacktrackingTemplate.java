@@ -1,4 +1,4 @@
-package InterviewPractice.StringManipulation.Templates;
+package InterviewPractice.Backtracking;
 
 
 public class BacktrackingTemplate {
