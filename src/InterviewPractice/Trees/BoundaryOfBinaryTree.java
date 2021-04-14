@@ -1,36 +1,52 @@
 package InterviewPractice.Trees;
 
-import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Queue;
 
+/**
+ * Complexity:
+ * O(n) leftBoundary(root.left);
+ * O(n) leaves(root.left);
+ * O(n) leaves(root.right);
+ * O(n) rightBoundary(root.right);
+ *
+ * Total: O(n)
+ */
 public class BoundaryOfBinaryTree {
-    TreeNode node;
-    public static List<Integer> boundaryOfBinaryTree(TreeNode root) {
-        Queue<TreeNode> queue = new ArrayDeque<>();
-        List<Integer> result = new ArrayList<>();
-        List<Integer> rightResult = new ArrayList<>();
-        queue.add(root);
-        while (!queue.isEmpty()){
-            int size = queue.size();
-            for(int i=0;i<size;i++){
-                TreeNode node = queue.poll();
-                if((i==0 && (node.left!=null || node.right!=null))) result.add(node.val);
-                if((i==size-1 && (node.left!=null || node.right!=null))) rightResult.add(node.val);
-                if(node.left == null && node.right == null) result.add(node.val);
-                if(node.left!=null) queue.add(node.left);
-                if(node.right!=null) queue.add(node.right);
-            }
+    //TreeNode node;
+    List<Integer> nodes = new ArrayList<>(1000);
+    public List<Integer> boundaryOfBinaryTree(TreeNode root) {
+        if(root == null) return nodes;
+        nodes.add(root.val);
+        leftBoundary(root.left);
+        leaves(root.left); // adding leaves of left side
+        leaves(root.right); // adding leaves of left side
+        rightBoundary(root.right);
+        return nodes;
+    }
+    public void leftBoundary(TreeNode root) {
+        if(root == null || (root.left == null && root.right == null)) return; //Avoid adding leftmost leaf node and rightmost leaf node while traverse left and right boundary.
+        nodes.add(root.val);
+        if(root.left == null) leftBoundary(root.right);
+        else leftBoundary(root.left);
+    }
+    public void rightBoundary(TreeNode root) {
+        if(root == null || (root.right == null && root.left == null)) return; //Avoid adding leftmost leaf node and rightmost leaf node while traverse left and right boundary.
+        if(root.right == null)rightBoundary(root.left);
+        else rightBoundary(root.right);
+        nodes.add(root.val); // add after child visit(reverse)
+    }
+    public void leaves(TreeNode root) {
+        if(root == null) return;
+        if(root.left == null && root.right == null) {
+            nodes.add(root.val);
+            return;
         }
-        int size = rightResult.size();
-        for(int i=size-1;i>0;i--){
-            result.add(rightResult.remove(i));
-        }
-        return result;
+        leaves(root.left);
+        leaves(root.right);
     }
 
-    public static void main(String[] args) {
+   /* public static void main(String[] args) {
         BoundaryOfBinaryTree tree = new BoundaryOfBinaryTree();
         tree.node = new TreeNode(1);
         tree.node.left = new TreeNode(2);
@@ -42,6 +58,6 @@ public class BoundaryOfBinaryTree {
         tree.node.right.left = new TreeNode(6);
         tree.node.right.left.left = new TreeNode(9);
         tree.node.right.left.right = new TreeNode(10);
-        System.out.println(boundaryOfBinaryTree(tree.node));
-    }
+        //System.out.println(boundaryOfBinaryTree(tree.node));
+    }*/
 }
