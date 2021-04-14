@@ -1,4 +1,6 @@
-package InterviewPractice.Trees;
+package InterviewPractice.Trees.DFS;
+
+import InterviewPractice.Trees.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,7 +34,7 @@ public class BoundaryOfBinaryTree {
     }
     public void rightBoundary(TreeNode root) {
         if(root == null || (root.right == null && root.left == null)) return; //Avoid adding leftmost leaf node and rightmost leaf node while traverse left and right boundary.
-        if(root.right == null)rightBoundary(root.left);
+        if(root.right == null) rightBoundary(root.left);
         else rightBoundary(root.right);
         nodes.add(root.val); // add after child visit(reverse)
     }
