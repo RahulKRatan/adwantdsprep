@@ -4,9 +4,21 @@ import InterviewPractice.Trees.TreeNode;
 
 public class CountGoodNodesBinaryTree {
     TreeNode node;
+    static int goodNode = 0;
     public static int goodNodes(TreeNode root) {
+        findGoodNode(root,root.val);
+        return goodNode;
+    }
 
-        return 0;
+    public static void findGoodNode(TreeNode node,int maxTillNow){
+        if(node != null){
+            if(node.val >= maxTillNow){
+                goodNode+=1;
+                maxTillNow = node.val;
+            }
+            findGoodNode(node.left,maxTillNow);
+            findGoodNode(node.right,maxTillNow);
+        }
     }
 
     public static void main(String[] args) {
