@@ -22,7 +22,7 @@ public class DeepestLeavesSum {
 
     public static void findSum(TreeNode root, int currDepth){
         if(root != null){
-            if(currDepth > maxDepth){
+            if(currDepth > maxDepth){ // extra if clause if we ignore maxDepth method.
                 maxDepth = currDepth;
                 sum = 0;
             }
@@ -33,6 +33,25 @@ public class DeepestLeavesSum {
             findSum(root.right,currDepth+1);
         }
     }
+
+    /** BFS solution O(N) for both space and time
+     *
+     * int deepestLeavesSum(TreeNode* root) {
+     * 	int sum = 0, n;
+     * 	queue<TreeNode*> q; // required for level-order traversal
+     * 	q.push(root);
+     * 	while(!q.empty()){
+     * 		sum = 0, n = size(q); // reset sum when deeper level is reached and accumulate for that level
+     * 		for(int i = 0; i < n; i++){
+     * 			auto top = q.front(); q.pop();
+     * 			sum += top -> val;
+     * 			if(top -> left) q.push(top -> left);
+     * 			if(top -> right) q.push(top -> right);
+     *                }* 	}
+     * 	return sum; // final value held by 'sum' will be sum of values of nodes at the deepest level
+     * }
+     *
+     */
 
     public static void main(String[] args) {
         DeepestLeavesSum tree = new DeepestLeavesSum();
