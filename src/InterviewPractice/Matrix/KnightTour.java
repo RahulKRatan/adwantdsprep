@@ -1,4 +1,4 @@
-package InterviewPractice.Backtracking;
+package InterviewPractice.Matrix;
 
 import java.text.DecimalFormat;
 
