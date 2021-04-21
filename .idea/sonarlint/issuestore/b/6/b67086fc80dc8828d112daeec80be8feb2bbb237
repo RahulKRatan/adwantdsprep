@@ -1,0 +1,7 @@
+
+n	java:S1353"YReduce the total number of break and continue statements in this loop to use at most one.(ÆõÎø
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(€¾ö
+t
+java:S3012,"YUse "Arrays.copyOf", "Arrays.asList", "Collections.addAll" or "System.arraycopy" instead.(Ò•ƒºşÿÿÿÿ
+h
+java:S37760"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(ñ‘º™

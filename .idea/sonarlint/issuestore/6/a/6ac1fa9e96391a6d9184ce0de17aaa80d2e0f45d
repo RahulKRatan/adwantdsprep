@@ -1,24 +1,24 @@
 
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(êÁˆ
-N	java:S106T"9Replace this use of System.out or System.err by a logger.(”Ò¿†
-h	java:S100("NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰àõúûÿÿÿÿ
+e	java:S117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é œI
+S
+java:S1197("8Move the array designator from the variable to the type.(‰àõúûÿÿÿÿ
+N
+java:S1197-"8Move the array designator from the variable to the type.(¹¥õå
+4
+java:S1659/"Declare "j" on a separate line.(é œI
 S
 java:S1197O"8Move the array designator from the variable to the type.(º ìıÿÿÿÿ
 4
 java:S1659/"Declare "q" on a separate line.(é œI
-h	java:S100	"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï«ïåùÿÿÿÿ
-N
-java:S1197-"8Move the array designator from the variable to the type.(¹¥õå
-S
-java:S1197("8Move the array designator from the variable to the type.(‰àõúûÿÿÿÿ
-S
-java:S1197Q"8Move the array designator from the variable to the type.(ãËÉåùÿÿÿÿ
-e	java:S117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é œI
-4
-java:S1659/"Declare "j" on a separate line.(é œI
-4
-java:S1659/"Declare "k" on a separate line.(é œI
 S
 java:S1197	"8Move the array designator from the variable to the type.(Ï«ïåùÿÿÿÿ
+S
+java:S1197Q"8Move the array designator from the variable to the type.(ãËÉåùÿÿÿÿ
+N	java:S106T"9Replace this use of System.out or System.err by a logger.(”Ò¿†
+h	java:S100	"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ï«ïåùÿÿÿÿ
+h	java:S100("NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰àõúûÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(êÁˆ
+4
+java:S1659/"Declare "k" on a separate line.(é œI
 4
 java:S1659/"Declare "L" on a separate line.(é œI

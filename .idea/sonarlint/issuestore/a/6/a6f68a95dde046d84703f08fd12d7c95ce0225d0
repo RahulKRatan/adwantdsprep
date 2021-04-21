@@ -1,0 +1,9 @@
+
+:
+java:S1659"Declare "d" on a separate line.(„™šûÿÿÿÿ
+S	java:S106$"9Replace this use of System.out or System.err by a logger.(øü™©úÿÿÿÿ
+<
+java:S1659"!Declare "col" on a separate line.(„™šûÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ıÁ´ï
+:
+java:S1659"Declare "n" on a separate line.(½ªÌ•ÿÿÿÿÿ

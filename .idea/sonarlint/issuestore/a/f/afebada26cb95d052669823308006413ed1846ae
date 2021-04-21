@@ -1,7 +1,7 @@
 
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(®ä¤û
-T	java:S106‘"9Replace this use of System.out or System.err by a logger.(î¥å‰ıÿÿÿÿ
 m
 java:S37767"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(ø¤ıÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(®ä¤û
 O
 java:S2864r"4Iterate over the "entrySet" instead of the "keySet".(üçÆšøÿÿÿÿ
+T	java:S106‘"9Replace this use of System.out or System.err by a logger.(î¥å‰ıÿÿÿÿ

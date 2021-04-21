@@ -1,14 +1,14 @@
 
-K
-java:S1121O".Extract the assignment out of this expression.(ãòÇÃ8õïİòÕ.
-P
-java:S1068".Remove this unused "dictionary" private field.(‚¸üüÿÿÿÿ8åúÛòÕ.
+j	java:S100B"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„µ‡Î8õïİòÕ.
 Q
 java:S3740-"/Provide the parametrized type for this generic.(”ğ¢Ãøÿÿÿÿ8åúÛòÕ.
-f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÙÛ¥
-N	java:S106V"9Replace this use of System.out or System.err by a logger.(ûêÃ´
-Q
-java:S3740@"/Provide the parametrized type for this generic.(İåÿÕüÿÿÿÿ8õïİòÕ.
-j	java:S100B"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„µ‡Î8õïİòÕ.
+P
+java:S1068".Remove this unused "dictionary" private field.(‚¸üüÿÿÿÿ8åúÛòÕ.
 o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(êÁˆ
 o	java:S100/"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Òéî¾ıÿÿÿÿ8åúÛòÕ.
+Q
+java:S3740@"/Provide the parametrized type for this generic.(İåÿÕüÿÿÿÿ8õïİòÕ.
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÙÛ¥
+K
+java:S1121O".Extract the assignment out of this expression.(ãòÇÃ8õïİòÕ.
+N	java:S106V"9Replace this use of System.out or System.err by a logger.(ûêÃ´
