@@ -1,5 +1,0 @@
-
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(˛ù‘Ÿ
-y
-java:S2234 "cParameters to isOneEditDistance have the same names but not the same order as the method arguments.(¨¨÷û
-M	java:S106;"9Replace this use of System.out or System.err by a logger.(÷ñﬁg
