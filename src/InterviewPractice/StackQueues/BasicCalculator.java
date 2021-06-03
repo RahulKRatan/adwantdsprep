@@ -33,18 +33,14 @@ public class BasicCalculator {
 
         for(int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-
             if(c >= '0' && c <= '9') {
-                num = num * 10 + (c - '0');
-
+                num = num * 10 + (c - '0'); //in case if we have more than one digit for the number. ex: "12", so we will break it down to 1 * 10 + 2 = 12
             } else if(c == '+' || c == '-') {
                 result += sign * num;
                 sign = stack.peek() * (c == '+' ? 1: -1);
                 num = 0;
-
             } else if(c == '(') {
                 stack.push(sign);
-
             } else if(c == ')') {
                 stack.pop();
             }
