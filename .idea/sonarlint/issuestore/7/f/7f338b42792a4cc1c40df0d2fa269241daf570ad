@@ -1,0 +1,16 @@
+
+Z
+java:S1197"8Move the array designator from the variable to the type.(¹êşûÿÿÿÿ8ğşË/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ıÁ´ï
+E
+java:S1659"#Declare "index" on a separate line.(¹êşûÿÿÿÿ8ğşË/
+o
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(Ó•ö¶8ğşË/
+C
+java:S1168"&Return an empty array instead of null.(Ç÷¥ƒ8ğşË/
+Z
+java:S1197"8Move the array designator from the variable to the type.(¹êşûÿÿÿÿ8ğşË/
+{
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(°†ÿşÿÿÿÿ8ğşË/
+E
+java:S1659"#Declare "order" on a separate line.(¹êşûÿÿÿÿ8ğşË/
