@@ -15,6 +15,32 @@ package InterviewPractice.LinkedList;
  * Then we initialize a counter with 1 and start from the common point and keeps on visiting next node and increasing the counter till we again reach the common point(ptr).
  * At that point, the value of the counter will be equal to the length of the loop.
  */
+/*
+We can conclude below from above diagram
+
+Distance traveled by fast pointer = 2 * (Distance traveled
+                                         by slow pointer)
+
+(m + n*x + k) = 2*(m + n*y + k)
+
+Note that before meeting the point shown above, fast
+was moving at twice speed.
+
+x -->  Number of complete cyclic rounds made by
+       fast pointer before they meet first time
+
+y -->  Number of complete cyclic rounds made by
+       slow pointer before they meet first time
+From above equation, we can conclude below
+
+    m + k = (x-2y)*n
+
+Which means m+k is a multiple of n.
+Thus we can write, m + k = i*n or m = i*n - k.
+Hence, distance moved by slow pointer: m, is equal to distance moved by fast pointer:
+i*n - k or (i-1)*n + n - k (cover the loop completely i-1 times and start from n-k).
+So if we start moving both pointers again at same speed such that one pointer (say slow) begins from head node of linked list and other pointer (say fast) begins from meeting point. When slow pointer reaches beginning of loop (has made m steps), fast pointer would have made also moved m steps as they are now moving same pace. Since m+k is a multiple of n and fast starts from k, they would meet at the beginning. Can they meet before also? No because slow pointer enters the cycle first time after m steps.
+ */
 public class LinkedListCycleII {
 
     public Node detectCycle(Node head) {
