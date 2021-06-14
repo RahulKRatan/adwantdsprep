@@ -2,7 +2,8 @@ package InterviewPractice.Trees.BFS;
 
 import InterviewPractice.Trees.TreeNode;
 
-import java.util.ArrayDeque;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * Given the roots of two binary trees p and q, write a function to check if they are the same or not.
@@ -21,33 +22,21 @@ public class SameTree {
         return true;
     }
     public boolean isSameTree(TreeNode p, TreeNode q) {
-        if (p == null && q == null) return true;
-        if (!check(p, q)) return false;
-
-        // init deques
-        ArrayDeque<TreeNode> deqP = new ArrayDeque<>();
-        ArrayDeque<TreeNode> deqQ = new ArrayDeque<>();
-        deqP.addLast(p);
-        deqQ.addLast(q);
-
-        while (!deqP.isEmpty()) {
-            p = deqP.removeFirst();
-            q = deqQ.removeFirst();
-
-            if (!check(p, q)) return false;
-            if (p != null) {
-                // in Java nulls are not allowed in Deque
-                if (!check(p.left, q.left)) return false;
-                if (p.left != null) {
-                    deqP.addLast(p.left);
-                    deqQ.addLast(q.left);
-                }
-                if (!check(p.right, q.right)) return false;
-                if (p.right != null) {
-                    deqP.addLast(p.right);
-                    deqQ.addLast(q.right);
-                }
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(p);
+        queue.add(q);
+        while(!queue.isEmpty()){
+            TreeNode first = queue.poll();
+            TreeNode second = queue.poll();
+            if(first == null && second == null){
+                continue;
+            }else if(first == null || second == null || first.val != second.val){
+                return false;
             }
+            queue.add(first.left);
+            queue.add(second.left);
+            queue.add(first.right);
+            queue.add(second.right);
         }
         return true;
     }
