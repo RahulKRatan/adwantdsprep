@@ -13,7 +13,7 @@ import java.util.Queue;
 public class MaxDepthBinaryTree {
     TreeNode node;
 
-    public int maxDepth(TreeNode root) {
+    public static int maxDepth(TreeNode root) {
         if(root == null) {
             return 0;
         }
@@ -35,6 +35,7 @@ public class MaxDepthBinaryTree {
         }
         return count;
     }
+
     public static int maxDepthDFS(TreeNode root) {
         if(root == null)
             return 0;
@@ -51,5 +52,6 @@ public class MaxDepthBinaryTree {
         tree.node.right.left = new TreeNode(15);
         tree.node.right.right = new TreeNode(7);
         System.out.println(maxDepthDFS(tree.node));
+        System.out.println(maxDepth(tree.node));
     }
 }
