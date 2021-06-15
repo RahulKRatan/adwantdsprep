@@ -1,45 +1,48 @@
 package InterviewPractice.Trees;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
+import java.util.Deque;
+import java.util.LinkedList;
+
 // same solution for Serialize and deserialize for BST
 // Time and space complexity is O(N)
 public class SerializeDeserializeBinaryTree {
     TreeNode node;
+    private static final String spliter = ",";
+    private static final String NN = "X";
+
     // Encodes a tree to a single string.
     public static String serialize(TreeNode root) {
-        return serializeTree(root,"");
+        StringBuilder sb = new StringBuilder();
+        buildString(root, sb);
+        return sb.toString();
     }
-    // Preorder traversal - DFS
-    public static String serializeTree(TreeNode root, String s){
-        if(root == null){
-            s = s + "null,";
+    //Preorder traversal to covert tree into string
+    private static void buildString(TreeNode node, StringBuilder sb) {
+        if (node == null) {
+            sb.append(NN).append(spliter);
         } else {
-            s = s+String.valueOf(root.val) + ",";
-            s = serializeTree(root.left,s);
-            s = serializeTree(root.right,s);
+            sb.append(node.val).append(spliter);
+            buildString(node.left, sb);
+            buildString(node.right,sb);
         }
-        return s;
     }
-
     // Decodes your encoded data to tree.
     public static TreeNode deserialize(String data) {
-        String[] strings = data.split(",");
-        List<String> list = new ArrayList<>(Arrays.asList(strings));
-        return rDeserialize(list);
+        Deque<String> nodes = new LinkedList<>();
+        nodes.addAll(Arrays.asList(data.split(spliter)));
+        return buildTree(nodes);
     }
-
-    public static TreeNode rDeserialize(List<String> list){
-    if(list.get(0).equals("null")){
-        list.remove(0);
-        return null;
-    }
-    TreeNode root = new TreeNode(Integer.valueOf(list.get(0)));
-    list.remove(0);
-    root.left = rDeserialize(list);
-    root.right = rDeserialize(list);
-    return root;
+    //preorder traversal to construct tree from string
+    private static TreeNode buildTree(Deque<String> nodes) {
+        String val = nodes.remove();
+        if (val.equals(NN)) return null;
+        else {
+            TreeNode node = new TreeNode(Integer.parseInt(val));
+            node.left = buildTree(nodes);
+            node.right = buildTree(nodes);
+            return node;
+        }
     }
 
     public static void main(String[] args) {
