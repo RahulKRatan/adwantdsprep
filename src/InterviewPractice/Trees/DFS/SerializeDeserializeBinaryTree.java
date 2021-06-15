@@ -1,4 +1,6 @@
-package InterviewPractice.Trees;
+package InterviewPractice.Trees.DFS;
+
+import InterviewPractice.Trees.TreeNode;
 
 import java.util.Arrays;
 import java.util.Deque;
