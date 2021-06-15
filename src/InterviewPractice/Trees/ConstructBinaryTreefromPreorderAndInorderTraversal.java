@@ -20,7 +20,8 @@ import java.util.Map;
  * Therefore the immediate right child index is preStart + numsOnLeft + 1 (remember in preorder traversal array root is always ahead of children nodes but you don't know which one is the left child which one is the right, and this is why we need inorder array)
  * numsOnLeft = root - inStart.
  *
- *
+ *Time complexity : O(N)
+ *Space complexity : O(N)
  *
  *  use HashMap to cache the inorder[] position
  */
