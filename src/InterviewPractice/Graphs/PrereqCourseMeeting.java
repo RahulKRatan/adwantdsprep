@@ -3,7 +3,7 @@ package InterviewPractice.Graphs;
 import java.util.*;
 
 /** Wayfair Karat
- * 
+ *
  * You're developing a system for scheduling advising meetings with students in a Computer Science program. Each meeting should be scheduled when a student has completed 50% of their academic program.
  *
  * Each course at our university has at most one prerequisite that must be taken first. No two courses share a prerequisite. There is only one path through the program.
@@ -96,8 +96,8 @@ public class PrereqCourseMeeting {
                 break;
             }
         }
-
-        while(count<(set.size()/2)) {
+        int size = set.size();
+        while(count<(size/2)) {
             course = map.get(course);
             count++;
         }
