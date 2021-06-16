@@ -10,7 +10,7 @@ public class SubdomainVisitCount {
         HashMap<String,Integer> values = new HashMap<>();
         for(String string : cpdomains){
 
-            String[] cpinfo = string.split("\\s+");
+            String[] cpinfo = string.split(",");
             String[] frags = cpinfo[1].split("\\.");
             int count = Integer.parseInt(cpinfo[0]);
             String cur = "";
@@ -30,7 +30,18 @@ public class SubdomainVisitCount {
     }
 
     public static void main(String[] args) {
-        String[] cpdomains = new String[]{"900 google.mail.com", "50 yahoo.com", "1 intel.mail.com", "5 wiki.org"};
+        String[] cpdomains = new String[]{"900,google.com",
+                "60,mail.yahoo.com",
+                "10,mobile.sports.yahoo.com",
+                "40,sports.yahoo.com",
+                "300,yahoo.com",
+                "10,stackoverflow.com",
+                "20,overflow.com",
+                "5,com.com",
+                "2,en.wikipedia.org",
+                "1,m.wikipedia.org",
+                "1,mobile.sports",
+                "1,google.co.uk"};
         System.out.println(subdomainVisits(cpdomains));
     }
 }
