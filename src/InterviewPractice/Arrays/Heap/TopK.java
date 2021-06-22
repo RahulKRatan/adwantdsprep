@@ -34,6 +34,6 @@ public class TopK {
     public static void main(String[] args) {
         int[] arr = new int[]{1,1,1,2,2,3};
         int k = 2;
-        topK(arr,k);
+        System.out.println(topK(arr,k));
     }
 }
