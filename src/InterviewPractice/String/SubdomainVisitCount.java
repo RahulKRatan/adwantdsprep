@@ -4,12 +4,17 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+/**
+ * Time Complexity: O(N), where N is the length of cpdomains, and assuming the length of cpdomains[i] is fixed.
+ *
+ * Space Complexity: O(N), the space used in our count.
+ */
 public class SubdomainVisitCount {
 
     public static List<String> subdomainVisits(String[] cpdomains) {
         HashMap<String,Integer> values = new HashMap<>();
-        for(String string : cpdomains){
 
+        for(String string : cpdomains){
             String[] cpinfo = string.split(",");
             String[] frags = cpinfo[1].split("\\.");
             int count = Integer.parseInt(cpinfo[0]);
@@ -21,11 +26,11 @@ public class SubdomainVisitCount {
             }
 
         }
-        List<String> ans = new ArrayList<>();
+        List<String> result = new ArrayList<>();
         for (String dom: values.keySet()){
-            ans.add("" + values.get(dom) + " " + dom);
+            result.add("" + values.get(dom) + " " + dom);
         }
-        return ans;
+        return result;
 
     }
 
