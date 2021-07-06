@@ -1,0 +1,7 @@
+
+2
+java:S1643"Use a StringBuilder instead.(Ì’’Ë
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Œè±±
+J
+java:S2864"4Iterate over the "entrySet" instead of the "keySet".(…Œ«¤
+N	java:S1062"9Replace this use of System.out or System.err by a logger.(Ç‚âË

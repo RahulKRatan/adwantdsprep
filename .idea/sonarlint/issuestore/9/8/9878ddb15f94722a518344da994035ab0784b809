@@ -1,0 +1,12 @@
+
+m
+java:S1192o"KDefine a constant instead of duplicating this literal "Algorithms" 5 times.(´œÅüÿÿÿÿ8¦¹Èš¡/
+r
+java:S1192o"PDefine a constant instead of duplicating this literal "Data Structures" 4 times.(´œÅüÿÿÿÿ8¦¹Èš¡/
+‚
+java:S1192n"`Define a constant instead of duplicating this literal "Foundations of Computer Science" 4 times.(¤í‘—şÿÿÿÿ8¦¹Èš¡/
+r	java:S117m"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°û¤ùÿÿÿÿ8³±Éš¡/
+r	java:S117u"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÆíÍèşÿÿÿÿ8§¹Èš¡/
+r	java:S117{"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•ÙÒÎùÿÿÿÿ8¨¹Èš¡/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(®ä¤û
+S	java:S106i"9Replace this use of System.out or System.err by a logger.(Úİû·úÿÿÿÿ
